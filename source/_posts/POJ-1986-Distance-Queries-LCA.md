@@ -1,19 +1,19 @@
 ---
-title: POJ 1986 Distance Queries(LCA)
+title: POJ 1986 Distance Queries (LCA)
 date: 2016-04-13 03:07:49
-categories: ACM
+categories: [ACM,图论]
 tags: [LCA]
 ---
-<font color="#6495ED">**题目链接：**</font>[POJ 1986 Distance Queries(LCA)](http://poj.org/problem?id=1986)   
-<font color="#6495ED">**题意分析：**</font>   
-求树上两点间的最短距离。   
-<font color="#6495ED">**解题思路：**</font>   
-典型的离线LCA啊，主要是涉及到上一题的条件输入。不过本题边的朝向并不影响解题:)   
-<font color="#6495ED">**个人感受：**</font>   
-时间主要废在看这题和上题题目上了2333   
+<font color="#6495ED">**题目链接：**</font>[POJ 1986 Distance Queries (LCA)](http://poj.org/problem?id=1986)  
+<font color="#6495ED">**题意分析：**</font>  
+求树上两点间的最短距离。  
 <!--more-->
-<font color="#6495ED">**具体代码如下：**</font>   
-``` C++
+<font color="#6495ED">**解题思路：**</font>  
+典型的离线LCA啊，主要是涉及到上一题的条件输入。不过本题边的朝向并不影响解题:)  
+<font color="#6495ED">**个人感受：**</font>  
+时间主要废在看这题和上题题目上了2333  
+<font color="#6495ED">**具体代码如下：**</font>
+```c++
 #include<algorithm>
 #include<cctype>
 #include<cmath>
