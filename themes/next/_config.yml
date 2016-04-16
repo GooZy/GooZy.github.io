@@ -195,14 +195,14 @@ sidebar:
 #   image: url-of-image   - Images's url
 custom_logo:
   enabled: false
-  image:
+  image: 
 
 
 # Code Highlight theme
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright
+highlight_theme: normal
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -236,13 +236,13 @@ mathjax:
 
 
 # Swiftype Search API Key
-#swiftype_key:
+swiftype_key: 5MAxgiYhsog7wzQeyfoF
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 86b5c1ff9e10063a95cf9d293a065bdf
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: GooZy
 
 # Disqus
 #disqus_shortname:
@@ -266,7 +266,7 @@ mathjax:
 
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-76325241-1
 
 # CNZZ count
 #cnzz_siteid:
@@ -321,7 +321,7 @@ busuanzi_count:
 # tencent_analytics:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 
 
