@@ -16,7 +16,7 @@ categories: [ACM,数据结构]
 RMQ的ST算法登场。$dpl[i][j]$代表：从第i个数开始，包含第i个数，区间长度为$2^j$范围内的最小值。有转移：$$dpl[i][j] = min(dp[i][j - 1], dp[i + 2^{j - 1}][j - 1])$$
 $dph[i][j]$同理。  
 最终求区间中的最小值，那么我们只需查询:  
-$k = log2(r - l + 1)$  
+$k = log_2(r - l + 1)$  
 $ans = min(dpl[i][k], dpl[i + (1 << k) + 1][k])$
 
 <font color="#6495ED">**个人感受：**</font>  

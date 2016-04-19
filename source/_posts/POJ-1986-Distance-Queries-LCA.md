@@ -1,7 +1,7 @@
 ---
 title: POJ 1986 Distance Queries (LCA)
 date: 2016-04-13 03:07:49
-categories: [ACM,图论]
+categories: [ACM,数据结构]
 tags: [LCA]
 ---
 <font color="#6495ED">**题目链接：**</font>[POJ 1986 Distance Queries (LCA)](http://poj.org/problem?id=1986)  

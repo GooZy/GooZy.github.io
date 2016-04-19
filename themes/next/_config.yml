@@ -124,6 +124,8 @@ social:
   zhihu: http://www.zhihu.com/people/guo-zi-yao
   CSDN: http://blog.csdn.net/catglory
   weibo: http://weibo.com/2266445663
+  千里码: http://www.qlcoder.com/
+  闲时一题: http://cquacmerwechat.duapp.com/RandomProblem.jsp
 
 
 # Social Links Icons
@@ -149,7 +151,8 @@ social_icons:
 # title
 links_title: Links
 links:
-  千里码: http://www.qlcoder.com/
+  fly: http://flyyyy.github.io/
+  先叼: http://zerolxf.github.io/
 
 
 # Table Of Ccontents in the Sidebar
@@ -231,7 +234,7 @@ auto_excerpt:
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 

@@ -2,7 +2,7 @@
 title: UESTC 92 Journey (离线LCA)
 date: 2016-04-14 22:08:59
 tags: [LCA]
-categories: [ACM,图论]
+categories: [ACM,数据结构]
 ---
 
 <font color="#6495ED">**题目链接：**</font>[UESTC 92 Journey (离线LCA)](http://acm.uestc.edu.cn/#/problem/show/92)

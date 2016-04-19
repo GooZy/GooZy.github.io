@@ -19,10 +19,13 @@ path: sitemap.xml
 
 # Swiftype Search Key
 swiftype_key: 5MAxgiYhsog7wzQeyfoF
+
 # baidu
 baidu_analytics: 86b5c1ff9e10063a95cf9d293a065bdf
+
 # duoshuo
 duoshuo_shortname: GooZy
+
 # google
 google_analytics: UA-76325241-1
 
@@ -85,5 +88,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:goozy/goozy.github.io.git
-  branch: master
+  repo:
+          github: git@github.com:goozy/goozy.github.io.git,master
+        #  coding: git@git.coding.net:GooZy/GooZy.git,master
