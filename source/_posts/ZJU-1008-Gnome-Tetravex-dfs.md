@@ -1,12 +1,12 @@
 ---
-title: ZJU 1008 Gnome Tetravex (dfs)
-date: 2016-04-19 22:07:28
+title: ZJU 1008 Gnome Tetravex (DFS)
+date: 2016-04-20 14:00:49
 tags: [DFS]
 categories: [ACM,图论]
 ---
 
 <font color="#6495ED">**题目链接：**</font>
-[ZJU 1008 Gnome Tetravex (dfs)](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1008)
+[ZJU 1008 Gnome Tetravex (DFS)](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1008)
 
 <font color="#6495ED">**题意分析：**</font>  
 给出$N \times N$块正方形，每一块被切割成上下左右四个三角形，每个三角形写上0~9的值，问：能否移动这些正方形的位置，使得它们排列成$N \times N$的方块，每一个相邻的边上数字都相同。
