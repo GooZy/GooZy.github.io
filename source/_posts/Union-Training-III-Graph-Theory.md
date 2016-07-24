@@ -1,7 +1,7 @@
 ---
 title: Union Training III - Graph Theory
 date: 2016-06-07 16:22:19
-tags: [总结]
+tags: [总结, 图论]
 categories: [ACM,总结]
 ---
 

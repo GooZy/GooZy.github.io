@@ -1,7 +1,7 @@
 ---
 title: 'CQU&SCU Union Training II - Dynamic Programming'
 date: 2016-05-23 13:36:56
-tags: [总结]
+tags: [总结, 动态规划]
 categories: [ACM,总结]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: 2016 Pre-summer Training Ⅳ - Data Structure
 date: 2016-07-10 10:53:38
-tags:
+tags: [总结, 数据结构]
+categories: [ACM, 总结]
 ---
 
 ### 前言
