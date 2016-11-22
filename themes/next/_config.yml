@@ -139,7 +139,7 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
-  gitHub: Github
+  gitHub: github
   twitter: twitter
   weibo: weibo
   
