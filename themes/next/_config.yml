@@ -31,6 +31,7 @@ menu:
   archives: /archives
   tags: /tags
   about: /about
+  books: /books
   #commonweal: /404.html
 
 
@@ -47,6 +48,7 @@ menu_icons:
   categories: th
   tags: tags
   archives: archive
+  books: heartbeat
   commonweal: heartbeat
 
 
