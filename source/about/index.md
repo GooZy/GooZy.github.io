@@ -7,13 +7,15 @@ date: 2016-04-13 02:50:19
 
 
 >程序宅一枚，没事写写代码，看看动漫，打打游戏。
+>
+>ACM退役狗，大学重深造中…...
 
 
 ## Contact Me
 
- - Email: ziyaoguo@gmail.com  
- - QQ: 751744014
- 
+- Email: ziyaoguo@gmail.com  
+- QQ: 751744014
+
 
 --------
 
