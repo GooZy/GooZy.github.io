@@ -1,7 +1,7 @@
 ---
 title: hiho计划之hiho一下
 date: 2016-06-28 13:44:12
-tags: [学习]
+tags: [算法]
 categories: [学习,算法]
 ---
 
