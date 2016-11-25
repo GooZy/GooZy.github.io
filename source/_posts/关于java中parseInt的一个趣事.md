@@ -7,6 +7,8 @@ categories: [学习, 笔记]
 
 今天看Java的时候突然好奇`parseInt()`的实现，想着会不会和自己平常比赛时候的实现方法一样。于是就翻到了这个：
 
+<!--more-->
+
 ``` java
 public static int parseInt(String s, int radix)
                 throws NumberFormatException
