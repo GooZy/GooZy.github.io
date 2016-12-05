@@ -127,7 +127,7 @@ social:
   CSDN: http://blog.csdn.net/catglory
   weibo: http://weibo.com/2266445663
   千里码: http://www.qlcoder.com/
-  闲时一题: http://cquacmerwechat.duapp.com/RandomProblem.jsp
+  闲时一题: https://leetcode.com/problems/random-one-question/algorithms
 
 
 # Social Links Icons
@@ -142,8 +142,7 @@ social_icons:
   gitHub: github
   twitter: twitter
   weibo: weibo
-  
-  
+
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
