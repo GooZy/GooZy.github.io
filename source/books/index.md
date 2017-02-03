@@ -11,6 +11,8 @@ date: 2016-11-21 19:28:19
 
 ### 2017
 
+<input type='checkbox' checked>[《MySQL必知必会》](https://github.com/GooZy/BookList/blob/master/2017/MySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A.zip) | 很好的入门书。虽然篇幅短，但是内容涵盖的还是很全面的。至于编写查询的各种技巧，还得自己深造了。
+
 <input type='checkbox' checked>《计算机网络——自顶向下方法》 | 看完了第五章，后续没有动力看下去了，暂且搁置。书中的TCP、UDP通信程序感觉很好玩。个人还是比较喜欢自底向上，自顶向下总是不爽讲着讲着又一个要之后才介绍的东西蹦出来。
 
 ### 2016
