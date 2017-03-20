@@ -1,5 +1,5 @@
 ---
-title: 关于java中parseInt的一个趣事
+title: 关于Java中parseInt的一个趣事
 date: 2016-11-24 23:19:00
 tags: [Java]
 categories: [学习, 笔记]
@@ -9,7 +9,7 @@ categories: [学习, 笔记]
 
 <!--more-->
 
-``` java
+``` Java
 public static int parseInt(String s, int radix)
                 throws NumberFormatException
     {
