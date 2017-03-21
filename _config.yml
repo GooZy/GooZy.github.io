@@ -18,7 +18,14 @@ sitemap:
 path: sitemap.xml
 
 # Swiftype Search Key
-swiftype_key: 5MAxgiYhsog7wzQeyfoF
+# swiftype_key: 5MAxgiYhsog7wzQeyfoF
+
+# local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # baidu
 baidu_analytics: 86b5c1ff9e10063a95cf9d293a065bdf

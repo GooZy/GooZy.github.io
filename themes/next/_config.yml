@@ -139,8 +139,8 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
-  gitHub: github
-  twitter: twitter
+  Github: github
+  Twitter: twitter
   weibo: weibo
 
 
@@ -240,13 +240,17 @@ mathjax:
 
 
 # Swiftype Search API Key
-swiftype_key: 5MAxgiYhsog7wzQeyfoF
+# swiftype_key: 5MAxgiYhsog7wzQeyfoF
 
 # Baidu Analytics ID
 baidu_analytics: 86b5c1ff9e10063a95cf9d293a065bdf
 
 # Duoshuo ShortName
 duoshuo_shortname: GooZy
+
+# Local search
+local_search:
+  enable: true
 
 # Disqus
 #disqus_shortname:
@@ -376,6 +380,11 @@ vendors:
 css: css
 js: js
 images: images
+
+# reward
+reward_comment: 梦想有一天所有人都能给我一块钱XD
+wechatpay: /images/wechat.png
+alipay: /images/alipay.jpg
 
 # Theme version
 version: 5.0.1
