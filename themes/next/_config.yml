@@ -139,8 +139,9 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   Github: github
-  Twitter: twitter
-
+  zhihu: user-o
+  千里码: star
+  闲时一题: code
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -262,10 +263,7 @@ local_search:
 
 # Share
 jiathis: true
-#add_this_id:
-
-# Share
-#duoshuo_share: true
+add_this_id: 2128176
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
