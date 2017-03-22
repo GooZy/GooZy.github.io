@@ -247,9 +247,6 @@ baidu_analytics: 86b5c1ff9e10063a95cf9d293a065bdf
 # Hypercomments
 hypercomments_id: 88567
 
-# Duoshuo ShortName
-#duoshuo_shortname: GooZy
-
 # Local search
 local_search:
   enable: true
@@ -264,7 +261,7 @@ local_search:
 ##  type: button
 
 # Share
-#jiathis:
+jiathis: true
 #add_this_id:
 
 # Share
@@ -285,11 +282,11 @@ google_analytics: UA-76325241-1
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-#duoshuo_info:
-  #ua_enable: true
-  #admin_enable: true
-  #user_id: 6272695807833540000
-  #admin_nickname: Author
+duoshuo_info:
+  ua_enable: #true
+  admin_enable: #true
+  user_id: #6272695807833540000
+  admin_nickname: #Author
 
 
 # Facebook SDK Support.
