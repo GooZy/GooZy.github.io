@@ -152,6 +152,7 @@ links_title: Links
 links:
   fly: http://flyyyy.github.io/
   先叼: http://zerolxf.github.io/
+  韬韬: http://TaoSama.github.io
 
 
 # Table Of Ccontents in the Sidebar
@@ -247,7 +248,7 @@ baidu_analytics: 86b5c1ff9e10063a95cf9d293a065bdf
 hypercomments_id: 88567
 
 # Duoshuo ShortName
-duoshuo_shortname: GooZy
+#duoshuo_shortname: GooZy
 
 # Local search
 local_search:
