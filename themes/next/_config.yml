@@ -48,7 +48,7 @@ menu_icons:
   categories: th
   tags: tags
   archives: archive
-  books: heartbeat
+  books: book
   commonweal: heartbeat
 
 
@@ -139,8 +139,8 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   Github: github
-  zhihu: user-o
-  千里码: star
+  zhihu: user
+  千里码: cubes
   闲时一题: code
 
 # Sidebar Avatar
