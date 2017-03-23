@@ -252,9 +252,6 @@ hypercomments_id: 88567
 local_search:
   enable: true
 
-# Disqus
-#disqus_shortname:
-
 # Baidu Share
 # Available value:
 #    button | slide
