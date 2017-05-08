@@ -10,6 +10,9 @@ date: 2016-11-21 19:28:19
 书单中部分书籍下载请移步到：[仓库](https://github.com/GooZy/BookList)
 
 ### 2017
+
+<input type='checkbox' checked>[《快乐Linux命令行》](https://github.com/GooZy/BookList/blob/master/2017/%E5%BF%AB%E4%B9%90Linux%E5%91%BD%E4%BB%A4%E8%A1%8C.pdf) | 不得不说linux命令行真是强大，认真看一遍，保留下来作为手册查看 :) 英文版本题目为<< The Linux Command Line>>。全地址：http://billie66.github.io/TLCL/
+
 <input type='checkbox' checked>《Java编程思想(第4版)》| 从翻开这本书的第一页起，到现在三个月出头Orz。期间有达到过6页/h的阅读速度；阅读代码，理解，loop。不得不说，真的是圣经级别的书，感觉像是越级杀怪一样，难，很多东西感觉不是自己踩过坑，体会不会特别深，总之，已经加入书架必备书单。另外，从I/O部分开始，就没静下心来看了，最后图形化界面暂时搁置（惭愧rz）。（PS：看书和面试真的不是一个级别的东西啊TAT）
 
 <input type='checkbox' checked>《MySQL必知必会》 | 很好的入门书。虽然篇幅短，但是内容涵盖的还是很全面的。至于编写查询的各种技巧，还得自己深造了。
