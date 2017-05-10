@@ -11,7 +11,9 @@ date: 2016-11-21 19:28:19
 
 ### 2017
 
-<input type='checkbox' checked>[《快乐Linux命令行》](https://github.com/GooZy/BookList/blob/master/2017/%E5%BF%AB%E4%B9%90Linux%E5%91%BD%E4%BB%A4%E8%A1%8C.pdf) | 不得不说linux命令行真是强大，认真看一遍，保留下来作为手册查看 :) 英文版本题目为<< The Linux Command Line>>。全地址：http://billie66.github.io/TLCL/
+<input type='checkbox' checked>[《Python for Informatics》](https://github.com/GooZy/BookList/blob/master/2017/Python%20for%20Informatics.pdf) | 前十二章是数据处理所需知道的基础，专门拿来练习英文阅读了XD。到十五章数据可视化感觉比较吃力= =。总得感觉这本书还是不错哒，回忆基础看前十二章就行啦。此书是基于py2，py3版本见[链接](http://www.py4e.com/book.php)。
+
+<input type='checkbox' checked>[《快乐Linux命令行》](https://github.com/GooZy/BookList/blob/master/2017/%E5%BF%AB%E4%B9%90Linux%E5%91%BD%E4%BB%A4%E8%A1%8C.pdf) | 全文读下来很舒服。不得不说linux命令行真是强大，认真看一遍，保留下来作为手册查看 :) 英文版本题目为<< The Linux Command Line>>。全地址：http://billie66.github.io/TLCL/
 
 <input type='checkbox' checked>《Java编程思想(第4版)》| 从翻开这本书的第一页起，到现在三个月出头Orz。期间有达到过6页/h的阅读速度；阅读代码，理解，loop。不得不说，真的是圣经级别的书，感觉像是越级杀怪一样，难，很多东西感觉不是自己踩过坑，体会不会特别深，总之，已经加入书架必备书单。另外，从I/O部分开始，就没静下心来看了，最后图形化界面暂时搁置（惭愧rz）。（PS：看书和面试真的不是一个级别的东西啊TAT）
 
