@@ -377,9 +377,9 @@ js: js
 images: images
 
 # reward
-reward_comment: 梦想有一天所有人都能给我一块钱XD
-wechatpay: /images/wechat.png
-alipay: /images/alipay.jpg
+# reward_comment: 梦想有一天所有人都能给我一块钱XD
+# wechatpay: /images/wechat.png
+# alipay: /images/alipay.jpg
 
 # Theme version
 version: 5.0.1
