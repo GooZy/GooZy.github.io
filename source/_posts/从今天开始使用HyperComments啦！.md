@@ -147,3 +147,11 @@ hypercomments_id: xxxx
 ### 参考资料
 
 1. [Гиперкомментарии для темы Next в Hexo](https://almostover.ru/2016-10/add-hypercomments-to-hexo-theme-next/)
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

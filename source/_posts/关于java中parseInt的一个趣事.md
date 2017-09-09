@@ -79,3 +79,11 @@ public static int parseInt(String s, int radix)
 
 
 整体思路也是先乘基数，然后加值，多了对溢出的判断。在计算结果时，不是像我平常使用正数存储，而是默认是负数。不是很理解，然后注释说防止接近`MAX_VALUE`。发现：`INT_MAX = 2147483647 、 INT_MIN = -2147483648`。那么答案就很明显了，如果默认为正数的话，当值为`INT_MIN`时，会造成溢出，最终异常。好严谨Orz
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

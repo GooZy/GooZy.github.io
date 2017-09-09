@@ -30,3 +30,11 @@ $1000 \times 1000$ 的矩阵啊，$n^{2}$ 操作肯定是要T的。考虑链表�
 ### 具体代码链接：
 
 [传送门](https://github.com/GooZy/Codes/blob/master/OJ-Codeforces/%23367%20div2/Working%20routine.cpp)
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

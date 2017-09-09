@@ -66,3 +66,11 @@ categories: [学习, 笔记]
 ### 书评
 
 这本书可以算是一本**工具书**+**经验书**。  书中有很多的命令，所以记笔记是必须的。另外作者也会根据自己的经历给出一些开发中需要注意的事项。对于入门而言我觉得是极好的一本书，剩下的提高就要看自己之后的实践了。此外书不大，作为参考书放着也是极好的。
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

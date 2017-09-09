@@ -37,3 +37,12 @@ categories: [ACM, 实现]
 
 [传送门](https://github.com/GooZy/Codes/blob/master/Trainning/2016%E5%A4%9A%E6%A0%A1%E7%AC%AC07%E5%9C%BA/Distance.cpp)
 
+
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

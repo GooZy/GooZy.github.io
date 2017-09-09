@@ -68,3 +68,12 @@ class Test {
 
 1. [Java 泛型总结（三）：通配符的使用](https://segmentfault.com/a/1190000005337789#articleHeader0)
 2. [Java 8 默认方法（Default Methods）](http://ebnbin.com/2015/12/20/java-8-default-methods/)
+
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

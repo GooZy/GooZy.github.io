@@ -312,3 +312,11 @@ categories: [ACM,总结]
 ### 具体代码点击下方传送门:)
 
 [传送门](https://github.com/GooZy/Codes/tree/master/OJ-SCU/CQU%26SCU%20Union%20Training%20I%20-%20Searching%20and%20Strings)
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

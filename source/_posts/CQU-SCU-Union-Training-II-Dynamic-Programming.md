@@ -121,3 +121,11 @@ DP专题。斜率优化，单调队列，还有各种迷之姿势，反正这个
 ### 具体代码点击下方传送门:)
 
 [传送门](https://github.com/GooZy/Codes/tree/master/OJ-SCU/CQU%26SCU%20Union%20Training%20II%20-%20Dynamic%20Programming)
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

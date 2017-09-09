@@ -27,3 +27,11 @@ categories: [学习,算法]
 ##### [hiho一下第104周——平衡树·Splay](http://hihocoder.com/contest/hiho104/problem/1)　　[Code + Note](https://github.com/GooZy/Codes/tree/master/OJ-hihocoder/hiho%E4%B8%80%E4%B8%8B/%E7%AC%AC104%E5%91%A8%E2%80%94%E2%80%94%E5%B9%B3%E8%A1%A1%E6%A0%91%C2%B7Splay)
 
 ##### [hiho一下第105周——平衡树·Splay](http://hihocoder.com/contest/hiho105/problem/1)　　[Code + Note](https://github.com/GooZy/Codes/tree/master/OJ-hihocoder/hiho%E4%B8%80%E4%B8%8B/%E7%AC%AC105%E5%91%A8%E2%80%94%E2%80%94%E5%B9%B3%E8%A1%A1%E6%A0%91%C2%B7Splay2)
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+

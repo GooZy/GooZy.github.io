@@ -166,3 +166,11 @@ ans[当前值] += cnt[当前值 $\times k$];
 ### 具体代码点击下方传送门:)
 
 [传送门](https://github.com/GooZy/Codes/tree/master/OJ-CQU/2016%20Pre-summer%20Training%20%E2%85%A3%20-%20Data%20Structure)
+
+
+---
+
+**广告时间**
+
+> *VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>
+
