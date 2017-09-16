@@ -9,6 +9,8 @@ date: 2016-11-21 19:28:19
 
 ### 2017
 
+<input type='checkbox' checked>[《嫌疑犯x的献身》](https://book.douban.com/subject/3211779/) | 看到中期有种不想看的念头，觉得一切水到渠成，警方总能恰巧抓住线索，太没意思。后期的反转还是比较惊艳，最后的结局不是很喜欢，但也想不到可以替代的结局。
+
 <input type='checkbox' checked>[《用Python写网络爬虫》](https://book.douban.com/subject/26869992/) | 篇幅不大，较为基础入门，能有个大概的轮廓，代码比较分散，所以理解起来有些费力。验证码部分感觉很惊艳。
 
 <input type='checkbox' checked>[《Python for Informatics》](https://github.com/GooZy/BookList/blob/master/2017/Python%20for%20Informatics.pdf) | 前十二章是数据处理所需知道的基础，专门拿来练习英文阅读了XD。到十五章数据可视化感觉比较吃力= =。总得感觉这本书还是不错哒，回忆基础看前十二章就行啦。此书是基于py2，py3版本见[链接](http://www.py4e.com/book.php)。
