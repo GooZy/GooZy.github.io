@@ -9,7 +9,9 @@ date: 2016-11-21 19:28:19
 
 ### 2017
 
-<input type='checkbox' checked>[《嫌疑犯x的献身》](https://book.douban.com/subject/3211779/) | 看到中期有种不想看的念头，觉得一切水到渠成，警方总能恰巧抓住线索，太没意思。后期的反转还是比较惊艳，最后的结局不是很喜欢，但也想不到可以替代的结局。
+<input type='checkbox' checked>[《Web Scraping with Python》](https://book.douban.com/subject/26284925/) | 数据清洗、动态抓取、图像识别、防爬策略都是本书不错的章节。
+
+<input type='checkbox' checked>[《嫌疑犯X的献身》](https://book.douban.com/subject/3211779/) | 看到中期有种不想看的念头，觉得一切水到渠成，警方总能恰巧抓住线索，太没意思。后期的反转还是比较惊艳，最后的结局不是很喜欢，但也想不到可以替代的结局。
 
 <input type='checkbox' checked>[《用Python写网络爬虫》](https://book.douban.com/subject/26869992/) | 篇幅不大，较为基础入门，能有个大概的轮廓，代码比较分散，所以理解起来有些费力。验证码部分感觉很惊艳。
 
