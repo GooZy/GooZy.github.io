@@ -9,6 +9,8 @@ date: 2016-11-21 19:28:19
 
 ### 2017
 
+<input type='checkbox' checked>[《Python学习手册（第4版）》](https://book.douban.com/subject/6049132/) | 大抵是些语法、语言特性上的收获，高级话题部分比较费力。翻译一般。不推荐初学者靠这个入门。
+
 <input type='checkbox' checked>[《Web Scraping with Python》](https://book.douban.com/subject/26284925/) | 数据清洗、动态抓取、图像识别、防爬策略都是本书不错的章节。
 
 <input type='checkbox' checked>[《嫌疑犯X的献身》](https://book.douban.com/subject/3211779/) | 看到中期有种不想看的念头，觉得一切水到渠成，警方总能恰巧抓住线索，太没意思。后期的反转还是比较惊艳，最后的结局不是很喜欢，但也想不到可以替代的结局。
