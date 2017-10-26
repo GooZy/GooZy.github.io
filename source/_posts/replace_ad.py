@@ -11,6 +11,7 @@ ad = [
 
 new_ad = {
     '*VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>': 0,
+    '*QQ自助代刷*: <a href="http://qqzzds.hxcvb.com/" target="_blank">![qqzzds](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/qqzzds.png?raw=true)</a>': 0,
 }
 
 def replace_ad():
@@ -48,7 +49,7 @@ def add_ad():
                 for k in new_ad:
                     if k in line:
                         new_ad[k] = 1
-                    break
+                        break
         for word, flag in new_ad.items():
             if flag == 0:
                 lines.append('> ' + word + '\n\n')
