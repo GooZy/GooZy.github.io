@@ -6,24 +6,27 @@ import glob
 
 ad = [
     '*VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>',
-    '*VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>'
+    '*QQ自助代刷*: <a href="http://qqzzds.hxcvb.com/" target="_blank">![qqzzds](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/qqzzds.png?raw=true)</a>'
 ]
 
 new_ad = {
     '*VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>': 0,
-    '*QQ自助代刷*: <a href="http://qqzzds.hxcvb.com/" target="_blank">![qqzzds](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/qqzzds.png?raw=true)</a>': 0,
+    # '*QQ自助代刷*: <a href="http://qqzzds.hxcvb.com/" target="_blank">![qqzzds](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/qqzzds.png?raw=true)</a>': 0,
 }
 
-def replace_ad():
+def delete_ad():
     for filename in glob.glob('*.md'):
+    	outs = ''
         with open(filename, 'r') as f:
             lines = f.readlines()
-            for index, line in enumerate(lines):
-                for i in range(0, len(ad), 2):
-                    if ad[i] in line:
-                        lines[index] = line.replace(ad[i], ad[i + 1])
+            for line in lines:
+            	for each in ad:
+            		if each in line:
+            			break
+            	else:
+            		outs += line
         with open(filename, 'w') as f:
-            f.writelines(lines)
+            f.writelines(outs)
 
             
 def init_ad():
@@ -57,6 +60,6 @@ def add_ad():
             f.writelines(lines)
 
 if __name__ == '__main__':
-    #replace_ad()
     init_ad()
     add_ad()
+    # delete_ad()
