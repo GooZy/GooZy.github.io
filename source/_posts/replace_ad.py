@@ -11,6 +11,7 @@ ad = [
 
 new_ad = {
     '*Java学习网站*: <a href="http://how2j.cn?p=23251" target="_blank">![how2j](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true)</a>': 0,
+    '*VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://www.vultr.com/media/banner_2.png)</a>': 0,
 }
 
 def delete_ad():
@@ -18,9 +19,14 @@ def delete_ad():
     	outs = ''
         with open(filename, 'r') as f:
             lines = f.readlines()
+            skip = False
             for line in lines:
+            	if skip:
+            		skip = False
+            		continue
             	for each in ad:
             		if each in line:
+            			skip = True
             			break
             	else:
             		outs += line
