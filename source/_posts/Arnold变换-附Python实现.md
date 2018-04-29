@@ -18,9 +18,9 @@ categories: [学习,算法]
 也叫做猫脸变换，因为提出该算法的人当时是在一张猫的图片上操作，因此而得名= =
 
 这个变换公式很简单：
-$$
-\begin{bmatrix} x_{n+1} \\ y_{n+1} \end{bmatrix}=\begin{bmatrix} 1 & b \\ a & ab+1 \end{bmatrix}\begin{bmatrix} x_{n} \\ y_{n} \end{bmatrix}mod(N)
-$$
+
+![公式](https://user-images.githubusercontent.com/12698567/39406471-c4080f28-4be9-11e8-99f6-42f9a190093c.jpg)
+
 这里N代表图像的长宽，意即需要是正方形。当然，如果你想在长方形上尝试，把长方形切割成多个正方形，分别对正方形操作即可。Xn和Yn是原图像像素点位置，Xn+1和Yn+1该像素点的新位置。
 
 有两点十分神奇，我也不知道为什么：
