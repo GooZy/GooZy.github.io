@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: 
-Sitemap: http://goozy.github.io/sitemap.xml
+Sitemap: https://goozy.github.io/sitemap.xml
