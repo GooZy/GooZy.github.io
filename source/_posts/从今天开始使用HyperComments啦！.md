@@ -5,6 +5,12 @@ tags: [HyperComments, 总结]
 categories: [闲碎, 经验总结]
 ---
 
+**UPDATE 2018.05.18**
+
+HyperComments将于**2018.06.15**起不再提供免费服务，需要免费评论系统的，可以略过这篇文章了。
+
+![hypercomments](https://user-images.githubusercontent.com/12698567/40232853-1aad2348-5ad3-11e8-908d-0fc68eb4d802.png)
+
 ### 起因
 
 [多说不再提供评论服务。](http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241)
@@ -147,7 +153,6 @@ hypercomments_id: xxxx
 ### 参考资料
 
 1. [Гиперкомментарии для темы Next в Hexo](https://almostover.ru/2016-10/add-hypercomments-to-hexo-theme-next/)
-
 
 ---
 
