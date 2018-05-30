@@ -7,7 +7,7 @@ categories: [闲碎, 经验总结]
 
 **UPDATE 2018.05.30**
 
-HyperComments将于**2018.06.15**起不再提供免费服务。需要免费评论系统的，可以参考这篇文章“[Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/)”了。目前博客将采用gitment作为评论系统。
+HyperComments将于**2018.06.15**起不再提供免费服务。需要免费评论系统的，可以参考这篇文章“[Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/)”了。目前博客将采用gitment作为评论系统，有疑问的可以到[留言页](https://goozy.github.io/bbs/)留言，旧文章不再提供评论，新文章可正常评论。
 
 ### 起因
 
@@ -160,46 +160,3 @@ hypercomments_id: xxxx
 
 > *VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://www.vultr.com/media/banner_2.png)</a>
 
-
-
-
-<div id="container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-const myTheme = {
-  render(state, instance) {
-    const container = document.createElement('div')
-    container.lang = "en-US"
-    container.className = 'gitment-container gitment-root-container'
-    
-     // your custom component
-    container.appendChild(instance.renderSomething(state, instance))
-    
-    container.appendChild(instance.renderHeader(state, instance))
-    container.appendChild(instance.renderEditor(state, instance))
-    container.appendChild(instance.renderComments(state, instance))
-    container.appendChild(instance.renderFooter(state, instance))
-    return container
-  },
-  renderSomething(state, instance) {
-    const container = document.createElement('div')
-    container.lang = "en-US"
-    if (state.user.login) {
-      container.innerText = `Hello, ${state.user.login}`
-    }
-    return container
-  }
-}
-
-var gitment = new Gitment({
-  owner: 'GooZy',
-  repo: 'GooZy.github.io',
-  oauth: {
-    client_id: '09ad28d84613270d54c9',
-    client_secret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
-  },
-  theme: myTheme,
-})
-gitment.render('container')
-</script>
