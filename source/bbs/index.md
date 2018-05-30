@@ -5,6 +5,9 @@ date: 2018-05-30 13:00:00
 
 ## Leave a comment and share your view :)
 
+![Konata](https://user-images.githubusercontent.com/12698567/40700912-4b2c5824-640e-11e8-9694-7a212f66dc7e.jpg)
+
+
 <div id="container"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
