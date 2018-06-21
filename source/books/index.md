@@ -5,6 +5,8 @@ date: 2016-11-21 19:28:19
 
 ### 2018
 
+<input type='checkbox' checked>[ <<Effective Python>>](https://book.douban.com/subject/26312313/) | Great book! Especially when you encounter the same problem.
+
 <input type='checkbox' checked>《聪明投资者的第一本金融学常识书》 | 在多看上买的，真心偏概念，后期有些干货。感觉概念这种东西，还是一边实际接触，一边了解比较好，这样直接提出概念，我觉得很难消化，而且语言也不有趣。
 
 <input type='checkbox' checked>[《万历十五年》](https://book.douban.com/subject/1041482/) | 高中毕业后觉得大学该读的书之一，当时纯粹是觉得大学了，该好好学学这些“杂书”。本书从多个历史人物角度，展示了整个朝代存在的问题，特性。代入到历史情境，我觉得事情很是复杂= =如何上下一心？环境不可改的情况下，如何才能实现自己的目的？人性中的阴和阳。
