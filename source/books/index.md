@@ -5,6 +5,8 @@ date: 2016-11-21 19:28:19
 
 ### 2018
 
+<input type='checkbox' checked>[ 《图解HTTP》](https://book.douban.com/subject/25863515/) | 你以为你会HTTP系列。很多首部字段都是重新认知。第四章到第九章是重点，其它章节偏科普。
+
 <input type='checkbox' checked>[ 《人之彼岸》](https://book.douban.com/subject/27180217/) | 用人工智能的可能发展方向分别写了一些短篇，作为消遣阅读还是不错的。
 
 <input type='checkbox' checked>[ 《Effective Python》](https://book.douban.com/subject/26312313/) | Great book! Especially when you encounter the same problem.
