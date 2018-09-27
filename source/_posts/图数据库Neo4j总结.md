@@ -144,5 +144,5 @@ merge (p:Invest{company_name: line.company_name, name: line.name, level: line.le
 
 > *Java学习网站*: <a href="http://how2j.cn?p=23251" target="_blank">![how2j](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true)</a>
 
-> *VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://www.vultr.com/media/banner_2.png)</a>
+> *VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true)</a>
 
