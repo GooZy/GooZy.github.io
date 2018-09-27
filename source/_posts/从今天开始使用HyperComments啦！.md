@@ -7,9 +7,9 @@ categories: [闲碎, 经验总结]
 
 **UPDATE 2018.05.30**
 
-HyperComments将于**2018.06.15**起不再提供免费服务。~需要免费评论系统的，可以参考这篇文章“[Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/)”了。目前博客将采用gitment作为评论系统，有疑问的可以到[留言页](https://goozy.github.io/bbs/)留言，旧文章不再提供评论，新文章可正常评论。~
+HyperComments将于**2018.06.15**起不再提供免费服务。~~需要免费评论系统的，可以参考这篇文章“[Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/)”了。目前博客将采用gitment作为评论系统，有疑问的可以到[留言页](https://goozy.github.io/bbs/)留言，旧文章不再提供评论，新文章可正常评论。~~
 
-**2018.09.27**，如今giment也GG了，正式换成[valine](https://valine.js.org/hexo.html)
+**2018.09.27**，如今giment也GG了，正式换成[valine](https://valine.js.org/hexo.html)，顺带把主题升级到6.x了，累=。=
 
 ### 起因
 

@@ -1,6 +1,7 @@
 ---
 title: bbs
 date: 2018-05-30 13:00:00
+comments: false
 ---
 
 ## Leave a comment and share your view :)
