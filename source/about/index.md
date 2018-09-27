@@ -1,5 +1,5 @@
 ---
-title: about
+title: About
 date: 2016-04-13 02:50:19
 comments: false
 ---

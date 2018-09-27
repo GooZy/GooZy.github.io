@@ -1,5 +1,5 @@
 ---
-title: bbs
+title: BBS
 date: 2018-05-30 13:00:00
 ---
 

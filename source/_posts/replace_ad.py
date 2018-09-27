@@ -6,12 +6,13 @@ import glob
 
 ad = [
     '*VPN*: <a href="https://portal.shadowsocks.la/aff.php?aff=11951" target="_blank">![shadowsocks](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/shadowsocks.png?raw=true)</a>',
-    '*QQ自助代刷*: <a href="http://qqzzds.hxcvb.com/" target="_blank">![qqzzds](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/qqzzds.png?raw=true)</a>'
+    '*QQ自助代刷*: <a href="http://qqzzds.hxcvb.com/" target="_blank">![qqzzds](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/qqzzds.png?raw=true)</a>',
+    '*VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://www.vultr.com/media/banner_2.png)</a>',
 ]
 
 new_ad = {
     '*Java学习网站*: <a href="http://how2j.cn?p=23251" target="_blank">![how2j](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true)</a>': 0,
-    '*VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://www.vultr.com/media/banner_2.png)</a>': 0,
+    '*VPS*: <a href="https://www.vultr.com/?ref=7255071" target="_blank">![VPS](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true)</a>': 0,
 }
 
 def delete_ad():
