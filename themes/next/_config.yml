@@ -304,6 +304,20 @@ leancloud_visitors:
   app_id: UnlHq38TrEog3wAugYB3AdMs-gzGzoHsz
   app_key: rUDovW4O7cKDCeOhLjqnn448
 
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+valine:
+  enable: true
+  appid: UnlHq38TrEog3wAugYB3AdMs-gzGzoHsz # your leancloud application appid
+  appkey: rUDovW4O7cKDCeOhLjqnn448 # your leancloud application appkey
+  notify: true # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: true # Verification code
+  placeholder: Feel free to leave any comments # comment box placeholder
+  avatar: mm # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  pageSize: 10 # pagination size
+
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
