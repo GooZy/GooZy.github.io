@@ -1,13 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags: 
-categories: 
+tags: [adf]
+categories: [a,b]
 ---
 
-
-
-
-
-**广告时间**
 
