@@ -40,13 +40,8 @@ categories: [学习,算法]
 2. [python中有关矩阵的创建、求逆、转置](https://blog.csdn.net/shuaishuai3409/article/details/50830196)
 3. [百度百科：置乱](https://baike.baidu.com/item/%E7%BD%AE%E4%B9%B1/6575561?fr=aladdin)
 
-------
 
-> 版权声明：本文采用国际知识共享[“署名-非商业使用-禁止演绎”协议4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)进行授权许可。转载请注明作者姓名和文章出处。
-
-------
-
-
+---
 
 **广告时间**
 
