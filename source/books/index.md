@@ -4,6 +4,10 @@ date: 2016-11-21 19:28:19
 comments: false
 ---
 
+### 2019
+
+<input type='checkbox' checked>[ 《Redis实战》](https://book.douban.com/subject/26612779/) | 18年拖到现在书=。=真的很实战，例子很巧妙，到后面的例子有些难读，常常看了后面代码忘了前面干了啥。。。
+
 ### 2018
 
 <input type='checkbox' checked>[ 《图解HTTP》](https://book.douban.com/subject/25863515/) | 你以为你会HTTP系列。很多首部字段都是重新认知。第四章到第九章是重点，其它章节偏科普。
