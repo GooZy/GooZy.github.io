@@ -8,6 +8,10 @@ feature:
 ---
 ### 2019
 
+<input type='checkbox' checked>[ 《三体全集》](https://book.douban.com/subject/6518605/) | 16年6月在多看上买的，今年才看完，一半时间都是上班路上听书听完的。好看！和白夜行列为必荐小说。感觉科幻作者真的想象力丰富，而且说的有理有据，总之推荐x3
+
+<input type='checkbox' checked>[ 《竹取物语》](https://book.douban.com/subject/24225065/) | 因为《辉夜大小姐想让我告白》漫画才去接触的，希望能看出漫画中一些人物关系，可惜失败了。就是很老套的剧情，一般。
+
 <input type='checkbox' checked>[ 《设计模式》](https://book.douban.com/subject/1052241/) | 才知道原来有些模式工作中就用到了🤣马马虎虎看吧，主要是各个模式的类图，不懂的可以结合网上的说明。入门不大推荐这本书，可以看head first系列。
 
 <input type='checkbox' checked>[ 《Redis实战》](https://book.douban.com/subject/26612779/) | 18年拖到现在书=。=真的很实战，例子很巧妙，到后面的例子有些难读，常常看了后面代码忘了前面干了啥。。。
