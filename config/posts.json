@@ -187,10 +187,7 @@
       "data": {
         "title": "从今天开始使用HyperComments啦！",
         "date": "2017-03-22 20:16:24",
-        "tags": [
-          "HyperComments",
-          "总结"
-        ],
+        "tags": [],
         "published": true,
         "hideInList": false,
         "feature": null
@@ -198,7 +195,7 @@
       "isEmpty": false,
       "excerpt": "",
       "abstract": "\n**UPDATE 2018.05.30**\n\nHyperComments将于**2018.06.15**起不再提供免费服务。~~需要免费评论系统的，可以参考这篇文章“[Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/)”了。目前博客将采用gitment作为评论系统，有疑问的可以到[留言页](https://goozy.github.io/bbs/)留言，旧文章不再提供评论，新文章可正常评论。~~\n\n**UPDATE 2018.09.27**\n\n如今giment也GG了，正式换成[valine](https://valine.js.org/hexo.html)，顺带把主题升级到6.x了，累=。=\n\n**UPDATE 2019.06.01**\n\n改用[gridea](https://github.com/getgridea/gridea)管理博客了，挺好用的，现在的评论系统是内置的gittalk。\n\n### 起因\n\n[多说不再提供评论服务。](http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241)",
-      "fileName": "use_HyperComments_from_today_on"
+      "fileName": "use_hypercomment_from_today_on"
     },
     {
       "content": "\n最近想学学集合框架的源代码，结果画风是这样的：\n\n``` Java\nboolean addAll(Collection<? extends E> c);\ndefault boolean removeIf(Predicate<? super E> filter) {\n\t...\n}\nboolean containsAll(Collection<?> c);\n```\n\n一下就暴露了泛型没好好学的锅= =，今天总结一下。\n\n<!--more-->\n\n下文统一使用这两个类进行说明。\n\n``` Java\nclass Fruit {}\nclass Apple extends Fruit {}\n```\n\n### 泛型中的通配符\n\n#### 上边界限定通配符\n\n用法：`<? extends Fruit>`\n\n即当前类型 `X = ? extends Fruit`，类似`X <= Fruit`的感觉\n\n这个X类型，表示是某个Fruit子类(或者Fruit本身)的类型，这也就意味着X类型有多种可能性，而编译器无法判定是哪一个类型，所以通过这种方法声明的List无法添加元素，只允许取出元素，取出的元素全都会向上转型。\n\n#### 下边界限定通配符/超类型的通配符\n\n用法：`<? super Fruit>`\n\n即当前类型 `X = ? super Fruit`，类似`X >= Fruit`的感觉\n\n这里的X类型，表示是某个Fruit父类(或者Fruit本身)的类型，虽然这里的X的类型也有多种可能性，但是编译器可以断定，只要加入的类型是Fruit子类或者Fruit本身，就一定可以向上转型。所以通过这种方法声明的List允许添加Fruit及其子类型的对象，加入的对象会自动向上转型成Fruit。\n\n与上边界通配符的配合：\n``` Java\nclass Test {\n    public static <T> void copy(List<? super T> dest, List<? extends T> src) {\n        for (int i = 0; i < src.size(); i++)\n            dest.set(i, src.get(i));\n    }\n}\n```\n\n#### 无边界通配符\n\n用法：`<?>`\n\n即当前类型X不限定范围，可能是任意的一个类型。所以自然也就无法向其添加任何元素了。用法类似于`extends`，不过`get`出来的是`Object`类型就是了。\n\n### PS\n\n引子中的`removeIf`是一个默认方法，不得不赞一发，既扩展了接口方法，又不使得实现接口的类去添加新方法的覆盖，具体见参考资料。之后别人再问接口和抽象类的区别，就不能说普通类实现接口一定要实现所有方法了，2333。\n\n### 参考资料\n\n1. [Java 泛型总结（三）：通配符的使用](https://segmentfault.com/a/1190000005337789#articleHeader0)\n2. [Java 8 默认方法（Default Methods）](http://ebnbin.com/2015/12/20/java-8-default-methods/)\n\n\n\n---\n\n**广告时间**\n\n\n\n\n> *Java学习网站*: <a href=\"http://how2j.cn?p=23251\" target=\"_blank\">![how2j](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true)</a>\n\n> *VPS*: <a href=\"https://www.vultr.com/?ref=7255071\" target=\"_blank\">![VPS](https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true)</a>\n\n",
@@ -595,7 +592,7 @@
     {
       "name": "HyperComments",
       "slug": "hypercomments",
-      "used": true
+      "used": false
     },
     {
       "name": "Java",
