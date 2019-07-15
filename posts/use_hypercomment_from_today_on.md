@@ -79,7 +79,7 @@ hypercomments_id: xxxx
 #### 3. 最终步骤：改写和添加文件
 
 首先是文件`/themes/next/layout/_macro/post.swig`，打开后，在如下位置添加代码。其中**第5行到第16行**是新添代码，具体位置使用编辑器ctrl + f查找`<span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>`即可找到。
-``` javascript
+```
                 <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
                 </a>
@@ -101,7 +101,7 @@ hypercomments_id: xxxx
 ```
 
 接着修改`themes/next/layout/_partials/comments.swig`，**第8行到第9行**为新增代码
-``` javascript
+```
     {% elseif theme.disqus_shortname %}
       <div id="disqus_thread">
         <noscript>
@@ -117,14 +117,14 @@ hypercomments_id: xxxx
 ```
 
 然后修改`themes/next/layout/_scripts/third-party/comments.swig`，**第3行**为新增代码
-``` javascript
+```
 {% include './comments/duoshuo.swig' %}
 {% include './comments/disqus.swig' %}
 {% include './comments/hypercomments.swig' %}
 ```
 
 最后新建文件`themes/next/layout/_scripts/third-party/comments/hypercomments.swig`，写入：
-``` javascript
+```
 {% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname and not theme.disqus_shortname %}
 
 	{% if theme.hypercomments_id %}
