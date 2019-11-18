@@ -1,0 +1,258 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GitHub入门与实践 笔记+书评 | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              GitHub入门与实践 笔记+书评
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-11-23 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/YPEHsObo-g" class="post-tag">
+                  # git
+                </a>
+              
+                <a href="https://goozy.github.io//tag/OHDnctsRw9" class="post-tag">
+                  # 笔记
+                </a>
+              
+                <a href="https://goozy.github.io//tag/xNfB8A-HFS" class="post-tag">
+                  # 开源
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <h3 id="笔记">笔记</h3>
+<ul>
+<li>
+<p><code>git diff HEAD</code> (查看本次提交和上次提交的区别)</p>
+</li>
+<li>
+<p><code>git reset --hard hashValue</code> 回退到哈希值对应版本。这条命令会把你工作目录中所有未提交的内容清空(当然这不包括未置于版控制下的文件 untracked files)</p>
+</li>
+<li>
+<p><code>git checkout -- xx.txt</code> 恢复单个文件</p>
+</li>
+<li>
+<p><code>git commit --amend</code> 修改最近一次的提交信息</p>
+</li>
+<li>
+<p><code>git commit -am '...'</code> 个别文件修改时，直接这样，省事。</p>
+<!--more-->
+</li>
+<li>
+<p><strong>分支操作</strong></p>
+<ul>
+<li><code>git branch</code> (显示分支一览表)</li>
+<li><code>git branch xxx</code> (创建分支xxx)</li>
+<li><code>git checkout xxx</code> (切换到分支xxx)</li>
+<li><code>git checkout -b xxx</code> (上方两命令的合成)</li>
+<li><code>git checkout -</code> (切换回上一个分支)</li>
+<li><code>git merge --no-ff xxx</code> (合并xxx到当前分支，关闭fast-forward，保留commit历史)</li>
+<li><code>git branch -D xxx</code> 删除分支xxx</li>
+<li><code>git branch -a</code> (查看所有分支)</li>
+<li><code>git branch -r</code> (查看远程分支)</li>
+</ul>
+</li>
+<li>
+<p><code>git reflog</code> (查看当前仓库的操作日志)</p>
+</li>
+<li>
+<p>发送pull request</p>
+<ul>
+<li>首先网页上fork</li>
+<li>然后<code>git clone git@github.com:username/proName</code></li>
+<li>创建特性(Topic)分支。
+<ul>
+<li><code>git checkout -b work xxx</code>(xxx为源分支)</li>
+</ul>
+</li>
+<li>修改文件</li>
+<li><code>git diff</code>查看修改是否正确进行</li>
+<li>全部确认完毕后提交到本地仓库。<code>git add xxx</code> 和 <code>git commit -m 'xxx'</code></li>
+<li>由于目前只建立了本地的分支work，还需在远程建立此分支。<code>git push origin work</code> 在远程建立这个分支。</li>
+<li>从网页进入分支。提交PR</li>
+</ul>
+</li>
+<li>
+<p><code>git fetch xxx</code> 更新分支xxx到最新版本。此时需要手动进行merge。这种做法比较安全</p>
+</li>
+<li>
+<p>接收pull request</p>
+<ul>
+<li>首先，我们把<strong>接收方</strong>仓库clone到本地。已经clone过的，就通过pull更新到最新版。</li>
+<li>然后，把<strong>发送方</strong>的仓库设置为远程仓库(<code>git remote add name git@github.com:prSender/repoName</code>)。接着fetch到本地。</li>
+<li>建立一个分支merge刚才fetch的内容。接着就是看看程序是否没有问题。</li>
+<li>没问题，你就把这个分支删了吧。</li>
+<li>最后到网页接收PR即可。
+<ul>
+<li>当然，也可以切换到主分支，进行合并，然后push到github，此时PR会自动关闭。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>与github相互协作的工具或服务</p>
+<ul>
+<li>hub。完全包含git的所有命令，并且对其进行了简化和扩展。</li>
+<li>Travis CI(Continuous Integration)。可以在开发者执行提交后立即进行测试和构建。Travis Weblint检查配置文件.travis.yml是否错误。有些仓库的readme中显示有些条状状态，正是Travis CI的测试结果的显示。</li>
+<li>Coveralls。代码覆盖率检测服务。</li>
+<li>Gemnasium。查询github仓库正在使用的RubyGems或npm(Node Package Manager)，让开发者了解自己是否正在使用新版本进行开发。</li>
+<li>Code Climate。只支持Ruby，提供代码分析报告服务，对代码质量进行评定，指出质量有问题代码。收费。</li>
+<li>Jenkins。持续集成开发服务。主要用于持续、自动地构建/测试软件项目和监控一些定时执行的任务。</li>
+</ul>
+</li>
+</ul>
+<h3 id="书评">书评</h3>
+<p>这本书可以算是一本<strong>工具书</strong>+<strong>经验书</strong>。  书中有很多的命令，所以记笔记是必须的。另外作者也会根据自己的经历给出一些开发中需要注意的事项。对于入门而言我觉得是极好的一本书，剩下的提高就要看自己之后的实践了。此外书不大，作为参考书放着也是极好的。</p>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/Codeforces-706E-Working-routine-模拟链表">
+              <h3 class="post-title">
+                Codeforces 706E Working routine (模拟链表)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

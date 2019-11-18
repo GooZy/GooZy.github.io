@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arnold变换(附Python实现) | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Arnold变换(附Python实现)
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2018-04-29 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/ZW1qE1bs1q" class="post-tag">
+                  # 图像
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <h3 id="介绍">介绍</h3>
+<p>首先是一个概念：置乱。意即将图像的信息次序打乱，使其变换成杂乱无章难以辨认的图像。</p>
+<p>用处大概就是：对图像加个密，除非你暴力破解，否则你不知道这是个啥。<s>所以就能安心地在百度云上存些蜜汁图片<sub>(≧▽≦)/</sub>啦</s></p>
+<!--more-->
+<h3 id="arnold变换">Arnold变换</h3>
+<p>也叫做猫脸变换，因为提出该算法的人当时是在一张猫的图片上操作，因此而得名= =</p>
+<p>这个变换公式很简单：</p>
+<figure data-type="image" tabindex="1"><img src="https://user-images.githubusercontent.com/12698567/39406471-c4080f28-4be9-11e8-99f6-42f9a190093c.jpg" alt="公式"></figure>
+<p>这里N代表图像的长宽，意即需要是正方形。当然，如果你想在长方形上尝试，把长方形切割成多个正方形，分别对正方形操作即可。Xn和Yn是原图像像素点位置，Xn+1和Yn+1该像素点的新位置。</p>
+<p>有两点十分神奇，我也不知道为什么：</p>
+<ol>
+<li>单次变换后，所有像素点一一映射，也就是单映射。</li>
+<li>经过一定的变换次数后，图像会变换成原来的样子。</li>
+</ol>
+<h3 id="算法实现大致思路">算法实现大致思路</h3>
+<p>原图到新图就不说了，直接照着公式来。还原的话，只需要在公式两边乘上逆矩阵即可。</p>
+<p>具体可以看代码的arnold和iarnold部分：<a href="https://github.com/GooZy/EasyW/blob/master/easyw/common/utils.py">传送门</a></p>
+<h3 id="参考资料">参考资料</h3>
+<ol>
+<li><a href="https://blog.csdn.net/yezi_happy/article/details/52804574">Arnold变换置乱图像</a></li>
+<li><a href="https://blog.csdn.net/shuaishuai3409/article/details/50830196">python中有关矩阵的创建、求逆、转置</a></li>
+<li><a href="https://baike.baidu.com/item/%E7%BD%AE%E4%B9%B1/6575561?fr=aladdin">百度百科：置乱</a></li>
+</ol>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p>Java学习网站: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/日本之旅-4-4-4-14">
+              <h3 class="post-title">
+                日本之旅(4.4~4.14)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

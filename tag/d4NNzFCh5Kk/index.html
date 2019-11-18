@@ -1,0 +1,144 @@
+<html>
+  <head>
+  <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>二进制 | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="current-tag-container">
+            <h2 class="title">
+                标签：#二进制
+            </h2> 
+        </div>
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://goozy.github.io//post/HDU-5812-Distance">
+        <h2 class="post-title">HDU 5812 Distance</h2>
+      </a>
+      <div class="post-info">
+        <time class="post-time">
+          · 2016-08-10 ·
+        </time>
+        
+          <a href="https://goozy.github.io//tag/IuY569NX66" class="post-tag">
+            # 实现
+          </a>
+        
+          <a href="https://goozy.github.io//tag/d4NNzFCh5Kk" class="post-tag">
+            # 二进制
+          </a>
+        
+          <a href="https://goozy.github.io//tag/UDd28DenQL2" class="post-tag">
+            # 数学
+          </a>
+        
+      </div>
+      
+      <div class="post-abstract">
+        <h3 id="题目链接">题目链接：</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5812">HDU 5812 Distance</a></p>
+<h3 id="题意分析">题意分析：</h3>
+<p>给出一个空集合和三个操作。操作I向集合中插入元素X，操作D删除集合中的元素X，操作Q，查询集合中与X的最小距离最小是多少？<br>
+定义最小距离 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">d(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 为从x变为y只通过乘或者除素数所需要的最少操作。例如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>(</mo><mn>15</mn><mo separator="true">,</mo><mn>50</mn><mo>)</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">d(15, 50) = 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord">1</span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>，因为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>15</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>×</mo><mn>2</mn><mo>×</mo><mn>5</mn><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">15 / 3 \times 2 \times 5 = 50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">/</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span></span></span></span></p>
+
+      </di>
+    </article>
+  
+</div>
+
+        <div class="pagination-container">
+  
+  
+</div>
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

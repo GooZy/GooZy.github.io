@@ -1,0 +1,204 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>建站小记 | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              建站小记
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-04-13 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/bTC1fX-QmEd" class="post-tag">
+                  # 杂谈
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <h2 id="写在前面">写在前面</h2>
+<blockquote>
+<p>昨晚折腾到了凌晨4点，总算是收尾了，祝贺下~这篇也不打算讲具体如何建站，这类教程网上都是。所以打算总结下这期间比较让我费时的事情。</p>
+</blockquote>
+<!--more-->
+<h2 id="推荐一个hexo主题next">推荐一个hexo主题：NexT</h2>
+<p>1.NexT很简洁，本站就是采用了NexT提供的三种主题中的NexT.Pisces<br>
+2.官方教程十分详细，基本按着教程来，80%的问题都是能解决的。附地址：<a href="http://theme-next.iissnan.com/getting-started.html">点我</a><br>
+3.当然，一切的前提是你已经部署好了博客XD</p>
+<h2 id="关于favicon">关于Favicon</h2>
+<p>官方说把ico图标命名为<strong>favicon.ico</strong>放到站点配置的<strong>source</strong>目录下即可，但是我的并不行，需要把图标放在<strong>themes/next/source</strong>下才可行</p>
+<h2 id="推荐布置博客方法">推荐布置博客方法</h2>
+<ul>
+<li>
+<p>在github上的仓库中建立两个分支，其中master分支存放hexo生成的站点，另一个分支用于存放站点部署文件，也就是本地的那个文件。这样就不用担心换了电脑还得随身带着本地部署这种事情了。</p>
+</li>
+<li>
+<p>具体参考此人博客：<a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more">点我</a></p>
+</li>
+<li>
+<p>有几点需要注意：<br>
+1.记得把分支设为默认分支，具体在仓库页面的<strong>setting</strong>中设置,否则会使得push到本地仓库的是<strong>master</strong>。<br>
+2.上传到git的部署文件不会将主题文件同步上去，因为主题本身是个仓库，网上说只需把主题里面的**.git**删除即可。<s>然而对我没什么用，所以目前我是打算将来更新直接自己手动备份主题......</s></p>
+</li>
+</ul>
+<p><strong>Update</strong>: 删除github上分支里的themes文件夹，然后删除本地next里面的.git文件，重新上传到github就能同步备份了。</p>
+<h2 id="如何为文章分配到子分类">如何为文章分配到子分类</h2>
+<p>具体的说法就是，比如某篇文章属于**“生活”<strong>分类下的</strong>“日志”**分类。那么只需在文章头添加</p>
+<pre><code>categories: [生活,日志]
+</code></pre>
+<p>最终会生成分类信息：</p>
+<pre><code>- 生活(1)
+  - 日志(1)
+</code></pre>
+<p>顺便一提：多个书签也是同样的方法并排书写即可。</p>
+<h2 id="最后呢推荐一款windows下的本地markdown编辑器">最后呢，推荐一款windows下的本地markdown编辑器</h2>
+<p>地址来啦：<a href="https://github.com/chenguanzhou/MarkDownEditor/releases">免费哦，开源哦~</a></p>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/POJ-1986-Distance-Queries-LCA">
+              <h3 class="post-title">
+                POJ 1986 Distance Queries (LCA)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POJ 1426 Find The Multiple (BFS) | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              POJ 1426 Find The Multiple (BFS)
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-04-17 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/1QNfehj7JhS" class="post-tag">
+                  # BFS
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p><font color="#6495ED"><strong>题目链接：</strong></font><br>
+<a href="http://acm.pku.edu.cn/JudgeOnline/problem?id=1426">POJ 1426 Find The Multiple (BFS)</a></p>
+<p><font color="#6495ED"><strong>题意分析：</strong></font><br>
+给出一个数字n，查找一个只由0和1构成的数字，使得这个数字能够整除n。输出一个这样的数字。</p>
+<!--more-->
+<p><font color="#6495ED"><strong>解题思路：</strong></font><br>
+首先第一个数肯定是1，然后不断得枚举添加0或者1，用BFS进行搜索即可。这里要注意两点：<br>
+1.长度很大的数字取余数可以使用从左到右解析的方式，所以每一次我们保留下解析后的余数即可，然后使用余数作为标记。<br>
+2.这就要求我们需要另开一个数组来存答案，所以BFS里面存的是结构体。</p>
+<p><font color="#6495ED"><strong>个人感受：</strong></font><br>
+不知道POJ上面那些肯定long long能存的下的人结论是哪里来的。想到了余数计算就行，却没想到怎么标记，加油~</p>
+<p><font color="#6495ED"><strong>具体代码如下：</strong></font></p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;cctype&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;iomanip&gt;
+#include&lt;iostream&gt;
+#include&lt;map&gt;
+#include&lt;queue&gt;
+#include&lt;set&gt;
+#include&lt;sstream&gt;
+#include&lt;stack&gt;
+#include&lt;string&gt;
+#define lowbit(x) (x &amp; (-x))
+#define ll long long
+#define pr(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; (x) &lt;&lt; '\n';
+using namespace std;
+
+struct P {
+    char ans[111];
+    int cnt;
+    int mod;
+};
+bool vis[311];
+
+int main()
+{
+    int n;
+    while (~scanf(&quot;%d&quot;, &amp;n) &amp;&amp; n) {
+        queue&lt;P&gt; q;
+        memset(vis, 0, sizeof vis);
+        P st;
+        st.cnt = 1;
+        st.ans[0] = '1';
+        st.mod = 1 % n;
+        q.push(st);
+
+        while (q.size()) {
+            P cur = q.front(); q.pop();
+            if (cur.mod == 0) {
+                for (int i = 0; i &lt; cur.cnt; ++i) printf(&quot;%c&quot;, cur.ans[i]);
+                putchar('\n');
+                break;
+            }
+            vis[cur.mod] = 1;
+
+            cur.cnt = cur.cnt + 1;
+            cur.ans[cur.cnt - 1] = '0';
+            cur.mod = (cur.mod * 10) % n;
+            if (!vis[cur.mod])
+                q.push(cur);
+            cur.ans[cur.cnt - 1] = '1';
+            cur.mod = (cur.mod + 1) % n;
+            if (!vis[cur.mod])
+                q.push(cur);
+        }
+    }
+    return 0;
+}
+
+</code></pre>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/POJ-3264-Balanced-Lineup-RMQ-ST">
+              <h3 class="post-title">
+                POJ 3264 Balanced Lineup (RMQ,ST)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

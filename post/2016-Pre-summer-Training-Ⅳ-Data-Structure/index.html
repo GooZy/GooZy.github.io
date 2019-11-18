@@ -1,0 +1,277 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2016 Pre-summer Training Ⅳ - Data Structure | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              2016 Pre-summer Training Ⅳ - Data Structure
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-07-10 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/74OGfzJjO" class="post-tag">
+                  # 总结
+                </a>
+              
+                <a href="https://goozy.github.io//tag/LIg4ghwOnb" class="post-tag">
+                  # 数据结构
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <h3 id="前言">前言</h3>
+<p>数据结构亦可赛艇！我已经中了树的煮粥XD坐等官方题解，学习一波剩下的题Orz 丧病韬面向AC出数据，至今不会那题TAT</p>
+<!--more-->
+<hr>
+<h3 id="b-发糖游戏11">B. 发糖游戏1+1</h3>
+<h4 id="题意">题意</h4>
+<p>两种姿势发糖，具体看题目描述= =</p>
+<h4 id="分析">分析</h4>
+<ol>
+<li>线段树 单点更新，区间查询 + 区间更新，单点查询</li>
+</ol>
+<h4 id="思考">思考</h4>
+<ol>
+<li>坑点： 无。</li>
+<li>技巧： 基础。</li>
+</ol>
+<hr>
+<h3 id="e-组队方案数">E. 组队方案数</h3>
+<h4 id="题意-2">题意</h4>
+<p>寻找公比为k的三个数的个数（这三个数根据相对位置从左到右排列）。</p>
+<h4 id="分析-2">分析</h4>
+<ol>
+<li>找等比数列。相对位置确定，如果当前数字为x，那么我们从后往前统计的话，就能知道有多少个kx，顺带也能统计出kx之后有多少个kkx。使用两个map，一个存kx，一个存kkx。2. 设两个map分别为ans和cnt，ans[i]记录i和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">i\times k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>的组合个数，cnt[i]记录到目前位置i出现了多少次。</li>
+<li>所以有转移：<br>
+答案 += ans[当前值 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">\times k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">×</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>];<br>
+ans[当前值] += cnt[当前值 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">\times k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">×</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>];<br>
+++cnt[当前值];</li>
+</ol>
+<h4 id="思考-2">思考</h4>
+<ol>
+<li>坑点： 公比为0、1之类的。之前转移没考虑清楚还特判这种情况，现在的转移不需要特判。</li>
+<li>技巧： 思考。</li>
+</ol>
+<hr>
+<h3 id="f-goozy挑战最强大脑">F. goozy挑战最强大脑</h3>
+<h4 id="题意-3">题意</h4>
+<p>初始总值为1，操作1：总值乘X，操作2：总值除第X次出现的乘数。给出每次操作之后总值模72807249之后的值。</p>
+<h4 id="分析-3">分析</h4>
+<ol>
+<li>除一个以前乘的数，相当于那个数变成了1。</li>
+<li>线段树单点更新，区间查询。</li>
+</ol>
+<h4 id="思考-3">思考</h4>
+<ol>
+<li>坑点： 区间查询用query会慢，由于是总区间值，直接输出sum[1]就好了。</li>
+<li>技巧： 转换思维。</li>
+</ol>
+<hr>
+<h3 id="g-线段树写个爽">G. 线段树写个爽</h3>
+<h4 id="题意-4">题意</h4>
+<p>如题，各式区间更新。</p>
+<h4 id="分析-4">分析</h4>
+<ol>
+<li>操作1需要全部加上一个值c，最基础的区间标记。</li>
+<li>操作2标记区间左值和右值以及公差</li>
+<li>操作3标记是否转换即可</li>
+<li>操作4，区间查询</li>
+</ol>
+<h4 id="思考-4">思考</h4>
+<ol>
+<li>坑点： 记得开long long啊，不然WA个爽！另外细节要考虑清楚！</li>
+<li>技巧： 凡是涉及到修改数据的操作，都要标记下传。如果有操作3存在，那么它之前的其它操作都无效。</li>
+</ol>
+<hr>
+<h3 id="h-这是一个标题">H. 这是一个标题</h3>
+<h4 id="题意-5">题意</h4>
+<p>求区间最大连续和。</p>
+<h4 id="分析-5">分析</h4>
+<ol>
+<li>三个标记，lsum从左开始的最大和，sum区间最大和，rsum从右开始的最大和。区间合并经典题。</li>
+</ol>
+<h4 id="思考-5">思考</h4>
+<ol>
+<li>坑点： 无。</li>
+<li>技巧： 设定状态，好好转移。</li>
+</ol>
+<hr>
+<h3 id="k-这是一颗普通的树">K. 这是一颗普通的树</h3>
+<h4 id="题意-6">题意</h4>
+<p>这是一颗普通的树，普通到需要树链剖分才能解决。</p>
+<h4 id="分析-6">分析</h4>
+<ol>
+<li>树链剖分之后就是基础的线段树操作了。</li>
+</ol>
+<h4 id="思考-6">思考</h4>
+<ol>
+<li>坑点： 无。</li>
+<li>技巧： 树链剖分。</li>
+</ol>
+<hr>
+<h3 id="l-数列维护">L. 数列维护</h3>
+<h4 id="题意-7">题意</h4>
+<p>完成对数列的五种操作。</p>
+<h4 id="分析-7">分析</h4>
+<ol>
+<li>splay。推荐hiho一下 104 周和 105 周的splay专题。</li>
+<li>基于splay的特点，每次都能将需要操作的一段区间旋转到特定子树上，所以操作就好进行了。</li>
+</ol>
+<h4 id="思考-7">思考</h4>
+<ol>
+<li>坑点： 无。</li>
+<li>技巧： splay。</li>
+</ol>
+<hr>
+<h3 id="具体代码点击下方传送门">具体代码点击下方传送门:)</h3>
+<p><a href="https://github.com/GooZy/Codes/tree/master/OJ-CQU/2016%20Pre-summer%20Training%20%E2%85%A3%20-%20Data%20Structure">传送门</a></p>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/hiho计划之hiho一下">
+              <h3 class="post-title">
+                hiho计划之hiho一下
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

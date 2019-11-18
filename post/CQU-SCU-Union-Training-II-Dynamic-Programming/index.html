@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CQU&amp;SCU Union Training II - Dynamic Programming | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CQU&amp;SCU Union Training II - Dynamic Programming
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-05-23 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/74OGfzJjO" class="post-tag">
+                  # 总结
+                </a>
+              
+                <a href="https://goozy.github.io//tag/4nMYWIgu9f3" class="post-tag">
+                  # 动态规划
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <h3 id="前言">前言</h3>
+<p>DP专题。斜率优化，单调队列，还有各种迷之姿势，反正这个专题我是废了Orz。</p>
+<!--more-->
+<hr>
+<h3 id="a-雷神之路">A. 雷神之路</h3>
+<h4 id="题意">题意</h4>
+<p>询问从0到n一共有多少种走法，每次可以走1、2、3步，有些点不能走。(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>1</mn></msup><mn>8</mn></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord">8</span></span></span></span>)</p>
+<h4 id="分析">分析</h4>
+<ol>
+<li>很容易想到dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3]，然后地雷点dp[i] = 0。</li>
+<li>华丽丽的由于矩阵乘法矩阵位置不对debug了好久。另外一直不知道怎么处理地雷，其实地雷就是原先的矩阵得出的下一个的值为0，那么根据这点构造地雷矩阵即可。</li>
+</ol>
+<h4 id="思考">思考</h4>
+<ol start="3">
+<li>坑点： 无。</li>
+<li>技巧： 使用矩阵快速幂。分A类矩阵、B类矩阵计算。</li>
+</ol>
+<hr>
+<h3 id="c-taosama与煎饼">C. TaoSama与煎饼</h3>
+<h4 id="题意-2">题意</h4>
+<p>煎饼工作台有(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>350</mn></mrow><annotation encoding="application/x-tex">1 \leq n \leq 350</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">5</span><span class="mord">0</span></span></span></span>)的格子，煎饼通过每个格子会提升口感ai，初始时煎饼在位置1，所以初始口感度为a1。然而煎饼不能自己移动，必须使用Taosama的(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">1 \leq m \leq 120</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">0</span></span></span></span>)个小道具才能移动，每个小道具只能使用一次，每次移动距离bi(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>b</mi><mi>i</mi><mo>≤</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">1 \leq bi \leq 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>)，保证同样距离的小道具总数不超过40。</p>
+<h4 id="分析-2">分析</h4>
+<ol>
+<li>格子，移动，第一个想法是背包，开搞，答案怎么不对= =额，使用顺序会影响结果啊！ZZ。</li>
+<li>怎么存这顺序呢= =，重新看题目，移动距离1到4，不超过40，关键字啊，新状态dp[i][j][k][l]移动到i使用了第一个、第二个、第三个道具的数量，嗯，第四个相减就能出来嘛~不过这种状态爆内存啊！GG。</li>
+<li>问fly我爆内存了咋办，他说开三维就够了。于是豁然开朗，第一维位置没用啊！然后搞，诶，怎么样例二答案不对= =。左思右想，不对啊，得四维，第四个道具不能由前三个计算出来，算了下不会爆内存，搞！然后AC了~</li>
+</ol>
+<h4 id="思考-2">思考</h4>
+<ol>
+<li>坑点： 没有吧</li>
+<li>技巧： 正如PPT所说，不管别的，状态开出来再说，优化等开出来后再考虑。</li>
+</ol>
+<hr>
+<h3 id="e-goozy的积木">E. Goozy的积木</h3>
+<h4 id="题意-3">题意</h4>
+<p>用(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">1 \leq n \leq 50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span></span></span></span>)个积木，最高能搭建多高的两个塔？</p>
+<h4 id="分析-3">分析</h4>
+<ol>
+<li>这不正是ppt上说的那道题吗？dp[i][j]代表到第i个积木，两塔高度差为j时，最大的共同高度，那么答案就是dp[n][0]了。初始化dp[0][0]为0，其它为负无穷（都是不合法状态）</li>
+<li>转移写了半天，最后自己都搞混了。自己定义的状态没有记清楚，搞得debug了半天。</li>
+</ol>
+<h4 id="思考-3">思考</h4>
+<ol>
+<li>坑点： 没有。</li>
+<li>技巧： 一定要记得自己状态代表的含义啊！！！<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">×</span><span class="mord">3</span></span></span></span></li>
+</ol>
+<hr>
+<h3 id="h-又见背包">H. 又见背包</h3>
+<h4 id="题意-4">题意</h4>
+<p>有(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1 \leq n \leq 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span>)种大小不同的数字a_i,每种(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>m</mi><mi>i</mi></msub><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq m_i \leq 10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7859700000000001em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span>)个，判断是否可以从这些数字中选出若干使它们的和恰好为(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq k \leq 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>)。</p>
+<h4 id="分析-4">分析</h4>
+<ol>
+<li>诶！这不是男人八题？！多重背包 + 二进制优化 + bool型dp。</li>
+<li>出题组说二进制优化会被卡！不管了，先写T了再说。结果AC，时间72ms。饿= =。</li>
+</ol>
+<h4 id="思考-4">思考</h4>
+<ol>
+<li>坑点： 没有。</li>
+<li>技巧： 使用bool型进行转移的话，比起平常调用max函数效率要快不少。另外，本题正解应该是多重背包的单调队列优化，复杂度O(V*N)。然而这种科技就留给fly和xf去吧，2333。</li>
+</ol>
+<hr>
+<h3 id="l-来签个到吧">L. 来签个到吧</h3>
+<h4 id="题意-5">题意</h4>
+<p>初始有n个球，球上写着数字，第一阶段的任务是让任意两个球上数字之差都在这些球上出现（通过添加球办到），此阶段操作数固定，为放进球的个数；第二阶段需要任意从中抽出球，抽出后放回，直到所有数字都被拿出。问：两阶段的操作数期望值是多少？</p>
+<h4 id="分析-5">分析</h4>
+<ol>
+<li>第一阶段的任务就是把原始的数列变成等差数列，求公共gcd即可。</li>
+<li>第二阶段要算期望了，默默想到一个状态，dp[i]代表拿到i张卡片的期望操作数，发现无法转移，GG。于是就上网查资料，发现了这个有趣的链接：<a href="http://www.guokr.com/article/5583/">传送</a></li>
+</ol>
+<h4 id="思考-5">思考</h4>
+<ol>
+<li>坑点： 数列中的值存在0，此时不能把0考虑进入gcd。</li>
+<li>技巧： 说好的dp呢？转移呢？怎么就变成解数学期望题了！！！把取到第i个数的平均次数相加就是期望次数，果然高中到现在，还是觉得概率啊，期望啊这种东西太迷了。</li>
+</ol>
+<hr>
+<h3 id="具体代码点击下方传送门">具体代码点击下方传送门:)</h3>
+<p><a href="https://github.com/GooZy/Codes/tree/master/OJ-SCU/CQU%26SCU%20Union%20Training%20II%20-%20Dynamic%20Programming">传送门</a></p>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/CQU-SCU-Union-Training-I-Searching-and-Strings">
+              <h3 class="post-title">
+                CQU&amp;SCU Union Training I - Searching and Strings
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

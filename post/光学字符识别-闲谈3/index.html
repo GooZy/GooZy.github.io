@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>光学字符识别-闲谈3 | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              光学字符识别-闲谈3
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2018-01-24 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/ZW1qE1bs1q" class="post-tag">
+                  # 图像
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <h3 id="本期题目">本期题目</h3>
+<p>在给出的10000张图片中，有一个单词重复出现了两次，请找出这个单词~</p>
+<!--more-->
+<p>来源：千里码 → <a href="http://www.qlcoder.com/task/7557">传送门</a></p>
+<h3 id="正经">正经</h3>
+<p>首先当然是下载文件包，看看需要识别的都是什么图片啦。发现大部分都经过了旋转，变形倒没有，所以可以说是省下很大一笔功夫，然后调用开源的Tesseract-OCR愉快地识别。所以重点应该就是在如何把图片旋转回来:p</p>
+<p>先交代下我旋转前的前置步骤，放大-&gt;灰度-&gt;二值，OpenCV轻松完成。</p>
+<p>然后来个巨模糊的高斯模糊，主要就是为了让图片糊在一起，二值化后就只剩一个椭圆形轮廓。然后找到该轮廓的最小外接矩形，如果该矩形旋转度数为0，则不进行后续操作。否则，我们就去找矩形的上方、下方、左方、右方顶点。</p>
+<p>有了这四个顶点后，根据上方和下方顶点的相对位置，我们就能判定矩形到底是怎么斜的了，无非两种情况：k &gt; 0 || k &lt; 0。这个斜率k呢，我们可以用两条短边的中点算出来，这样倒着旋转度数，就可以开心地得到正常角度的单词啦<sub>(≧▽≦)/</sub>这里要注意OpenCV的坐标系，否则容易搞错顶点，如下图：</p>
+<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/coordinate.png" alt="坐标系"></figure>
+<p>最后就是愉快的识别啦，首先直接拿下载的Tesseract-OCR进行识别，结果惨不忍睹，然后发现可以限定只识别小写字母以及单行处理，结果也是bad。无奈ㄟ( ▔, ▔ )ㄏ，只好自己动手，丰衣足食，进行训练，训练要记住的要点就是：找到26个字母都在训练集里就行！哇，我随机找了50张，标完了才发现还少了几个字母，被自己蠢哭TAT</p>
+<h3 id="闲谈">闲谈</h3>
+<p>17年年末的夙愿=。=，结果拖到了现在才做完。当初大一数字识别各种网上找资料，MFC简直反人类。工作后接触比较多的就是OCR了，证照识别，验证码识别，不过仅仅都如前文所说，只是尽力做些预处理，真正核心的识别原理还没时间去了解，这个下来自己也想好好看看，嘿嘿😜</p>
+<p>本期代码链接 → <a href="https://github.com/GooZy/OCR">传送门</a></p>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/无边界地图-闲谈2">
+              <h3 class="post-title">
+                无边界地图[闲谈2]
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HDU 3966 Aragorn&#39;s Story (树链剖分,线段树) | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              HDU 3966 Aragorn&#39;s Story (树链剖分,线段树)
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-04-23 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/2utkjtvNMq9" class="post-tag">
+                  # 树链剖分
+                </a>
+              
+                <a href="https://goozy.github.io//tag/teMS9DG9f65" class="post-tag">
+                  # 线段树
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p><font color="#6495ED"><strong>题目链接：</strong></font><br>
+<a href="http://acm.hdu.edu.cn/showproblem.php?pid=3966">HDU 3966 Aragorn's Story (树链剖分,线段树)</a></p>
+<p><font color="#6495ED"><strong>题意分析：</strong></font><br>
+有三种操作，操作I：增加一个区间中结点的值；操作D：减少一个区间中结点的值；操作Q：查询结点值。</p>
+<!--more-->
+<p><font color="#6495ED"><strong>解题思路：</strong></font><br>
+将整棵树剖分成链，用线段树来维护。——树链剖分。<br>
+树链剖分巧妙地将同一条重链安排在了一起，这样变成一条总链的时候，只需要一条一条重链地更新或者查询就行了。具体还是建议上网找份PPT看。</p>
+<p><font color="#6495ED"><strong>个人感受：</strong></font><br>
+RE-&gt;WA-&gt;AC。RE应该是和lazy数组更新有关，后期WA是因为区间更新写错了。不过如今真得觉得线段树不难呀，以前要死要活的，哈哈</p>
+<p><font color="#6495ED"><strong>具体代码如下：</strong></font></p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;cctype&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;iomanip&gt;
+#include&lt;iostream&gt;
+#include&lt;map&gt;
+#include&lt;queue&gt;
+#include&lt;set&gt;
+#include&lt;sstream&gt;
+#include&lt;stack&gt;
+#include&lt;string&gt;
+#define ll long long
+#define pr(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; (x) &lt;&lt; '\n';
+using namespace std;
+
+const int INF = 0x7f7f7f7f;
+const int MAXN = 5e4 + 111;
+const int MAXM = 1e5 + 111;
+
+struct Edge {
+    int to, next;
+}edge[MAXM];
+int head[MAXN];
+// 它们分别是：深度，重儿子，儿子数，链顶端，父亲节点，在数组中位置，位置代表的节点
+int dep[MAXN], son[MAXN], num[MAXN], top[MAXN], fa[MAXN], p[MAXN], fp[MAXN];
+int enemy[MAXN];
+int pos, tol;
+
+void init(int n) {
+    for (int i = 1; i &lt;= n; ++i) {
+        son[i] = head[i] = -1;
+    }
+    pos = tol = 0;
+}
+
+void addedge(int u, int v) {
+    edge[tol].to = v, edge[tol].next = head[u], head[u] = tol++;
+}
+
+void dfs1(int u, int pre, int d) {
+    dep[u] = d;
+    fa[u] = pre;
+    num[u] = 1;
+    for (int i = head[u]; ~i; i = edge[i].next) {
+        int v = edge[i].to;
+        if (v != pre) {
+            dfs1(v, u, d + 1);
+            num[u] += num[v];
+            if (son[u] == -1 || num[son[u]] &lt; num[v]) {
+                son[u] = v;
+            }
+        }
+    }
+}
+
+void dfs2(int u, int f) {
+    p[u] = ++pos;
+    top[u] = f;
+    fp[p[u]] = u;
+    if (son[u] == -1) return;
+    dfs2(son[u], f);
+    for (int i = head[u]; ~i; i = edge[i].next) {
+        int v = edge[i].to;
+        if (v != son[u] &amp;&amp; v != fa[u])
+            dfs2(v, v);
+    }
+}
+
+struct Node {
+    int l, r, lazy;
+}st[MAXN &lt;&lt; 2];
+
+void build(int l, int r, int rt) {
+    st[rt].l = l;
+    st[rt].r = r;
+    st[rt].lazy = 0;
+    if (l == r) {
+        return;
+    }
+    int m = (l + r) &gt;&gt; 1;
+    build(l, m, rt &lt;&lt; 1);
+    build(m + 1, r, rt &lt;&lt; 1 | 1);
+}
+
+void pushdown(int rt) {
+    if (st[rt].lazy != 0) {
+        st[rt &lt;&lt; 1].lazy += st[rt].lazy;
+        st[rt &lt;&lt; 1 | 1].lazy += st[rt].lazy;
+        st[rt].lazy = 0;
+    }
+}
+
+int query(int rt, int val) {
+    if (st[rt].l == st[rt].r) return st[rt].lazy;
+    pushdown(rt);
+    int m = (st[rt].l + st[rt].r) &gt;&gt; 1;
+    if (val &lt;= m) return query(rt &lt;&lt; 1, val);
+    else return query(rt &lt;&lt; 1 | 1, val);
+}
+
+void update(int L, int R, int w, int rt) {
+    int l = st[rt].l, r = st[rt].r;
+    if (L &lt;= l &amp;&amp; r &lt;= R) {
+        st[rt].lazy += w;
+        return;
+    }
+    pushdown(rt);
+    int m = (l + r) &gt;&gt; 1;
+    if (L &lt;= m) update(L, R, w, rt &lt;&lt; 1);
+    if (m &lt; R) update(L, R, w, rt &lt;&lt; 1 | 1);
+}
+
+void change(int u, int v, int w) {
+    while (top[u] != top[v]) { // 慢慢向重链靠近
+        if (dep[top[u]] &lt; dep[top[v]]) swap(u, v);
+        update(p[top[u]], p[u], w, 1);
+        u = fa[top[u]];
+    }
+    if (dep[u] &gt; dep[v]) swap(u, v);
+    update(p[u], p[v], w, 1);
+}
+
+int main()
+{
+    int n, m, q, u, v, w;
+    while (~scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;q)) {
+        init(n);
+        for (int i = 1; i &lt;= n; ++i) scanf(&quot;%d&quot;, &amp;enemy[i]);
+        for (int i = 0; i &lt; n; ++i) {
+            scanf(&quot;%d%d&quot;, &amp;u, &amp;v);
+            addedge(u, v);
+            addedge(v, u);
+        }
+
+        dfs1(1, 0, 0);
+        dfs2(1, 1);
+        build(1, pos, 1);
+
+        char op[2];
+        while (q--) {
+            scanf(&quot;%s&quot;, op);
+            if (op[0] == 'Q') {
+                scanf(&quot;%d&quot;, &amp;u);
+                printf(&quot;%d\n&quot;, enemy[u] + query(1, p[u]));
+            }
+            else {
+                scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;w);
+                if (op[0] == 'D') w = -w;
+                change(u, v, w);
+            }
+        }
+    }
+    return 0;
+}
+
+</code></pre>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/ZJU-1008-Gnome-Tetravex-dfs">
+              <h3 class="post-title">
+                ZJU 1008 Gnome Tetravex (DFS)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

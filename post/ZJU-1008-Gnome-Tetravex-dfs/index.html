@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ZJU 1008 Gnome Tetravex (DFS) | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              ZJU 1008 Gnome Tetravex (DFS)
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-04-20 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/Crb7l5KO-f0" class="post-tag">
+                  # DFS
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p><font color="#6495ED"><strong>题目链接：</strong></font><br>
+<a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1008">ZJU 1008 Gnome Tetravex (DFS)</a></p>
+<p><font color="#6495ED"><strong>题意分析：</strong></font><br>
+给出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>×</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">N \times N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>块正方形，每一块被切割成上下左右四个三角形，每个三角形写上0~9的值，问：能否移动这些正方形的位置，使得它们排列成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>×</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">N \times N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>的方块，每一个相邻的边上数字都相同。</p>
+<!--more-->
+<p><font color="#6495ED"><strong>解题思路：</strong></font><br>
+从第一个方块开始枚举，还必须加上必要的剪枝，比如规格相同的方块在同一个地方不可行一次就不用试第二次了。</p>
+<p><font color="#6495ED"><strong>个人感受：</strong></font><br>
+啊啊啊，剪枝想不到啊啊啊啊啊。。。</p>
+<p><font color="#6495ED"><strong>具体代码如下：</strong></font></p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;cctype&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;iomanip&gt;
+#include&lt;iostream&gt;
+#include&lt;map&gt;
+#include&lt;queue&gt;
+#include&lt;set&gt;
+#include&lt;sstream&gt;
+#include&lt;stack&gt;
+#include&lt;string&gt;
+#define pr(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; (x) &lt;&lt; '\n';
+using namespace std;
+
+struct Square {
+    int u, r, d, l;
+}sq[30];
+int mp[10][10], sum[30];
+int n, ed;
+
+bool dfs(int p) {
+    if (p == ed) {
+        return 1;
+    }
+
+    int x = p / n, y = p % n;
+    for (int i = 0; i &lt; ed; ++i) {
+        if (!sum[i]) continue;
+        if (x &gt; 0 &amp;&amp; sq[mp[x - 1][y]].d != sq[i].u) continue;
+        if (y &gt; 0 &amp;&amp; sq[mp[x][y - 1]].r != sq[i].l) continue;
+        mp[x][y] = i;
+        --sum[i];
+        if (dfs(p + 1)) return 1;
+        ++sum[i];
+    }
+    return 0;
+}
+
+int main()
+{
+    int kase = 0;
+    while (~scanf(&quot;%d&quot;, &amp;n) &amp;&amp; n) {
+        ed = n * n;
+        for (int i = 0; i &lt; ed; ++i) {
+            sum[i] = 0;
+            scanf(&quot;%d%d%d%d&quot;, &amp;sq[i].u, &amp;sq[i].r, &amp;sq[i].d, &amp;sq[i].l);
+            bool flag = 1;
+            for (int j = 0; j &lt; i; ++j) {
+                if (sq[i].u == sq[j].u &amp;&amp; sq[i].r == sq[j].r
+                    &amp;&amp; sq[i].d == sq[j].d &amp;&amp; sq[i].l == sq[j].l) {
+                    ++sum[j];
+                    flag = 0;
+                    break;
+                }
+            }
+            if (flag) sum[i] = 1;
+        }
+
+        if (kase) putchar('\n');
+        if (dfs(0)) printf(&quot;Game %d: Possible\n&quot;, ++kase);
+        else printf(&quot;Game %d: Impossible\n&quot;, ++kase);
+    }
+    return 0;
+}
+
+</code></pre>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/POJ-2763-Housewife-Wind-LCA-RMQ-BIT">
+              <h3 class="post-title">
+                POJ 2763 Housewife Wind (LCA,RMQ,BIT)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

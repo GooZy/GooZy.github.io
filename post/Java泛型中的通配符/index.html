@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Java泛型中的通配符 | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Java泛型中的通配符
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2017-03-20 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/d7VmmG3DDq" class="post-tag">
+                  # Java
+                </a>
+              
+                <a href="https://goozy.github.io//tag/dzNrO5v8bU" class="post-tag">
+                  # 泛型
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>最近想学学集合框架的源代码，结果画风是这样的：</p>
+<pre><code class="language-Java">boolean addAll(Collection&lt;? extends E&gt; c);
+default boolean removeIf(Predicate&lt;? super E&gt; filter) {
+	...
+}
+boolean containsAll(Collection&lt;?&gt; c);
+</code></pre>
+<p>一下就暴露了泛型没好好学的锅= =，今天总结一下。</p>
+<!--more-->
+<p>下文统一使用这两个类进行说明。</p>
+<pre><code class="language-Java">class Fruit {}
+class Apple extends Fruit {}
+</code></pre>
+<h3 id="泛型中的通配符">泛型中的通配符</h3>
+<h4 id="上边界限定通配符">上边界限定通配符</h4>
+<p>用法：<code>&lt;? extends Fruit&gt;</code></p>
+<p>即当前类型 <code>X = ? extends Fruit</code>，类似<code>X &lt;= Fruit</code>的感觉</p>
+<p>这个X类型，表示是某个Fruit子类(或者Fruit本身)的类型，这也就意味着X类型有多种可能性，而编译器无法判定是哪一个类型，所以通过这种方法声明的List无法添加元素，只允许取出元素，取出的元素全都会向上转型。</p>
+<h4 id="下边界限定通配符超类型的通配符">下边界限定通配符/超类型的通配符</h4>
+<p>用法：<code>&lt;? super Fruit&gt;</code></p>
+<p>即当前类型 <code>X = ? super Fruit</code>，类似<code>X &gt;= Fruit</code>的感觉</p>
+<p>这里的X类型，表示是某个Fruit父类(或者Fruit本身)的类型，虽然这里的X的类型也有多种可能性，但是编译器可以断定，只要加入的类型是Fruit子类或者Fruit本身，就一定可以向上转型。所以通过这种方法声明的List允许添加Fruit及其子类型的对象，加入的对象会自动向上转型成Fruit。</p>
+<p>与上边界通配符的配合：</p>
+<pre><code class="language-Java">class Test {
+    public static &lt;T&gt; void copy(List&lt;? super T&gt; dest, List&lt;? extends T&gt; src) {
+        for (int i = 0; i &lt; src.size(); i++)
+            dest.set(i, src.get(i));
+    }
+}
+</code></pre>
+<h4 id="无边界通配符">无边界通配符</h4>
+<p>用法：<code>&lt;?&gt;</code></p>
+<p>即当前类型X不限定范围，可能是任意的一个类型。所以自然也就无法向其添加任何元素了。用法类似于<code>extends</code>，不过<code>get</code>出来的是<code>Object</code>类型就是了。</p>
+<h3 id="ps">PS</h3>
+<p>引子中的<code>removeIf</code>是一个默认方法，不得不赞一发，既扩展了接口方法，又不使得实现接口的类去添加新方法的覆盖，具体见参考资料。之后别人再问接口和抽象类的区别，就不能说普通类实现接口一定要实现所有方法了，2333。</p>
+<h3 id="参考资料">参考资料</h3>
+<ol>
+<li><a href="https://segmentfault.com/a/1190000005337789#articleHeader0">Java 泛型总结（三）：通配符的使用</a></li>
+<li><a href="http://ebnbin.com/2015/12/20/java-8-default-methods/">Java 8 默认方法（Default Methods）</a></li>
+</ol>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/关于java中parseInt的一个趣事">
+              <h3 class="post-title">
+                关于Java中parseInt的一个趣事
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

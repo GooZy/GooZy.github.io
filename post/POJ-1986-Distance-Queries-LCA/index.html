@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POJ 1986 Distance Queries (LCA) | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              POJ 1986 Distance Queries (LCA)
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-04-13 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/xRGxo18tbvh" class="post-tag">
+                  # LCA
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p><font color="#6495ED"><strong>题目链接：</strong></font><a href="http://poj.org/problem?id=1986">POJ 1986 Distance Queries (LCA)</a><br>
+<font color="#6495ED"><strong>题意分析：</strong></font><br>
+求树上两点间的最短距离。</p>
+<!--more-->
+<p><font color="#6495ED"><strong>解题思路：</strong></font><br>
+典型的离线LCA啊，主要是涉及到上一题的条件输入。不过本题边的朝向并不影响解题:)<br>
+<font color="#6495ED"><strong>个人感受：</strong></font><br>
+时间主要废在看这题和上题题目上了2333<br>
+<font color="#6495ED"><strong>具体代码如下：</strong></font></p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;cctype&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;iomanip&gt;
+#include&lt;iostream&gt;
+#include&lt;map&gt;
+#include&lt;queue&gt;
+#include&lt;set&gt;
+#include&lt;sstream&gt;
+#include&lt;stack&gt;
+#include&lt;string&gt;
+#define ll long long
+#define pr(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; (x) &lt;&lt; '\n';
+using namespace std;
+
+const int INF = 0x7f7f7f7f;
+const int MAXN = 4e4 + 111;
+const int MAXM = 8e4 + 222;
+
+struct Edge {
+    int to, w, next;
+}edge[MAXM];
+int head[MAXN], tol;
+
+struct Query {
+    int to, id, next;
+}query[MAXM];
+int qhead[MAXN], qtol, ans[MAXN], dis[MAXN];
+
+bool vis[MAXN];
+
+int par[MAXN];
+
+int find(int x) {
+    return par[x] == x ? x : par[x] = find(par[x]);
+}
+
+void init() {
+    tol = qtol = 0;
+    memset(head, -1, sizeof head);
+    memset(qhead, -1, sizeof qhead);
+}
+
+void addedge(int u, int v, int w) {
+    edge[tol].to = v;
+    edge[tol].w = w;
+    edge[tol].next = head[u];
+    head[u] = tol++;
+}
+
+void qaddedge(int u, int v, int id) {
+    query[qtol].to = v;
+    query[qtol].id = id;
+    query[qtol].next = qhead[u];
+    qhead[u] = qtol++;
+}
+
+void dfs(int u, int sum) {
+    dis[u] = sum;
+    vis[u] = 1;
+    for (int i = head[u]; ~i; i = edge[i].next) {
+        int v = edge[i].to;
+        if (!vis[v]) {
+            dfs(v, sum + edge[i].w);
+        }
+    }
+}
+
+void tarjan(int u) {
+    par[u] = u;
+    vis[u] = 1;
+    for (int i = head[u]; ~i; i = edge[i].next) {
+        int v = edge[i].to;
+        if (vis[v]) continue;
+        tarjan(v);
+        par[v] = u;
+    }
+    for (int i = qhead[u]; ~i; i = query[i].next) {
+        int v = query[i].to;
+        if (vis[v]) {
+            ans[query[i].id] = dis[u] + dis[v] - 2 * dis[find(par[v])];
+        }
+    }
+}
+
+int main()
+{
+    #ifdef LOCAL
+    freopen(&quot;C:\\Users\\apple\\Desktop\\in.txt&quot;, &quot;r&quot;, stdin);
+    #endif
+    int n, m;
+    while (~scanf(&quot;%d%d&quot;, &amp;n, &amp;m)) {
+        int u, v, w, k;
+        init();
+        char s[2];
+        for (int i = 0; i &lt; m; ++i) {
+            scanf(&quot;%d%d%d%s&quot;, &amp;u, &amp;v, &amp;w, s);
+            addedge(u, v, w);
+            addedge(v, u, w);
+        }
+        scanf(&quot;%d&quot;, &amp;k);
+        for (int i = 0; i &lt; k; ++i) {
+            scanf(&quot;%d%d&quot;, &amp;u, &amp;v);
+            qaddedge(u, v, i);
+            qaddedge(v, u, i);
+        }
+
+        memset(vis, 0, sizeof vis);
+        dfs(1, 0);
+        memset(vis, 0, sizeof vis);
+        tarjan(1);
+
+        for (int i = 0; i &lt; k; ++i) {
+            printf(&quot;%d\n&quot;, ans[i]);
+        }
+    }
+    return 0;
+}
+</code></pre>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

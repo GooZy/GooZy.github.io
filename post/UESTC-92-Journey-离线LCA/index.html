@@ -1,0 +1,296 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UESTC 92 Journey (离线LCA) | 闲停</title>
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574063582148">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://goozy.github.io/">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574063582148" alt="">
+  </a>
+  <h1 class="site-title">
+    闲停
+  </h1>
+  <p class="site-description">
+    闲下来休憩，停下来思考
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/books" class="menu">
+          书单
+        </a>
+      
+    
+      
+        <a href="/post/bbs" class="menu">
+          留言板
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              UESTC 92 Journey (离线LCA)
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2016-04-14 ·
+              </time>
+              
+                <a href="https://goozy.github.io//tag/xRGxo18tbvh" class="post-tag">
+                  # LCA
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p><font color="#6495ED"><strong>题目链接：</strong></font><a href="http://acm.uestc.edu.cn/#/problem/show/92">UESTC 92 Journey (离线LCA)</a></p>
+<p><font color="#6495ED"><strong>题意分析：</strong></font><br>
+给出一棵树和一条边，问加上这条边后，对于每一个查询，能优化多少的距离？</p>
+<!--more-->
+<p><font color="#6495ED"><strong>解题思路：</strong></font><br>
+这题多了一条边，那么我们只需要在查询的时候，特别考虑这条边存在的情况对原条件的影响即可。具体就是：<br>
+设新边为xy，费用w，查询的点为u和v，令<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mo>(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">dis(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>为点u和点v的树上最短距离，那么考虑新边之后，多出了两个路径，<strong>一：</strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mo>(</mo><mi>u</mi><mo separator="true">,</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>d</mi><mi>i</mi><mi>s</mi><mo>(</mo><mi>y</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo><mo>+</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">dis(u,x) + dis(y,v) + w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span></span></span></span>；<strong>二：</strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mo>(</mo><mi>u</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>+</mo><mi>d</mi><mi>i</mi><mi>s</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo><mo>+</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">dis(u,y) + dis(x,v) + w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span></span></span></span>；然后根据题意来搞就行了:)</p>
+<p><font color="#6495ED"><strong>个人感受：</strong></font><br>
+哦~我的第一想法是做两次tarjan，但是这样第二次加了新边做会放弃某条边，GG。其实我觉得缩点也是可以的，哈哈，不过我自己都嫌他麻烦。</p>
+<p><font color="#6495ED"><strong>具体代码如下：</strong></font></p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;cctype&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;iomanip&gt;
+#include&lt;iostream&gt;
+#include&lt;map&gt;
+#include&lt;queue&gt;
+#include&lt;set&gt;
+#include&lt;sstream&gt;
+#include&lt;stack&gt;
+#include&lt;string&gt;
+#define pr(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; (x) &lt;&lt; '\n';
+using namespace std;
+
+const int INF = 0x7f7f7f7f;
+const int MAXN = 1e5 + 111;
+
+struct Edge {
+    int next, to, w;
+}edge[MAXN * 2];
+
+struct Query {
+    int next, to, ans;
+}query[MAXN * 10];
+
+int head[MAXN], qhead[MAXN], tol, qtol;
+int dep[MAXN], par[MAXN];
+bool vis[MAXN];
+
+int find(int x) {
+    return x == par[x] ? x : par[x] = find(par[x]);
+}
+
+void init() {
+    tol = qtol = 0;
+    memset(head, -1, sizeof head);
+    memset(qhead, -1, sizeof qhead);
+    memset(vis, 0, sizeof vis);
+}
+
+void addedge(int u, int v, int w) {
+    edge[tol].to = v;
+    edge[tol].next = head[u];
+    edge[tol].w = w;
+    head[u] = tol++;
+}
+
+void qaddedge(int u, int v) {
+    query[qtol].to = v;
+    query[qtol].next = qhead[u];
+    qhead[u] = qtol++;
+    query[qtol].to = u;
+    query[qtol].next = qhead[v];
+    qhead[v] = qtol++;
+}
+
+void tarjan(int u, int sum) {
+    dep[u] = sum;
+    par[u] = u;
+    vis[u] = 1;
+    for (int i = head[u]; ~i; i = edge[i].next) {
+        int v = edge[i].to;
+        if (!vis[v]) {
+            tarjan(v, sum + edge[i].w);
+            par[v] = u;
+        }
+    }
+
+    for (int i = qhead[u]; ~i; i = query[i].next) {
+        int v = query[i].to;
+        if (vis[v]) {
+            query[i^1].ans = query[i].ans = dep[u] + dep[v] - 2 * dep[par[find(v)]];
+        }
+    }
+}
+
+int main()
+{
+    int t; scanf(&quot;%d&quot;, &amp;t);
+    int kase = 0;
+    while (t --) {
+        init();
+        int n, m;
+        scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
+        int u, v, w;
+        int u1, v1, w1;
+        for (int i = 0; i &lt; n - 1; ++i) {
+            scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;w);
+            addedge(u, v, w);
+            addedge(v, u, w);
+        }
+        scanf(&quot;%d%d%d&quot;, &amp;u1, &amp;v1, &amp;w1);
+        for (int i = 0; i &lt; m; ++i) {
+            scanf(&quot;%d%d&quot;, &amp;u, &amp;v);
+            qaddedge(u, v);
+            qaddedge(u, u1);
+            qaddedge(v, v1);
+            qaddedge(u, v1);
+            qaddedge(v, u1);
+        }
+
+        tarjan(1, 0);
+
+        printf(&quot;Case #%d:\n&quot;, ++kase);
+        for (int i = 0; i &lt; qtol; i += 10) {
+            int disuv = query[i].ans;
+            int disuu1 = query[i + 2].ans;
+            int disvv1 = query[i + 4].ans;
+            int disuv1 = query[i + 6].ans;
+            int disvu1 = query[i + 8].ans;
+            int mi = min(disuu1 + disvv1 + w1, disuv1 + w1 + disvu1);
+            printf(&quot;%d\n&quot;, disuv - min(disuv, mi));
+        }
+    }
+    return 0;
+}
+</code></pre>
+<hr>
+<p><strong>广告时间</strong></p>
+<blockquote>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+</blockquote>
+<blockquote>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://goozy.github.io//post/建站小记">
+              <h3 class="post-title">
+                建站小记
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '09ad28d84613270d54c9',
+    clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+    repo: 'GooZy.github.io',
+    owner: 'GooZy',
+    admin: ['GooZy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
