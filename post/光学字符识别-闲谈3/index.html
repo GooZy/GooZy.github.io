@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>光学字符识别-闲谈3 | 闲停</title>
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574064027362">
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1579236656608">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
@@ -13,6 +13,15 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76325241-1');
+</script>
+
 
   </head>
   <body>
@@ -20,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://goozy.github.io/">
-  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574064027362" alt="">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1579236656608" alt="">
   </a>
   <h1 class="site-title">
     闲停
@@ -70,6 +79,10 @@
   <div class="social-container">
     
       
+        <a href="https://github.com/GooZy" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
     
       
     
@@ -93,7 +106,7 @@
                 · 2018-01-24 ·
               </time>
               
-                <a href="https://goozy.github.io//tag/ZW1qE1bs1q" class="post-tag">
+                <a href="https://goozy.github.io/tag/ZW1qE1bs1q" class="post-tag">
                   # 图像
                 </a>
               
@@ -109,7 +122,7 @@
 <p>先交代下我旋转前的前置步骤，放大-&gt;灰度-&gt;二值，OpenCV轻松完成。</p>
 <p>然后来个巨模糊的高斯模糊，主要就是为了让图片糊在一起，二值化后就只剩一个椭圆形轮廓。然后找到该轮廓的最小外接矩形，如果该矩形旋转度数为0，则不进行后续操作。否则，我们就去找矩形的上方、下方、左方、右方顶点。</p>
 <p>有了这四个顶点后，根据上方和下方顶点的相对位置，我们就能判定矩形到底是怎么斜的了，无非两种情况：k &gt; 0 || k &lt; 0。这个斜率k呢，我们可以用两条短边的中点算出来，这样倒着旋转度数，就可以开心地得到正常角度的单词啦<sub>(≧▽≦)/</sub>这里要注意OpenCV的坐标系，否则容易搞错顶点，如下图：</p>
-<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/coordinate.png" alt="坐标系"></figure>
+<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/coordinate.png" alt="坐标系" loading="lazy"></figure>
 <p>最后就是愉快的识别啦，首先直接拿下载的Tesseract-OCR进行识别，结果惨不忍睹，然后发现可以限定只识别小写字母以及单行处理，结果也是bad。无奈ㄟ( ▔, ▔ )ㄏ，只好自己动手，丰衣足食，进行训练，训练要记住的要点就是：找到26个字母都在训练集里就行！哇，我随机找了50张，标完了才发现还少了几个字母，被自己蠢哭TAT</p>
 <h3 id="闲谈">闲谈</h3>
 <p>17年年末的夙愿=。=，结果拖到了现在才做完。当初大一数字识别各种网上找资料，MFC简直反人类。工作后接触比较多的就是OCR了，证照识别，验证码识别，不过仅仅都如前文所说，只是尽力做些预处理，真正核心的识别原理还没时间去了解，这个下来自己也想好好看看，嘿嘿😜</p>
@@ -117,10 +130,10 @@
 <hr>
 <p><strong>广告时间</strong></p>
 <blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j" loading="lazy"></a></p>
 </blockquote>
 <blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS" loading="lazy"></a></p>
 </blockquote>
 
             </div>
@@ -130,7 +143,7 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://goozy.github.io//post/无边界地图-闲谈2">
+            <a href="https://goozy.github.io/post/无边界地图-闲谈2">
               <h3 class="post-title">
                 无边界地图[闲谈2]
               </h3>

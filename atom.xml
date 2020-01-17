@@ -2,18 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2019-11-18T08:00:32.720Z</updated>
+    <updated>2020-01-17T04:51:18.270Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
-    <link rel="self" href="https://goozy.github.io//atom.xml"/>
+    <link rel="self" href="https://goozy.github.io/atom.xml"/>
     <subtitle>闲下来休憩，停下来思考</subtitle>
-    <logo>https://goozy.github.io//images/avatar.png</logo>
-    <icon>https://goozy.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, 闲停</rights>
+    <logo>https://goozy.github.io/images/avatar.png</logo>
+    <icon>https://goozy.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[时间管理工具——PlayTask安利]]></title>
+        <id>https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask</id>
+        <link href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask">
+        </link>
+        <updated>2020-01-17T01:58:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
+<h2 id="源起">源起</h2>
+<p>大概是在16年知道的这款软件，当时用着感觉也还不错，私下安利给过一个朋友。之后由于自己的惰性，加上奖励项目设计的不合理，导致收支严重不平衡，最终被我卸载。<br>
+最近我又回坑了！因为时间完全不够用！！！<br>
+想要学习，但是又忍不住看看看看看番，追追追追漫，玩玩玩游戏。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
+<h2 id="源起">源起</h2>
+<p>大概是在16年知道的这款软件，当时用着感觉也还不错，私下安利给过一个朋友。之后由于自己的惰性，加上奖励项目设计的不合理，导致收支严重不平衡，最终被我卸载。<br>
+最近我又回坑了！因为时间完全不够用！！！<br>
+想要学习，但是又忍不住看看看看看番，追追追追漫，玩玩玩游戏。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何用github和typora打造自己的云笔记]]></title>
-        <id>https://goozy.github.io//post/how-to-use-github-and-typora-to-build-your-own-cloud-note</id>
-        <link href="https://goozy.github.io//post/how-to-use-github-and-typora-to-build-your-own-cloud-note">
+        <id>https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note</id>
+        <link href="https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note">
         </link>
         <updated>2019-03-10T10:21:55.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="缘起">缘起</h2>
@@ -21,56 +40,12 @@
 ]]></summary>
         <content type="html"><![CDATA[<h2 id="缘起">缘起</h2>
 <p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
-<!--more-->
-<p>这几年用下来，确实也还不错。但总有一些让我不满意的地方，一是有时候卡顿严重，几乎无法书写；二是笔记的版本管理，我在mac上使用时，查看笔记的版本，虽然软件提供了比对近30天版本的功能，但是我发现各版本的区别就是0和1的区别（下图显示3-5号和3-3号两版本没任何改动，但其实我本身是有改动的）；三是我怕某天笔记倒闭了我这几年的笔记就得一个一个慢慢下载下来了，十分被动；最后一点就是有道云笔记支持不了本地图片添加到markdown里面；</p>
-<figure data-type="image" tabindex="1"><img src="https://user-images.githubusercontent.com/12698567/54083766-4631c180-4363-11e9-8a4d-955405592a4c.png" alt="版本比较"></figure>
-<p>所以渐渐地，我也有了把笔记上传github的想法。可是彼时github私有仓库是收费的，而我又不想私密的笔记公开，所以就作罢。但是现在不一样了，github私有仓库免费了，所以我也开始着手自己的转移工作。</p>
-<h2 id="所需工具">所需工具</h2>
-<ul>
-<li>git，官网传送门：<a href="https://git-scm.com/">点我</a>
-<ul>
-<li>开源的分布式版本控制系统</li>
-</ul>
-</li>
-<li>Typora，官网传送门：<a href="https://www.typora.io/">点我</a>
-<ul>
-<li>Typora是一个本地的<a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin">markdown</a>编辑工具，支持Windows/Mac/Linux三大系统</li>
-</ul>
-</li>
-</ul>
-<h2 id="步骤">步骤</h2>
-<h4 id="1-建立自己的github私有仓库">1. 建立自己的github私有仓库</h4>
-<p>进入github官网，在个人仓库页面，新建私人仓库。</p>
-<figure data-type="image" tabindex="2"><img src="https://user-images.githubusercontent.com/12698567/54084273-b04d6500-4369-11e9-9fb3-c8ea4445ea9c.png" alt="私有仓库"></figure>
-<h4 id="2-克隆到本地">2. 克隆到本地</h4>
-<p>然后进入项目页面，克隆仓库到本地。</p>
-<figure data-type="image" tabindex="3"><img src="https://user-images.githubusercontent.com/12698567/54084286-d07d2400-4369-11e9-9f58-4e2cc35d3a58.png" alt="克隆1"></figure>
-<figure data-type="image" tabindex="4"><img src="https://user-images.githubusercontent.com/12698567/54084287-d1ae5100-4369-11e9-894d-8ab8b90a53e9.png" alt="克隆2"></figure>
-<h4 id="3-设置typora">3. 设置Typora</h4>
-<p>主要就是开启Typora的文件树视图。</p>
-<figure data-type="image" tabindex="5"><img src="https://user-images.githubusercontent.com/12698567/54084318-1639ec80-436a-11e9-8f43-8b41abe2a338.png" alt="t1"></figure>
-<p>然后打开你的仓库。</p>
-<figure data-type="image" tabindex="6"><img src="https://user-images.githubusercontent.com/12698567/54084319-1639ec80-436a-11e9-816a-cbfd7c72f881.png" alt="t2"></figure>
-<figure data-type="image" tabindex="7"><img src="https://user-images.githubusercontent.com/12698567/54084320-176b1980-436a-11e9-95d6-21778630c3e1.png" alt="t3"></figure>
-<p>之后所有的新建文件、目录操作都可以在文件树视图里面进行，不小心关闭了软件，只需要打开最近打开的文件，目录树自动就加载出来了。</p>
-<h2 id="总结">总结</h2>
-<p><strong>优点</strong></p>
-<ol>
-<li>本地图片放到同级目录下，就可以使用相对路径引入，在本地看笔记很方便。</li>
-<li>所有笔记都在本地，同步到github，具有版本控制。</li>
-<li>本地编辑，十分流畅。</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>同步github比较麻烦，需要自己提交至github。（可以自己写个crontab命令进行定时检测仓库变动，然后上传github）</li>
-<li>笔记的分享功能没有了。（这个我个人的解决方式是发布到<a href="https://paste.ubuntu.com/">ubuntu pastebin</a>进行分享，本来是想推荐gist的，结果被墙了=。=)</li>
-</ol>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[青岛中秋三日游]]></title>
-        <id>https://goozy.github.io//post/Travel-Around-Qingdao-20180922</id>
-        <link href="https://goozy.github.io//post/Travel-Around-Qingdao-20180922">
+        <id>https://goozy.github.io/post/Travel-Around-Qingdao-20180922</id>
+        <link href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922">
         </link>
         <updated>2018-09-26T06:04:54.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
@@ -80,27 +55,12 @@
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <p>本来是想着中秋来一场说走就走的旅行，结果在询问秦皇岛和青岛哪一个比较好玩的时候，恰巧他们也打算去，此行就此成立~</p>
 <h2 id="主要行程">主要行程</h2>
-<!--more-->
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/12">青岛之旅(1/3)——亚美综合市场、劈柴院、栈桥海水浴场</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/13">青岛之旅(2/3)——浙江路天主教堂、栈桥、奥林匹克帆船中心、八大关、第二海水浴场</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/14">青岛之旅(3/3)——金沙滩</a></p>
-<h2 id="番外">番外</h2>
-<p>本次出行，总共花费大概1300左右，大部头在来回的动车票上，其余花费我觉得性价比都十分高。</p>
-<p>三天的行程结束，稍微认识了一座城，稍微认识了一群人。城市沿海真是老天莫大的垂帘。</p>
-<p>旅行总是能发现各种各样的细节，不论是人还是城市。</p>
-<p>海鲜这一趟真是吃到爽，便宜、好吃、量又多，2333。青岛的街道很小，小而精。这一趟之后，特别想去台湾看看，mark之。</p>
-<p>Thanks♪(･ω･)ﾉ</p>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Arnold变换(附Python实现)]]></title>
-        <id>https://goozy.github.io//post/Arnold变换-附Python实现</id>
-        <link href="https://goozy.github.io//post/Arnold变换-附Python实现">
+        <id>https://goozy.github.io/post/Arnold变换-附Python实现</id>
+        <link href="https://goozy.github.io/post/Arnold变换-附Python实现">
         </link>
         <updated>2018-04-29T11:34:06.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="介绍">介绍</h3>
@@ -110,40 +70,12 @@
         <content type="html"><![CDATA[<h3 id="介绍">介绍</h3>
 <p>首先是一个概念：置乱。意即将图像的信息次序打乱，使其变换成杂乱无章难以辨认的图像。</p>
 <p>用处大概就是：对图像加个密，除非你暴力破解，否则你不知道这是个啥。<s>所以就能安心地在百度云上存些蜜汁图片<sub>(≧▽≦)/</sub>啦</s></p>
-<!--more-->
-<h3 id="arnold变换">Arnold变换</h3>
-<p>也叫做猫脸变换，因为提出该算法的人当时是在一张猫的图片上操作，因此而得名= =</p>
-<p>这个变换公式很简单：</p>
-<figure data-type="image" tabindex="1"><img src="https://user-images.githubusercontent.com/12698567/39406471-c4080f28-4be9-11e8-99f6-42f9a190093c.jpg" alt="公式"></figure>
-<p>这里N代表图像的长宽，意即需要是正方形。当然，如果你想在长方形上尝试，把长方形切割成多个正方形，分别对正方形操作即可。Xn和Yn是原图像像素点位置，Xn+1和Yn+1该像素点的新位置。</p>
-<p>有两点十分神奇，我也不知道为什么：</p>
-<ol>
-<li>单次变换后，所有像素点一一映射，也就是单映射。</li>
-<li>经过一定的变换次数后，图像会变换成原来的样子。</li>
-</ol>
-<h3 id="算法实现大致思路">算法实现大致思路</h3>
-<p>原图到新图就不说了，直接照着公式来。还原的话，只需要在公式两边乘上逆矩阵即可。</p>
-<p>具体可以看代码的arnold和iarnold部分：<a href="https://github.com/GooZy/EasyW/blob/master/easyw/common/utils.py">传送门</a></p>
-<h3 id="参考资料">参考资料</h3>
-<ol>
-<li><a href="https://blog.csdn.net/yezi_happy/article/details/52804574">Arnold变换置乱图像</a></li>
-<li><a href="https://blog.csdn.net/shuaishuai3409/article/details/50830196">python中有关矩阵的创建、求逆、转置</a></li>
-<li><a href="https://baike.baidu.com/item/%E7%BD%AE%E4%B9%B1/6575561?fr=aladdin">百度百科：置乱</a></li>
-</ol>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p>Java学习网站: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[日本之旅(4.4~4.14)]]></title>
-        <id>https://goozy.github.io//post/日本之旅-4-4-4-14</id>
-        <link href="https://goozy.github.io//post/日本之旅-4-4-4-14">
+        <id>https://goozy.github.io/post/日本之旅-4-4-4-14</id>
+        <link href="https://goozy.github.io/post/日本之旅-4-4-4-14">
         </link>
         <updated>2018-04-05T14:09:23.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
@@ -153,73 +85,12 @@
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <p>北京室友大佬17年自己一个人去日本旅行过，今年旅行带上了我，程序宅于是有了一次出门~~（毕业旅行）~~的机会。</p>
 <h2 id="主要行程一览">主要行程一览</h2>
-<!--more-->
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/1">日本之旅(1/11)——新宿御苑、六本木之丘、目黑川樱花</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/2">日本之旅(2/11)——明治神宫、上野公园、秋叶原</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/3">日本之旅(3/11)——江之岛、镰仓、涩谷</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/4">日本之旅(4/11)——河口湖</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/5">日本之旅(5/11)——银座、台场、浅草寺、秋叶原</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/6">日本之旅(6/11)——大阪城、圣玛丽号、海游馆、天宝山摩天轮</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/7">日本之旅(7/11)——大阪城御座船、通天阁、浪速之汤、日本桥</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/8">日本之旅(8/11)——京都。八坂神社、清水寺、平安神宫、哲学之道、京都御所、晴明神社</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/9">日本之旅(9/11)——伏见稻荷大社、二条城、岚山</a></p>
-<p><a href="https://github.com/GooZy/GooZy.github.io/issues/10">日本之旅(10/11)——宇治。平等院、大吉山、造币局樱花道</a></p>
-<h2 id="番外">番外</h2>
-<p>11天的日本之旅结束（最后一天其实也就是去免税机场，然后回国），程序宅仿佛打开了新世界的大门：“旅行好像也是不错的事情呢”。</p>
-<p>从最初好奇，到现在的有所思，这段旅程收获还是颇丰的。最明显的一点就是，让我更想好好地游览自己的祖国了。我想知道幅员辽阔的中国，究竟是怎样一番模样。</p>
-<p>套用在造币局樱花道听到的一句日语：这样的感觉啊，还是第一次呢。以后也请好好旅行吧~</p>
-<ul>
-<li>
-<p>这次的全部基本花费，即不可避免的花费：将近8000+ RMB</p>
-</li>
-<li>
-<p>日本上班族大部分都是西装革履呀。小学、中学、高中，也都是一路制服下来，怎么说呢，感慨吧，虽然制服好看，但是觉得有些拘束。</p>
-</li>
-<li>
-<p>日本修学旅行真棒呢，这几天天天都能见到学生们，啊，青春啊？！</p>
-</li>
-<li>
-<p>日本的井盖，嗯，怎么说呢，井盖不要钱系列，各个地方的都有自己特色。</p>
-</li>
-<li>
-<p>日本神社真的很多！</p>
-</li>
-<li>
-<p>关东扶梯靠左，关西扶梯靠右（然而关西有些地方又靠左），果然最正确的做法是跟着第一个人做</p>
-</li>
-<li>
-<p>日本环境保护以及文化开发是真的好，很宜居。</p>
-</li>
-<li>
-<p>但是啊，我真的吃不惯日式料理，还是中华料理第一！</p>
-</li>
-<li>
-<p>动漫人物喜欢的食物= =请一定不要抱太大希望尝试。</p>
-</li>
-<li>
-<p>教练，我想学日语！教练，我想学英语！</p>
-</li>
-<li>
-<p>御守狂魔推荐御守购买：江之岛某款全蓝的御守，音羽山（清水寺）的樱铃。（可惜我都没买，果然人生看到喜欢的东西当时就要去追求~）</p>
-</li>
-<li>
-<p>旅行推荐：明治神宫、秋叶原、江之岛、镰仓稻村崎站（踩沙滩）、河口湖、台场海滨公园、海游馆、天宝山摩天轮、浪速之汤（温泉赛高）、清水寺、哲学之道、伏见稻荷大社、岚山、大吉山</p>
-</li>
-</ul>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[光学字符识别-闲谈3]]></title>
-        <id>https://goozy.github.io//post/光学字符识别-闲谈3</id>
-        <link href="https://goozy.github.io//post/光学字符识别-闲谈3">
+        <id>https://goozy.github.io/post/光学字符识别-闲谈3</id>
+        <link href="https://goozy.github.io/post/光学字符识别-闲谈3">
         </link>
         <updated>2018-01-24T15:17:34.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
@@ -227,32 +98,12 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
 <p>在给出的10000张图片中，有一个单词重复出现了两次，请找出这个单词~</p>
-<!--more-->
-<p>来源：千里码 → <a href="http://www.qlcoder.com/task/7557">传送门</a></p>
-<h3 id="正经">正经</h3>
-<p>首先当然是下载文件包，看看需要识别的都是什么图片啦。发现大部分都经过了旋转，变形倒没有，所以可以说是省下很大一笔功夫，然后调用开源的Tesseract-OCR愉快地识别。所以重点应该就是在如何把图片旋转回来:p</p>
-<p>先交代下我旋转前的前置步骤，放大-&gt;灰度-&gt;二值，OpenCV轻松完成。</p>
-<p>然后来个巨模糊的高斯模糊，主要就是为了让图片糊在一起，二值化后就只剩一个椭圆形轮廓。然后找到该轮廓的最小外接矩形，如果该矩形旋转度数为0，则不进行后续操作。否则，我们就去找矩形的上方、下方、左方、右方顶点。</p>
-<p>有了这四个顶点后，根据上方和下方顶点的相对位置，我们就能判定矩形到底是怎么斜的了，无非两种情况：k &gt; 0 || k &lt; 0。这个斜率k呢，我们可以用两条短边的中点算出来，这样倒着旋转度数，就可以开心地得到正常角度的单词啦<sub>(≧▽≦)/</sub>这里要注意OpenCV的坐标系，否则容易搞错顶点，如下图：</p>
-<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/coordinate.png" alt="坐标系"></figure>
-<p>最后就是愉快的识别啦，首先直接拿下载的Tesseract-OCR进行识别，结果惨不忍睹，然后发现可以限定只识别小写字母以及单行处理，结果也是bad。无奈ㄟ( ▔, ▔ )ㄏ，只好自己动手，丰衣足食，进行训练，训练要记住的要点就是：找到26个字母都在训练集里就行！哇，我随机找了50张，标完了才发现还少了几个字母，被自己蠢哭TAT</p>
-<h3 id="闲谈">闲谈</h3>
-<p>17年年末的夙愿=。=，结果拖到了现在才做完。当初大一数字识别各种网上找资料，MFC简直反人类。工作后接触比较多的就是OCR了，证照识别，验证码识别，不过仅仅都如前文所说，只是尽力做些预处理，真正核心的识别原理还没时间去了解，这个下来自己也想好好看看，嘿嘿😜</p>
-<p>本期代码链接 → <a href="https://github.com/GooZy/OCR">传送门</a></p>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[无边界地图[闲谈2]]]></title>
-        <id>https://goozy.github.io//post/无边界地图-闲谈2</id>
-        <link href="https://goozy.github.io//post/无边界地图-闲谈2">
+        <id>https://goozy.github.io/post/无边界地图-闲谈2</id>
+        <link href="https://goozy.github.io/post/无边界地图-闲谈2">
         </link>
         <updated>2017-11-25T09:49:56.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
@@ -262,44 +113,12 @@
         <content type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
 <p>一起来玩生命游戏~</p>
 <p>这是一款二维平面游戏，模拟生命的演化过程，规则十分简单：</p>
-<!--more-->
-<blockquote>
-<p>如果一个生命体周围少于2生命体，那么该生命体会因为人口缺少而在下一轮死去，这个格子变成了空地。</p>
-<p>如果一个生命体周围大于3个生命体，那么该生命体会因为人口的过度拥挤，资源匮乏，而在下一轮死去。这个格子变成空地。</p>
-<p>如果一个生命体周围有2-3个生命体，那么该生命体能在下一轮继续活下去。</p>
-<p>如果一个空地周围有3个生命体，那么该空地在下一轮会繁殖出新的生命体</p>
-</blockquote>
-<p>总结起来就是：有生命的格子，仅当周围存在2~3个生命体才能存活下来；无生命的格子，仅当周围有3个生命体，才能孕育出生命。</p>
-<p>维基百科上的动图十分生动，可以看看 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life</p>
-<p>这次的任务是给出初始的五个格子，说出在第几轮的时候，演化出最多的生命体</p>
-<figure data-type="image" tabindex="1"><img src="http://121.201.63.168/uploads/145017871936742.png" alt="初始图"></figure>
-<p>来源：千里码 → <a href="http://www.qlcoder.com/task/75d8">传送门</a></p>
-<h3 id="正经">正经</h3>
-<p>首先看看这个图是怎么演化的 <a href="https://github.com/GooZy/Codes/blob/master/qlcoder/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F%E6%BC%94%E5%8C%96.py">传送</a></p>
-<p>各种方向四处飞，初始化个很大的地图模拟过程应该是不行了= =</p>
-<p>考虑上方自己写代码的时候，其实用到的只有生命体和它周围的8个格子，那么是否可以只存下这些生命体的坐标位置？</p>
-<p>最终方案为：字典键记录生命体坐标，值记录周围生命体个数，每次迭代做一次备份，循环演化即可。</p>
-<h3 id="闲谈">闲谈</h3>
-<p>生命体游戏啊，很早就想写一个了，理想中是写个图形界面的，这次用控制台输出感觉也不错，哈哈哈。</p>
-<p>感觉题目介绍的无边界地图和我的认知稍微不同。个人认为的无边界是伪无边界，程序本身有存一份很大的地图，然后随着角色的走动，动态加载其中的一部分。</p>
-<p>本题给我的感觉是只记录必要信息= =</p>
-<p>来张帅气的控制台图：</p>
-<figure data-type="image" tabindex="2"><img src="http://7xsy54.com1.z0.glb.clouddn.com/%E6%97%A0%E8%BE%B9%E7%95%8C%E5%9C%B0%E5%9B%BE.png" alt="生命游戏控制台"></figure>
-<p>本期代码链接 → <a href="https://github.com/GooZy/Codes/blob/master/qlcoder/%E6%97%A0%E8%BE%B9%E7%95%8C%E5%9C%B0%E5%9B%BE.py">传送门</a></p>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[动态爬虫[闲谈1]]]></title>
-        <id>https://goozy.github.io//post/动态爬虫-闲谈1</id>
-        <link href="https://goozy.github.io//post/动态爬虫-闲谈1">
+        <id>https://goozy.github.io/post/动态爬虫-闲谈1</id>
+        <link href="https://goozy.github.io/post/动态爬虫-闲谈1">
         </link>
         <updated>2017-11-18T06:48:03.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="开题介绍~">开题介绍~</h3>
@@ -307,33 +126,12 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="开题介绍~">开题介绍~</h3>
 <p>打算开一个“闲谈”专题，定期(不定期?)收录一些自己觉得有趣的题，记录解题过程~</p>
-<!--more-->
-<h3 id="本期题目">本期题目</h3>
-<p>一共有十个时刻变化的页面，他们的更新频率不尽相同，需要给出这十个页面的频率排序</p>
-<p>来源：千里码 → <a href="http://www.qlcoder.com/task/7569">传送门</a></p>
-<h3 id="正经">正经</h3>
-<p>分析题目，大概就是需要做两件事情：比对页面是否相同、调整爬取频率</p>
-<p>需要比对同一页面差别的话，那可以考虑计算整个页面的md5值，这样就可以直接看出差别。谈优化的话，我觉得可以去除所有对人眼识别不相关的元素之后进行md5，比如页面空格。</p>
-<p>爬取频率调整，感觉可以考虑参考TCP拥塞控制那样，初期成倍增长，当页面变化时停止成倍增长，转而变成1.1倍的增和减。</p>
-<p>十个页面的话，开十个进程嘛，妥妥的:p 然后就放着跑等结果吧，2333</p>
-<h3 id="闲谈">闲谈</h3>
-<p>感觉爬虫的频率适配是个不错的想法，每个页面使用不同的频率爬取，节约资源。不过对于垂直爬虫这一类别，个人感觉还是不适用，还是根据网站量级制定频率比较稳妥= =</p>
-<p>诶，这么想的话，垂直爬虫只要能够制定一个网站的判重规则不就行了么，嘿嘿= =哇，这能怎么做。。。。。。</p>
-<p>本期代码链接 → <a href="https://github.com/GooZy/Codes/blob/master/qlcoder/%E5%8A%A8%E6%80%81%E7%88%AC%E8%99%AB.py">传送门</a></p>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[图数据库Neo4j总结]]></title>
-        <id>https://goozy.github.io//post/图数据库Neo4j总结</id>
-        <link href="https://goozy.github.io//post/图数据库Neo4j总结">
+        <id>https://goozy.github.io/post/图数据库Neo4j总结</id>
+        <link href="https://goozy.github.io/post/图数据库Neo4j总结">
         </link>
         <updated>2017-11-16T15:34:58.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="前言">前言</h3>
@@ -341,126 +139,12 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="前言">前言</h3>
 <p>最近业务上需要表现一些数据间的层级关系，考虑到关系型数据库的联表查询随着量级增大，复杂度骤增，打算采用图数据来存储这一部分数据用于展示。</p>
-<!--more-->
-<h4 id="介绍">介绍</h4>
-<p>Neo4j是一款开源的图形数据库，以图形结构的形式存储数据。</p>
-<p>下载地址：<a href="https://neo4j.com/download/other-releases/#releases">https://neo4j.com/download/other-releases/#releases</a></p>
-<p>解压后进入目录输入：<code>./bin/neo4j console</code> 即可启动，初始账号密码均为 neo4j</p>
-<p>也可以直接在线尝试：<a href="https://neo4j.com/sandbox-v2/?ref=product">https://neo4j.com/sandbox-v2/?ref=product</a></p>
-<h4 id="与关系型数据库对比">与关系型数据库对比</h4>
-<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/image2017-11-16_15-44-14.png" alt="neo4j"></figure>
-<table>
-<thead>
-<tr>
-<th>关系型数据库</th>
-<th>图数据库</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>表</td>
-<td>标签（每个节点都有自己所属的标签，标签内的节点可以看做一个组，单个节点可以拥有多个标签，上方财政部的标签就是Person）</td>
-</tr>
-<tr>
-<td>行</td>
-<td>节点（节点记录着节点属性，单个节点拥有多个属性（建议越少越好，因为主要关注在点与点间关系上））</td>
-</tr>
-<tr>
-<td>列</td>
-<td>属性名</td>
-</tr>
-<tr>
-<td>表间关系</td>
-<td>节点间关系（关系带有标签，一个标签下可以有多个属性值，例如上方的参股就是一个关系标签）</td>
-</tr>
-<tr>
-<td>SQL</td>
-<td>Cypher（专有查询语言）</td>
-</tr>
-</tbody>
-</table>
-<h4 id="cypher">Cypher</h4>
-<p>总：<a href="http://neo4j.com/docs/cypher-refcard/3.0/">http://neo4j.com/docs/cypher-refcard/3.0/</a></p>
-<p>Cypher命令不区分大小写，但是属性值是区分的</p>
-<p><strong>增</strong></p>
-<pre><code class="language-sql">CREATE (a:Person { name: &quot;Guo&quot;, from: &quot;China&quot;, age: 22 }),
-(b:Person { name: &quot;Zi&quot;, from: &quot;China&quot;, age: 22 }),
-(a)-[r:Knows {since: 1995}]-&gt;(b)
-RETURN a, r, b
-</code></pre>
-<p>建立一个标签为Person，具有三个属性name、from、age的节点，a为变量名。然后建立两者的单向关系，其中Knows为关系标签，具有属性since。使用()来表示节点，{}表示节点属性</p>
-<p><strong>查</strong></p>
-<pre><code class="language-sql">MATCH (a:Person), (b:Person)
-WHERE a.name = &quot;Guo&quot; AND b.name = &quot;Zi&quot;
-return a, b;
-</code></pre>
-<p><strong>删</strong></p>
-<pre><code class="language-sql">MATCH (b:Person)
-WHERE  b.name = &quot;Zi&quot;
-DETACH DELETE b;
-</code></pre>
-<p>DETACH会删除节点及与该节点相关的关系</p>
-<p><strong>改</strong></p>
-<pre><code class="language-sql">MATCH (n)
-where n.name='Guo'
-set n.Company='Team'
-return n;
-</code></pre>
-<h4 id="与python交互">与Python交互</h4>
-<p>总：<a href="https://neo4j.com/docs/api/python-driver/1.5/">https://neo4j.com/docs/api/python-driver/1.5/</a></p>
-<p>官方有提供驱动，但是我更推荐使用py2neo，使用起来更便捷</p>
-<p>py2neo(3.0版本)：<a href="http://py2neo.org/v3/">http://py2neo.org/v3/</a></p>
-<p><strong>增删改查</strong></p>
-<pre><code class="language-python">from py2neo import Graph, Node, Relationship
- 
-graph = Graph(
-    &quot;http://localhost:7474&quot;,
-    username=&quot;neo4j&quot;,
-    password=&quot;000000&quot;
-)
- 
- 
-# 增
-father = Node('Person', name='A')
-child = Node('Person', name='B')
-graph.create(father)
-graph.create(child)
-graph.create(Relationship(father, 'Father_of', child))
-# 改
-father['name'] = 'C'
-graph.push(father)
-# 查
-x = graph.find_one('Person', 'name', 'C')  # lable, key, value
-# 删
-graph.delete(x)
-</code></pre>
-<h4 id="关系数据库导入到图数据库">关系数据库导入到图数据库</h4>
-<p>参考：<a href="http://paradoxlife.me/how-to-insert-bulk-data-into-neo4j">http://paradoxlife.me/how-to-insert-bulk-data-into-neo4j</a></p>
-<p>对于少量数据（文件必须放在neo4j的impot目录下）</p>
-<pre><code class="language-shell">load csv with headers from &quot;file:///clue_invest.csv&quot; as line
-merge (p:Invest{company_name: line.company_name, name: line.name, level: line.level})
-</code></pre>
-<p>对于大量数据，可以考虑生成csv导入（header和数据分开有利于后期更改）</p>
-<p>可以参考：<a href="http://blog.csdn.net/macanv/article/details/78296066">http://blog.csdn.net/macanv/article/details/78296066</a></p>
-<p>命令不要加多余空格，另外neo4j-import之后会考虑废弃，所以推荐使用neo4j-admin来进行</p>
-<pre><code class="language-bash">/Users/guoziyao/Desktop/neo4j-community-3.3.0/bin/neo4j-admin import --mode csv -nodes:Company company_header.csv,company.csv --nodes:Person person_header.csv,person.csv -relationships relationship.csv
-</code></pre>
-<h4 id="总结">总结</h4>
-<p>以上便是这段时间学习的一个总结，更多的用法可以查看官方文档，以及给出的一些参考:)</p>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[从今天开始使用HyperComments啦！]]></title>
-        <id>https://goozy.github.io//post/use_hypercomment_from_today_on</id>
-        <link href="https://goozy.github.io//post/use_hypercomment_from_today_on">
+        <id>https://goozy.github.io/post/use_hypercomment_from_today_on</id>
+        <link href="https://goozy.github.io/post/use_hypercomment_from_today_on">
         </link>
         <updated>2017-03-22T12:16:24.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>UPDATE 2018.05.30</strong></p>
@@ -468,88 +152,6 @@ merge (p:Invest{company_name: line.company_name, name: line.name, level: line.le
 ]]></summary>
         <content type="html"><![CDATA[<p><strong>UPDATE 2018.05.30</strong></p>
 <p>HyperComments将于<strong>2018.06.15</strong>起不再提供免费服务。<s>需要免费评论系统的，可以参考这篇文章“<a href="https://imsun.net/posts/gitment-introduction/">Gitment：使用 GitHub Issues 搭建评论系统</a>”了。目前博客将采用gitment作为评论系统，有疑问的可以到<a href="https://goozy.github.io/bbs/">留言页</a>留言，旧文章不再提供评论，新文章可正常评论。</s></p>
-<!-- more -->
-<p><strong>UPDATE 2018.09.27</strong></p>
-<p>如今giment也GG了，正式换成<a href="https://valine.js.org/hexo.html">valine</a>，顺带把主题升级到6.x了，累=。=</p>
-<p><strong>UPDATE 2019.06.01</strong></p>
-<p>改用<a href="https://github.com/getgridea/gridea">gridea</a>管理博客了，挺好用的，现在的评论系统是内置的gittalk。</p>
-<h3 id="参考资料">参考资料</h3>
-<ol>
-<li><a href="https://almostover.ru/2016-10/add-hypercomments-to-hexo-theme-next/">Гиперкомментарии для темы Next в Hexo</a></li>
-</ol>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Java泛型中的通配符]]></title>
-        <id>https://goozy.github.io//post/Java泛型中的通配符</id>
-        <link href="https://goozy.github.io//post/Java泛型中的通配符">
-        </link>
-        <updated>2017-03-20T11:11:05.000Z</updated>
-        <summary type="html"><![CDATA[<p>最近想学学集合框架的源代码，结果画风是这样的：</p>
-<pre><code class="language-Java">boolean addAll(Collection&lt;? extends E&gt; c);
-default boolean removeIf(Predicate&lt;? super E&gt; filter) {
-	...
-}
-boolean containsAll(Collection&lt;?&gt; c);
-</code></pre>
-<p>一下就暴露了泛型没好好学的锅= =，今天总结一下。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>最近想学学集合框架的源代码，结果画风是这样的：</p>
-<pre><code class="language-Java">boolean addAll(Collection&lt;? extends E&gt; c);
-default boolean removeIf(Predicate&lt;? super E&gt; filter) {
-	...
-}
-boolean containsAll(Collection&lt;?&gt; c);
-</code></pre>
-<p>一下就暴露了泛型没好好学的锅= =，今天总结一下。</p>
-<!--more-->
-<p>下文统一使用这两个类进行说明。</p>
-<pre><code class="language-Java">class Fruit {}
-class Apple extends Fruit {}
-</code></pre>
-<h3 id="泛型中的通配符">泛型中的通配符</h3>
-<h4 id="上边界限定通配符">上边界限定通配符</h4>
-<p>用法：<code>&lt;? extends Fruit&gt;</code></p>
-<p>即当前类型 <code>X = ? extends Fruit</code>，类似<code>X &lt;= Fruit</code>的感觉</p>
-<p>这个X类型，表示是某个Fruit子类(或者Fruit本身)的类型，这也就意味着X类型有多种可能性，而编译器无法判定是哪一个类型，所以通过这种方法声明的List无法添加元素，只允许取出元素，取出的元素全都会向上转型。</p>
-<h4 id="下边界限定通配符超类型的通配符">下边界限定通配符/超类型的通配符</h4>
-<p>用法：<code>&lt;? super Fruit&gt;</code></p>
-<p>即当前类型 <code>X = ? super Fruit</code>，类似<code>X &gt;= Fruit</code>的感觉</p>
-<p>这里的X类型，表示是某个Fruit父类(或者Fruit本身)的类型，虽然这里的X的类型也有多种可能性，但是编译器可以断定，只要加入的类型是Fruit子类或者Fruit本身，就一定可以向上转型。所以通过这种方法声明的List允许添加Fruit及其子类型的对象，加入的对象会自动向上转型成Fruit。</p>
-<p>与上边界通配符的配合：</p>
-<pre><code class="language-Java">class Test {
-    public static &lt;T&gt; void copy(List&lt;? super T&gt; dest, List&lt;? extends T&gt; src) {
-        for (int i = 0; i &lt; src.size(); i++)
-            dest.set(i, src.get(i));
-    }
-}
-</code></pre>
-<h4 id="无边界通配符">无边界通配符</h4>
-<p>用法：<code>&lt;?&gt;</code></p>
-<p>即当前类型X不限定范围，可能是任意的一个类型。所以自然也就无法向其添加任何元素了。用法类似于<code>extends</code>，不过<code>get</code>出来的是<code>Object</code>类型就是了。</p>
-<h3 id="ps">PS</h3>
-<p>引子中的<code>removeIf</code>是一个默认方法，不得不赞一发，既扩展了接口方法，又不使得实现接口的类去添加新方法的覆盖，具体见参考资料。之后别人再问接口和抽象类的区别，就不能说普通类实现接口一定要实现所有方法了，2333。</p>
-<h3 id="参考资料">参考资料</h3>
-<ol>
-<li><a href="https://segmentfault.com/a/1190000005337789#articleHeader0">Java 泛型总结（三）：通配符的使用</a></li>
-<li><a href="http://ebnbin.com/2015/12/20/java-8-default-methods/">Java 8 默认方法（Default Methods）</a></li>
-</ol>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>

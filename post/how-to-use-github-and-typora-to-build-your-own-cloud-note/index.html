@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>如何用github和typora打造自己的云笔记 | 闲停</title>
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574064027362">
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1579236656608">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
@@ -13,6 +13,15 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76325241-1');
+</script>
+
 
   </head>
   <body>
@@ -20,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://goozy.github.io/">
-  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574064027362" alt="">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1579236656608" alt="">
   </a>
   <h1 class="site-title">
     闲停
@@ -70,6 +79,10 @@
   <div class="social-container">
     
       
+        <a href="https://github.com/GooZy" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
     
       
     
@@ -93,7 +106,7 @@
                 · 2019-03-10 ·
               </time>
               
-                <a href="https://goozy.github.io//tag/74OGfzJjO" class="post-tag">
+                <a href="https://goozy.github.io/tag/74OGfzJjO" class="post-tag">
                   # 总结
                 </a>
               
@@ -104,7 +117,7 @@
 <p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
 <!--more-->
 <p>这几年用下来，确实也还不错。但总有一些让我不满意的地方，一是有时候卡顿严重，几乎无法书写；二是笔记的版本管理，我在mac上使用时，查看笔记的版本，虽然软件提供了比对近30天版本的功能，但是我发现各版本的区别就是0和1的区别（下图显示3-5号和3-3号两版本没任何改动，但其实我本身是有改动的）；三是我怕某天笔记倒闭了我这几年的笔记就得一个一个慢慢下载下来了，十分被动；最后一点就是有道云笔记支持不了本地图片添加到markdown里面；</p>
-<figure data-type="image" tabindex="1"><img src="https://user-images.githubusercontent.com/12698567/54083766-4631c180-4363-11e9-8a4d-955405592a4c.png" alt="版本比较"></figure>
+<figure data-type="image" tabindex="1"><img src="https://user-images.githubusercontent.com/12698567/54083766-4631c180-4363-11e9-8a4d-955405592a4c.png" alt="版本比较" loading="lazy"></figure>
 <p>所以渐渐地，我也有了把笔记上传github的想法。可是彼时github私有仓库是收费的，而我又不想私密的笔记公开，所以就作罢。但是现在不一样了，github私有仓库免费了，所以我也开始着手自己的转移工作。</p>
 <h2 id="所需工具">所需工具</h2>
 <ul>
@@ -122,17 +135,17 @@
 <h2 id="步骤">步骤</h2>
 <h4 id="1-建立自己的github私有仓库">1. 建立自己的github私有仓库</h4>
 <p>进入github官网，在个人仓库页面，新建私人仓库。</p>
-<figure data-type="image" tabindex="2"><img src="https://user-images.githubusercontent.com/12698567/54084273-b04d6500-4369-11e9-9fb3-c8ea4445ea9c.png" alt="私有仓库"></figure>
+<figure data-type="image" tabindex="2"><img src="https://user-images.githubusercontent.com/12698567/54084273-b04d6500-4369-11e9-9fb3-c8ea4445ea9c.png" alt="私有仓库" loading="lazy"></figure>
 <h4 id="2-克隆到本地">2. 克隆到本地</h4>
 <p>然后进入项目页面，克隆仓库到本地。</p>
-<figure data-type="image" tabindex="3"><img src="https://user-images.githubusercontent.com/12698567/54084286-d07d2400-4369-11e9-9f58-4e2cc35d3a58.png" alt="克隆1"></figure>
-<figure data-type="image" tabindex="4"><img src="https://user-images.githubusercontent.com/12698567/54084287-d1ae5100-4369-11e9-894d-8ab8b90a53e9.png" alt="克隆2"></figure>
+<figure data-type="image" tabindex="3"><img src="https://user-images.githubusercontent.com/12698567/54084286-d07d2400-4369-11e9-9f58-4e2cc35d3a58.png" alt="克隆1" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://user-images.githubusercontent.com/12698567/54084287-d1ae5100-4369-11e9-894d-8ab8b90a53e9.png" alt="克隆2" loading="lazy"></figure>
 <h4 id="3-设置typora">3. 设置Typora</h4>
 <p>主要就是开启Typora的文件树视图。</p>
-<figure data-type="image" tabindex="5"><img src="https://user-images.githubusercontent.com/12698567/54084318-1639ec80-436a-11e9-8f43-8b41abe2a338.png" alt="t1"></figure>
+<figure data-type="image" tabindex="5"><img src="https://user-images.githubusercontent.com/12698567/54084318-1639ec80-436a-11e9-8f43-8b41abe2a338.png" alt="t1" loading="lazy"></figure>
 <p>然后打开你的仓库。</p>
-<figure data-type="image" tabindex="6"><img src="https://user-images.githubusercontent.com/12698567/54084319-1639ec80-436a-11e9-816a-cbfd7c72f881.png" alt="t2"></figure>
-<figure data-type="image" tabindex="7"><img src="https://user-images.githubusercontent.com/12698567/54084320-176b1980-436a-11e9-95d6-21778630c3e1.png" alt="t3"></figure>
+<figure data-type="image" tabindex="6"><img src="https://user-images.githubusercontent.com/12698567/54084319-1639ec80-436a-11e9-816a-cbfd7c72f881.png" alt="t2" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://user-images.githubusercontent.com/12698567/54084320-176b1980-436a-11e9-95d6-21778630c3e1.png" alt="t3" loading="lazy"></figure>
 <p>之后所有的新建文件、目录操作都可以在文件树视图里面进行，不小心关闭了软件，只需要打开最近打开的文件，目录树自动就加载出来了。</p>
 <h2 id="总结">总结</h2>
 <p><strong>优点</strong></p>
@@ -154,7 +167,7 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://goozy.github.io//post/Travel-Around-Qingdao-20180922">
+            <a href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922">
               <h3 class="post-title">
                 青岛中秋三日游
               </h3>

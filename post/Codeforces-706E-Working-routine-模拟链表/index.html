@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Codeforces 706E Working routine (模拟链表) | 闲停</title>
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574064027362">
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1579236656608">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
@@ -13,6 +13,15 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76325241-1');
+</script>
+
 
   </head>
   <body>
@@ -20,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://goozy.github.io/">
-  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574064027362" alt="">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1579236656608" alt="">
   </a>
   <h1 class="site-title">
     闲停
@@ -70,6 +79,10 @@
   <div class="social-container">
     
       
+        <a href="https://github.com/GooZy" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
     
       
     
@@ -93,15 +106,15 @@
                 · 2016-08-12 ·
               </time>
               
-                <a href="https://goozy.github.io//tag/uAfeciE2vm" class="post-tag">
+                <a href="https://goozy.github.io/tag/uAfeciE2vm" class="post-tag">
                   # 链表
                 </a>
               
-                <a href="https://goozy.github.io//tag/IuY569NX66" class="post-tag">
+                <a href="https://goozy.github.io/tag/IuY569NX66" class="post-tag">
                   # 实现
                 </a>
               
-                <a href="https://goozy.github.io//tag/LIg4ghwOnb" class="post-tag">
+                <a href="https://goozy.github.io/tag/LIg4ghwOnb" class="post-tag">
                   # 数据结构
                 </a>
               
@@ -115,7 +128,7 @@
 <!--more-->
 <h3 id="解题思路">解题思路：</h3>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1000</mn><mo>×</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">1000 \times 1000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 的矩阵啊，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> 操作肯定是要T的。考虑链表将整个矩阵串在一起，如下图：</p>
-<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/Codeforces%20706E%20Working%20routine.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/Codeforces%20706E%20Working%20routine.png" alt="" loading="lazy"></figure>
 <p>发现对于任意需要我们交换的矩阵，其实我们只需要改变这两个矩阵的周围一圈元素的指针指向即可完成两个矩阵的交换。单次操作复杂度就降到了O(n + m)了。另外我们只需要知道元素的右边下边是什么，并不用关心上方，左方是什么，所以只用存储两个方向即可。</p>
 <h3 id="个人感受">个人感受：</h3>
 <p>链表赛高！</p>
@@ -124,10 +137,10 @@
 <hr>
 <p><strong>广告时间</strong></p>
 <blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j" loading="lazy"></a></p>
 </blockquote>
 <blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS" loading="lazy"></a></p>
 </blockquote>
 
             </div>
@@ -137,7 +150,7 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://goozy.github.io//post/HDU-5812-Distance">
+            <a href="https://goozy.github.io/post/HDU-5812-Distance">
               <h3 class="post-title">
                 HDU 5812 Distance
               </h3>

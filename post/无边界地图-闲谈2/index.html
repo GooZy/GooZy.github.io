@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>无边界地图[闲谈2] | 闲停</title>
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1574064027362">
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1579236656608">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
@@ -13,6 +13,15 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76325241-1');
+</script>
+
 
   </head>
   <body>
@@ -20,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://goozy.github.io/">
-  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1574064027362" alt="">
+  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1579236656608" alt="">
   </a>
   <h1 class="site-title">
     闲停
@@ -70,6 +79,10 @@
   <div class="social-container">
     
       
+        <a href="https://github.com/GooZy" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
     
       
     
@@ -93,11 +106,11 @@
                 · 2017-11-25 ·
               </time>
               
-                <a href="https://goozy.github.io//tag/Mx3GomW036" class="post-tag">
+                <a href="https://goozy.github.io/tag/Mx3GomW036" class="post-tag">
                   # 生命游戏
                 </a>
               
-                <a href="https://goozy.github.io//tag/bCLM2RNu3S" class="post-tag">
+                <a href="https://goozy.github.io/tag/bCLM2RNu3S" class="post-tag">
                   # 无边界地图
                 </a>
               
@@ -117,7 +130,7 @@
 <p>总结起来就是：有生命的格子，仅当周围存在2~3个生命体才能存活下来；无生命的格子，仅当周围有3个生命体，才能孕育出生命。</p>
 <p>维基百科上的动图十分生动，可以看看 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life</p>
 <p>这次的任务是给出初始的五个格子，说出在第几轮的时候，演化出最多的生命体</p>
-<figure data-type="image" tabindex="1"><img src="http://121.201.63.168/uploads/145017871936742.png" alt="初始图"></figure>
+<figure data-type="image" tabindex="1"><img src="http://121.201.63.168/uploads/145017871936742.png" alt="初始图" loading="lazy"></figure>
 <p>来源：千里码 → <a href="http://www.qlcoder.com/task/75d8">传送门</a></p>
 <h3 id="正经">正经</h3>
 <p>首先看看这个图是怎么演化的 <a href="https://github.com/GooZy/Codes/blob/master/qlcoder/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F%E6%BC%94%E5%8C%96.py">传送</a></p>
@@ -129,15 +142,15 @@
 <p>感觉题目介绍的无边界地图和我的认知稍微不同。个人认为的无边界是伪无边界，程序本身有存一份很大的地图，然后随着角色的走动，动态加载其中的一部分。</p>
 <p>本题给我的感觉是只记录必要信息= =</p>
 <p>来张帅气的控制台图：</p>
-<figure data-type="image" tabindex="2"><img src="http://7xsy54.com1.z0.glb.clouddn.com/%E6%97%A0%E8%BE%B9%E7%95%8C%E5%9C%B0%E5%9B%BE.png" alt="生命游戏控制台"></figure>
+<figure data-type="image" tabindex="2"><img src="http://7xsy54.com1.z0.glb.clouddn.com/%E6%97%A0%E8%BE%B9%E7%95%8C%E5%9C%B0%E5%9B%BE.png" alt="生命游戏控制台" loading="lazy"></figure>
 <p>本期代码链接 → <a href="https://github.com/GooZy/Codes/blob/master/qlcoder/%E6%97%A0%E8%BE%B9%E7%95%8C%E5%9C%B0%E5%9B%BE.py">传送门</a></p>
 <hr>
 <p><strong>广告时间</strong></p>
 <blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j"></a></p>
+<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j" loading="lazy"></a></p>
 </blockquote>
 <blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS"></a></p>
+<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS" loading="lazy"></a></p>
 </blockquote>
 
             </div>
@@ -147,7 +160,7 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://goozy.github.io//post/动态爬虫-闲谈1">
+            <a href="https://goozy.github.io/post/动态爬虫-闲谈1">
               <h3 class="post-title">
                 动态爬虫[闲谈1]
               </h3>
