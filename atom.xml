@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-01-17T04:51:18.270Z</updated>
+    <updated>2020-01-24T07:48:12.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask</id>
         <link href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask">
         </link>
-        <updated>2020-01-17T01:58:10.000Z</updated>
+        <updated>2020-01-17T00:58:10.000Z</updated>
         <summary type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
 <h2 id="源起">源起</h2>
 <p>大概是在16年知道的这款软件，当时用着感觉也还不错，私下安利给过一个朋友。之后由于自己的惰性，加上奖励项目设计的不合理，导致收支严重不平衡，最终被我卸载。<br>
