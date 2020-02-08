@@ -1,16 +1,24 @@
+<!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>旅行 | 闲停</title>
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1579852085439">
+<meta name="description" content="闲下来休憩，停下来思考">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1581163626752">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
@@ -25,123 +33,144 @@
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://goozy.github.io/">
-  <img class="avatar" src="https://goozy.github.io//images/avatar.png?v=1579852085439" alt="">
-  </a>
-  <h1 class="site-title">
-    闲停
-  </h1>
-  <p class="site-description">
-    闲下来休憩，停下来思考
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://goozy.github.io/">
+        <img src="https://goozy.github.io//images/avatar.png?v=1581163626752" class="site-logo">
+        <h1 class="site-title">闲停</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于🐱
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/post/books" class="site-nav">
+            书单📚
+          </a>
+        
       
-    
+        
+          <a href="/post/bbs" class="site-nav">
+            留言板📝
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
+        
+          <a href="/post/bookmark" class="site-nav">
+            书签🏷
+          </a>
+        
       
-    
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-        <a href="/post/about" class="menu">
-          关于
-        </a>
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-    
-      
-        <a href="/post/books" class="menu">
-          书单
-        </a>
-      
-    
-      
-        <a href="/post/bbs" class="menu">
-          留言板
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-        <a href="https://github.com/GooZy" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
+        
+          <a class="social-link" href="https://github.com/GooZy" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+    </div>
+    <div class="site-description">
+      闲下来休憩，停下来思考
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="current-tag-container">
-            <h2 class="title">
-                标签：#旅行
-            </h2> 
-        </div>
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922">
-        <h2 class="post-title">青岛中秋三日游</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-09-26 ·
-        </time>
-        
-          <a href="https://goozy.github.io/tag/8M3-HGa5aY" class="post-tag">
-            # 旅行
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <h2 id="前言">前言</h2>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 旅行</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922">
+                  <h2 class="post-title">青岛中秋三日游</h2>
+                </a>
+                <div class="post-date">
+                  2018-09-26
+                </div>
+                <div class="post-abstract">
+                  <h2 id="前言">前言</h2>
 <p>本来是想着中秋来一场说走就走的旅行，结果在询问秦皇岛和青岛哪一个比较好玩的时候，恰巧他们也打算去，此行就此成立~</p>
 <h2 id="主要行程">主要行程</h2>
 
-      </di>
-    </article>
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
   
 </div>
 
-        <div class="pagination-container">
-  
-  
-</div>
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
