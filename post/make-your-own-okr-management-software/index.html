@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1581778686325">
+<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1581781069826">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://goozy.github.io/">
-        <img src="https://goozy.github.io//images/avatar.png?v=1581778686325" class="site-logo">
+        <img src="https://goozy.github.io//images/avatar.png?v=1581781069826" class="site-logo">
         <h1 class="site-title">闲停</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -140,7 +140,7 @@
 一般需要列出当前周期的目标，然后列举一些关键结果来衡量目标的完成情况。</p>
 <!-- more -->
 <p>我个人的情况是，以每两个月为一个周期设定自己的目标。最初都是用markdown记录，每次列出表格，写下目标，结果，进度，最后给自己算分数。<br>
-<img src="https://goozy.github.io//post-images/1581774739203.png" alt="" loading="lazy"><br>
+<img src="https://goozy.github.io//post-images/1581774739203.png" alt="手工记录" loading="lazy"><br>
 然而这个算分的过程每次都得重新计算，十分麻烦，而且表格也得手工维护，总之就是麻烦。于是就有了写个软件管理的想法。<br>
 正好自己主要是做后端，所以想学习下前端知识，于是把这款软件定位在web应用上。</p>
 <h2 id="1-产品设计">1. 产品设计</h2>
@@ -153,28 +153,22 @@
 </ol>
 <h2 id="3-新建项目">3. 新建项目</h2>
 <p>使用命令<code>vue ui</code>开启图形界面，新建项目，有个默认初始化git选项，按照喜好可要可不要<br>
-<img src="https://goozy.github.io//post-images/1581773375203.png" alt="" loading="lazy"></p>
+<img src="https://goozy.github.io//post-images/1581773375203.png" alt="初始化" loading="lazy"></p>
 <p>“预设”选项，选择“手动”，然后勾上这些包<code>vuex</code>和<code>router</code>，不选包<code>linter</code><br>
-<img src="https://goozy.github.io//post-images/1581773664855.png" alt="" loading="lazy"></p>
+<img src="https://goozy.github.io//post-images/1581773664855.png" alt="选择包" loading="lazy"></p>
 <p>之后勾选使用<a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html#html5-history-%E6%A8%A1%E5%BC%8F">html5历史模式</a><br>
-<img src="https://goozy.github.io//post-images/1581774432273.png" alt="" loading="lazy"></p>
+<img src="https://goozy.github.io//post-images/1581774432273.png" alt="勾选历史模式" loading="lazy"></p>
 <p>进入项目web管理页面后，添加<code>element-ui</code>模块<br>
-<img src="https://goozy.github.io//post-images/1581775786777.png" alt="" loading="lazy"></p>
+<img src="https://goozy.github.io//post-images/1581775786777.png" alt="安装插件" loading="lazy"></p>
 <p>项目建立后导入到IDEA，就可以开始编写代码了。</p>
 <h2 id="4-难点记录">4. 难点记录</h2>
 <p>这一部分只挑一些重点来说，剩余的可以参考git仓库代码：<a href="https://github.com/GooZy/ot">ot</a></p>
 <p>主要用了两个页面，<code>App.vue</code>作为整个门面，保持不变，主要用于展示OKR的可选月份，图中红色圈出的部分即是。<code>Home.vue</code>承接OKR的展示部分，为图中的非红色部分。<br>
-<img src="https://goozy.github.io//post-images/1581775002457.png" alt="" loading="lazy"></p>
+<img src="https://goozy.github.io//post-images/1581775002457.png" alt="结构" loading="lazy"></p>
 <h3 id="月份展示">月份展示</h3>
 <p>提前算好月份列表，默认显示当前双月的目标。这里用v-model指定默认打开的tab。详细参考：<a href="https://element.eleme.io/#/zh-CN/component/tabs">官方文档-tabs</a><br>
 注意<code>&lt;router-view&gt;</code>别放在循环里面，这样会产生多个，实际上我们只需要一个。</p>
-<pre><code class="language-html">&lt;el-tabs tab-position=&quot;left&quot; style=&quot;height: 100%;&quot; v-model=&quot;activeTab&quot; @tab-click=&quot;handleClick&quot;&gt;
-    &lt;el-tab-pane v-for=&quot;(month, index) in monthList&quot; :label=&quot;month&quot; :name=&quot;index+''&quot; :id=&quot;index=''&quot;&gt;
-    {{month}} ORK情况一览
-    &lt;/el-tab-pane&gt;
-    &lt;router-view&gt;&lt;/router-view&gt;
-&lt;/el-tabs&gt;
-</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://goozy.github.io//post-images/1581781022140.png" alt="c1" loading="lazy"></figure>
 <h3 id="数据传递">数据传递</h3>
 <p>当点击月份标签的时候，使用<code>$router.push</code>把月份信息传递到<code>Home.vue</code>。这里有个点要注意，<code>push</code>方法在推送的URL和当前URL相同时，会在控制台报错。这里加了个catch忽略掉报错。</p>
 <pre><code class="language-js">this.$router.push({path: '/okr/', query: {'month': tab.label}}).catch(() =&gt; {});
@@ -189,23 +183,12 @@
 ];
 </code></pre>
 <h3 id="homevue考虑">Home.vue考虑</h3>
-<p>本来只用了<code>&lt;el-table&gt;</code>，后来发现需要标题，所以在外面嵌套了<code>&lt;el-card&gt;</code>，最终布局是：</p>
-<pre><code class="language-html">&lt;el-card&gt;
-    &lt;el-table&gt;&lt;/&lt;el-table&gt;
-&lt;/el-card&gt;
-</code></pre>
+<p>本来只用了<code>&lt;el-table&gt;</code>，后来发现需要标题，所以在外面嵌套了<code>&lt;el-card&gt;</code>，最终布局是：<br>
+<img src="https://goozy.github.io//post-images/1581781050431.png" alt="c2" loading="lazy"></p>
 <h3 id="固定最后一行百分比">固定最后一行百分比</h3>
 <p>为了保证最后百分比总和为100%，就打算固定最后一行为不可更改的形式。<br>
-这里用了一个字典存是否可以修改<code>hitBox: {}</code>，key是<code>目标+结果+列名</code>，可以唯一确定一个单元格。</p>
-<pre><code class="language-html">&lt;el-table-column label=&quot;关键结果&quot; min-width=&quot;35&quot;&gt;
-        &lt;template v-slot=&quot;scope&quot;&gt;
-            &lt;span v-if=&quot;hitBox[scope.row.object+scope.row.key+scope.column.label]&quot;&gt;
-              &lt;el-input type=&quot;textarea&quot; size=&quot;small&quot; v-model=&quot;scope.row.key&quot;&gt;&lt;/el-input&gt;
-            &lt;/span&gt;
-            &lt;span v-else&gt;{{scope.row.key}}&lt;/span&gt;
-        &lt;/template&gt;
-&lt;/el-table-column&gt;
-</code></pre>
+这里用了一个字典存是否可以修改<code>hitBox: {}</code>，key是<code>目标+结果+列名</code>，可以唯一确定一个单元格。<br>
+<img src="https://goozy.github.io//post-images/1581781061489.png" alt="c3" loading="lazy"></p>
 <p><code>v-slot</code>用于获取父组件的数据，使其可以传递下来，具体参考：<a href="https://cn.vuejs.org/v2/guide/components-slots.html#%E7%BC%96%E8%AF%91%E4%BD%9C%E7%94%A8%E5%9F%9F">编译作用域</a></p>
 <h3 id="数据刷新">数据刷新</h3>
 <p>有两种情况页面需要刷新。一个是当双击单元格时，此时要显示单元格成编辑框，所以必须刷新页面。另一个是数据变动时，此时需要刷新页面。所以要特别注意<code>hitBox</code>，在第一种情况下，不需要刷新，否则单元格又变回原样。</p>
