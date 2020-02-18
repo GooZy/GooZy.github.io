@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-02-15T15:38:11.317Z</updated>
+    <updated>2020-02-18T07:54:54.911Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 闲停</rights>
     <entry>
         <title type="html"><![CDATA[[纯前端]打造自己的ORK管理软件]]></title>
-        <id>https://goozy.github.io/post/make-your-own-okr-management-software</id>
-        <link href="https://goozy.github.io/post/make-your-own-okr-management-software">
+        <id>https://goozy.github.io/post/make-your-own-okr-management-software/</id>
+        <link href="https://goozy.github.io/post/make-your-own-okr-management-software/">
         </link>
         <updated>2020-02-15T09:40:54.000Z</updated>
         <summary type="html"><![CDATA[<p>OKR（Objectives and Key Results）即目标与关键成果法，可以理解为对目标完成情况的一种管理方法。<br>
@@ -25,8 +25,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[时间管理工具——PlayTask安利]]></title>
-        <id>https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask</id>
-        <link href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask">
+        <id>https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask/</id>
+        <link href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask/">
         </link>
         <updated>2020-01-17T00:58:10.000Z</updated>
         <summary type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
@@ -44,8 +44,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[如何用github和typora打造自己的云笔记]]></title>
-        <id>https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note</id>
-        <link href="https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note">
+        <id>https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/</id>
+        <link href="https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/">
         </link>
         <updated>2019-03-10T10:21:55.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="缘起">缘起</h2>
@@ -57,8 +57,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[青岛中秋三日游]]></title>
-        <id>https://goozy.github.io/post/Travel-Around-Qingdao-20180922</id>
-        <link href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922">
+        <id>https://goozy.github.io/post/Travel-Around-Qingdao-20180922/</id>
+        <link href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922/">
         </link>
         <updated>2018-09-26T06:04:54.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
@@ -72,8 +72,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Arnold变换(附Python实现)]]></title>
-        <id>https://goozy.github.io/post/Arnold变换-附Python实现</id>
-        <link href="https://goozy.github.io/post/Arnold变换-附Python实现">
+        <id>https://goozy.github.io/post/Arnold变换-附Python实现/</id>
+        <link href="https://goozy.github.io/post/Arnold变换-附Python实现/">
         </link>
         <updated>2018-04-29T11:34:06.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="介绍">介绍</h3>
@@ -87,8 +87,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[日本之旅(4.4~4.14)]]></title>
-        <id>https://goozy.github.io/post/日本之旅-4-4-4-14</id>
-        <link href="https://goozy.github.io/post/日本之旅-4-4-4-14">
+        <id>https://goozy.github.io/post/日本之旅-4-4-4-14/</id>
+        <link href="https://goozy.github.io/post/日本之旅-4-4-4-14/">
         </link>
         <updated>2018-04-05T14:09:23.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
@@ -102,8 +102,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[光学字符识别-闲谈3]]></title>
-        <id>https://goozy.github.io/post/光学字符识别-闲谈3</id>
-        <link href="https://goozy.github.io/post/光学字符识别-闲谈3">
+        <id>https://goozy.github.io/post/光学字符识别-闲谈3/</id>
+        <link href="https://goozy.github.io/post/光学字符识别-闲谈3/">
         </link>
         <updated>2018-01-24T15:17:34.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
@@ -115,8 +115,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[无边界地图[闲谈2]]]></title>
-        <id>https://goozy.github.io/post/无边界地图-闲谈2</id>
-        <link href="https://goozy.github.io/post/无边界地图-闲谈2">
+        <id>https://goozy.github.io/post/无边界地图-闲谈2/</id>
+        <link href="https://goozy.github.io/post/无边界地图-闲谈2/">
         </link>
         <updated>2017-11-25T09:49:56.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
@@ -130,8 +130,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[动态爬虫[闲谈1]]]></title>
-        <id>https://goozy.github.io/post/动态爬虫-闲谈1</id>
-        <link href="https://goozy.github.io/post/动态爬虫-闲谈1">
+        <id>https://goozy.github.io/post/动态爬虫-闲谈1/</id>
+        <link href="https://goozy.github.io/post/动态爬虫-闲谈1/">
         </link>
         <updated>2017-11-18T06:48:03.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="开题介绍~">开题介绍~</h3>
@@ -143,8 +143,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[图数据库Neo4j总结]]></title>
-        <id>https://goozy.github.io/post/图数据库Neo4j总结</id>
-        <link href="https://goozy.github.io/post/图数据库Neo4j总结">
+        <id>https://goozy.github.io/post/图数据库Neo4j总结/</id>
+        <link href="https://goozy.github.io/post/图数据库Neo4j总结/">
         </link>
         <updated>2017-11-16T15:34:58.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="前言">前言</h3>
