@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>LCA | 闲停</title>
+<title>夢の記録 | 闲停</title>
 <meta name="description" content="闲下来休憩，停下来思考">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -122,68 +128,31 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: LCA</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://goozy.github.io/post/POJ-2763-Housewife-Wind-LCA-RMQ-BIT/">
-                  <h2 class="post-title">POJ 2763 Housewife Wind (LCA,RMQ,BIT)</h2>
-                </a>
-                <div class="post-date">
-                  2016-04-17
-                </div>
-                <div class="post-abstract">
-                  <p><font color="#6495ED"><strong>题目链接：</strong></font><br>
-<a href="http://acm.pku.edu.cn/JudgeOnline/problem?id=2763">POJ 2763 Housewife Wind (LCA,RMQ,BIT)</a></p>
-<p><font color="#6495ED"><strong>题意分析：</strong></font><br>
-给出两个操作，0：妈妈需要到树上某个结点接孩子，每次输出最短距离，然后妈妈的位置变成孩子所在的位置。1：更改树上某条边的距离为w。</p>
+          <div class="post-detail">
+            <h2 class="post-title">夢の記録</h2>
+            <div class="post-date">2020-03-29</div>
+            
+            <div class="post-content">
+              <h3 id="20200401-水-普通の夢">2020.04.01 水、普通の夢</h3>
+<p>観光ガイドさんから「わかりますか？」と聞かれました。私はちょっとわかったと言った。<br>
+彼：ちょと？<br>
+私：ちょっと。（恥ずかしい）</p>
+<h3 id="20200329-日-いい夢">2020.03.29 日、いい夢</h3>
+<p>I was going to learn guitar. But our school only taught erhu. So I went to somewhere to find someone who can answer my questions about erhu. Finally I found a girl who was a little fat and kind. She told me that the price of erhu was about 200 yuan, and she had just studied it for a few months. We added WeChat to each other. But I still didn't know her name in the end.</p>
 
-                </div>
-              </div>
+            </div>
+            
+            
+
+            
               
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://goozy.github.io/post/UESTC-92-Journey-离线LCA/">
-                  <h2 class="post-title">UESTC 92 Journey (离线LCA)</h2>
-                </a>
-                <div class="post-date">
-                  2016-04-14
-                </div>
-                <div class="post-abstract">
-                  <p><font color="#6495ED"><strong>题目链接：</strong></font><a href="http://acm.uestc.edu.cn/#/problem/show/92">UESTC 92 Journey (离线LCA)</a></p>
-<p><font color="#6495ED"><strong>题意分析：</strong></font><br>
-给出一棵树和一条边，问加上这条边后，对于每一个查询，能优化多少的距离？</p>
-
-                </div>
-              </div>
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://goozy.github.io/post/POJ-1986-Distance-Queries-LCA/">
-                  <h2 class="post-title">POJ 1986 Distance Queries (LCA)</h2>
-                </a>
-                <div class="post-date">
-                  2016-04-13
-                </div>
-                <div class="post-abstract">
-                  <p><font color="#6495ED"><strong>题目链接：</strong></font><a href="http://poj.org/problem?id=1986">POJ 1986 Distance Queries (LCA)</a><br>
-<font color="#6495ED"><strong>题意分析：</strong></font><br>
-求树上两点间的最短距离。</p>
 
-                </div>
-              </div>
               
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+          </div>
 
         </div>
       </div>
@@ -205,6 +174,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '09ad28d84613270d54c9',
+        clientSecret: '7de5d1666c4a92e382ccbfd05735a7d468f06ddf',
+        repo: 'GooZy.github.io',
+        owner: 'GooZy',
+        admin: ['GooZy'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
