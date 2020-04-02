@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-04-01T01:48:59.817Z</updated>
+    <updated>2020-04-02T01:49:36.697Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[夢の記録]]></title>
+        <id>https://goozy.github.io/post/dream-record/</id>
+        <link href="https://goozy.github.io/post/dream-record/">
+        </link>
+        <updated>2020-03-28T23:01:17.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[纯前端]打造自己的ORK管理软件]]></title>
         <id>https://goozy.github.io/post/make-your-own-okr-management-software/</id>
@@ -139,19 +146,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="开题介绍~">开题介绍~</h3>
 <p>打算开一个“闲谈”专题，定期(不定期?)收录一些自己觉得有趣的题，记录解题过程~</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[图数据库Neo4j总结]]></title>
-        <id>https://goozy.github.io/post/图数据库Neo4j总结/</id>
-        <link href="https://goozy.github.io/post/图数据库Neo4j总结/">
-        </link>
-        <updated>2017-11-16T15:34:58.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="前言">前言</h3>
-<p>最近业务上需要表现一些数据间的层级关系，考虑到关系型数据库的联表查询随着量级增大，复杂度骤增，打算采用图数据来存储这一部分数据用于展示。</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="前言">前言</h3>
-<p>最近业务上需要表现一些数据间的层级关系，考虑到关系型数据库的联表查询随着量级增大，复杂度骤增，打算采用图数据来存储这一部分数据用于展示。</p>
 ]]></content>
     </entry>
 </feed>
