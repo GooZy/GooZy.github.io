@@ -1,228 +1,546 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" >
 
-<title>标签列表 | 闲停</title>
+<head>
+    <meta charset="utf-8" />
+<title>
+    闲停
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="GooZy">
 <meta name="description" content="闲下来休憩，停下来思考">
+<meta name="keywords" content="">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://goozy.github.io//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--点击特效-->
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+    
+            <!--CDN样式-->
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+            <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+            
+                <script>
+                    (function() {
+                        var bp = document.createElement('script');
+                        var curProtocol = window.location.protocol.split(':')[0];
+                        if (curProtocol === 'https') {
+                            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                        } else {
+                            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                        }
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bp, s);
+                    })();
+                </script>
+                
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
+                    <script>
+                        window.dataLayer = window.dataLayer || [];
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://goozy.github.io//favicon.ico?v=1585995612067">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://goozy.github.io//styles/main.css">
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', 'UA-76325241-1');
+                    </script>
+                    
+</head>
 
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://goozy.github.io/">
+                    闲停
+                </a>
+            </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76325241-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-76325241-1');
-</script>
-
-
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://goozy.github.io/">
-        <img src="https://goozy.github.io//images/avatar.png?v=1585995612067" class="site-logo">
-        <h1 class="site-title">闲停</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于🐱
-          </a>
-        
-      
-        
-          <a href="/post/books" class="site-nav">
-            书单📚
-          </a>
-        
-      
-        
-          <a href="/post/bbs" class="site-nav">
-            留言板📝
-          </a>
-        
-      
-        
-          <a href="/post/bookmark" class="site-nav">
-            书签🏷
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-          <a class="social-link" href="https://github.com/GooZy" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      闲下来休憩，停下来思考
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://goozy.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
-
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
-            
-              <a class="tag" href="https://goozy.github.io/tag/0_6vS5ms_/">vue</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/gV2jFFSrm7/">element-ui</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/1aA7OUuqJ/">教程</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/7Nl0k-dK_/">安利</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/74OGfzJjO/">总结</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/8M3-HGa5aY/">旅行</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/ZW1qE1bs1q/">图像</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/U4htodJjI9/">日本</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/Mx3GomW036/">生命游戏</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/bCLM2RNu3S/">无边界地图</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/TbFj7wI1i-/">爬虫</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/UHu-WqRQDh/">HyperComments</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/d7VmmG3DDq/">Java</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/dzNrO5v8bU/">泛型</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/YPEHsObo-g/">git</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/OHDnctsRw9/">笔记</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/xNfB8A-HFS/">开源</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/uAfeciE2vm/">链表</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/IuY569NX66/">实现</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/LIg4ghwOnb/">数据结构</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/d4NNzFCh5Kk/">二进制</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/UDd28DenQL2/">数学</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/f5xiUmsIcmf/">算法</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/OK9lYVQO_Gc/">图论</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/4nMYWIgu9f3/">动态规划</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/BCjdcScSZeq/">tarjan</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/3qRnNjaVOLy/">2-SAT</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/2utkjtvNMq9/">树链剖分</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/teMS9DG9f65/">线段树</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/Crb7l5KO-f0/">DFS</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/xRGxo18tbvh/">LCA</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/K8jg2D4YU03/">RMQ</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/zwFA5i8quxD/">BIT</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/1QNfehj7JhS/">BFS</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/JNljsDMcnV4/">ST</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/ieXBLFNXZIm/">最大流</a>
-            
-              <a class="tag" href="https://goozy.github.io/tag/bTC1fX-QmEd/">杂谈</a>
-            
-          </div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        博文
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于🐱
+                    </a>
+                    
+                    <a class="menu-item" href="/post/books">
+                        书单📚
+                    </a>
+                    
+                    <a class="menu-item" href="/post/bbs">
+                        留言板📝
+                    </a>
+                    
+                    <a class="menu-item" href="/post/bookmark">
+                        书签🏷
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1586337243039" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
         </div>
-      </div>
-    </div>
+    </nav>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://goozy.github.io/">
+                            闲停
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1586337243039" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
 
-<script type="application/javascript">
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            博文
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于🐱
+                        </a>
+                        
+                        <a class="menu-item" href="/post/books">
+                            书单📚
+                        </a>
+                        
+                        <a class="menu-item" href="/post/bbs">
+                            留言板📝
+                        </a>
+                        
+                        <a class="menu-item" href="/post/bookmark">
+                            书签🏷
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
 
-AOS.init();
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
 
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+    }
 </script>
+            <div class="main">
+                <div class="container">
+                    <div class="post-wrap tags">
+                        
+                            <a href="https://goozy.github.io/tag/0_6vS5ms_/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> vue</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/gV2jFFSrm7/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> element-ui</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/1aA7OUuqJ/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 教程</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/7Nl0k-dK_/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 安利</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/74OGfzJjO/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 总结</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/8M3-HGa5aY/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 旅行</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/ZW1qE1bs1q/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 图像</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/U4htodJjI9/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 日本</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/Mx3GomW036/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 生命游戏</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/bCLM2RNu3S/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 无边界地图</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/TbFj7wI1i-/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 爬虫</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/UHu-WqRQDh/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> HyperComments</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/d7VmmG3DDq/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> Java</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/dzNrO5v8bU/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 泛型</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/YPEHsObo-g/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> git</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/OHDnctsRw9/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 笔记</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/xNfB8A-HFS/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 开源</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/uAfeciE2vm/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 链表</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/IuY569NX66/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 实现</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/LIg4ghwOnb/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 数据结构</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/d4NNzFCh5Kk/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 二进制</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/UDd28DenQL2/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 数学</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/f5xiUmsIcmf/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 算法</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/OK9lYVQO_Gc/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 图论</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/4nMYWIgu9f3/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 动态规划</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/BCjdcScSZeq/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> tarjan</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/3qRnNjaVOLy/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 2-SAT</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/2utkjtvNMq9/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 树链剖分</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/teMS9DG9f65/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 线段树</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/Crb7l5KO-f0/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> DFS</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/xRGxo18tbvh/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> LCA</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/K8jg2D4YU03/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> RMQ</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/zwFA5i8quxD/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> BIT</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/1QNfehj7JhS/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> BFS</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/JNljsDMcnV4/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> ST</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/ieXBLFNXZIm/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 最大流</i>
+                                </p>
+                            </a>
+                            
+                            <a href="https://goozy.github.io/tag/bTC1fX-QmEd/">
+                                <p class="post-title">
+                                    <i class="fa fa-tags" aria-hidden="true"> 杂谈</i>
+                                </p>
+                            </a>
+                            
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        闲停 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://github.com/getgridea/gridea" target="_blank">
+                                                Gridea
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.3
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1586337243039);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+                    <div id="tp-weather-widget" style="background: #666;display: flex;"></div>
+                    <script>
+                        (function(T, h, i, n, k, P, a, g, e) {
+                            g = function() {
+                                P = h.createElement(i);
+                                a = h.getElementsByTagName(i)[0];
+                                P.src = k;
+                                P.charset = "utf-8";
+                                P.async = 1;
+                                a.parentNode.insertBefore(P, a)
+                            };
+                            T["ThinkPageWeatherWidgetObject"] = n;
+                            T[n] || (T[n] = function() {
+                                (T[n].q = T[n].q || []).push(arguments)
+                            });
+                            T[n].l = +new Date();
+                            if (T.attachEvent) {
+                                T.attachEvent("onload", g)
+                            } else {
+                                T.addEventListener("load", g, false)
+                            }
+                        }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
+                    </script>
+                    <script>
+                        var wearther_margin = "10px 10px";
+                        
+                        tpwidget("init", {
+                            "flavor": "bubble",
+                            "location": "WX4FBXXFKE4F",
+                            "geolocation": "enabled",
+                            "position": "bottom-left",
+                            "margin": wearther_margin,
+                            "language": "zh-chs",
+                            "unit": "c",
+                            "theme": "chameleon",
+                            "uid": "UFC977E1C7",
+                            "hash": "213ad798bc472dc365da3a9d4a9ff115"
+                        });
+                        tpwidget("show");
+                    </script>
+                    
+        </div>
+</body>
 
-
-
-
-  </body>
 </html>
