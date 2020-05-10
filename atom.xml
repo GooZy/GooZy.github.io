@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-05-09T03:41:22.509Z</updated>
+    <updated>2020-05-10T18:03:14.974Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[说说HTTP和RPC]]></title>
+        <id>https://goozy.github.io/post/shuo-shuo-http-he-rpc/</id>
+        <link href="https://goozy.github.io/post/shuo-shuo-http-he-rpc/">
+        </link>
+        <updated>2020-05-10T13:27:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近被问到一个问题：“RPC和HTTP有什么区别？”<br>
+我说：“前者比后者效率高，但实现比较麻烦。总得来说后者比前者更“重”，导致效率低。”<br>
+回答的十分笼统，我觉得甚至没有解释清楚这个东西。<br>
+所以决定认真的再看看这两位“熟悉的朋友”。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近被问到一个问题：“RPC和HTTP有什么区别？”<br>
+我说：“前者比后者效率高，但实现比较麻烦。总得来说后者比前者更“重”，导致效率低。”<br>
+回答的十分笼统，我觉得甚至没有解释清楚这个东西。<br>
+所以决定认真的再看看这两位“熟悉的朋友”。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[夢の記録]]></title>
         <id>https://goozy.github.io/post/dream-record/</id>
@@ -133,19 +150,6 @@
         <content type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
 <p>一起来玩生命游戏~</p>
 <p>这是一款二维平面游戏，模拟生命的演化过程，规则十分简单：</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[动态爬虫[闲谈1]]]></title>
-        <id>https://goozy.github.io/post/动态爬虫-闲谈1/</id>
-        <link href="https://goozy.github.io/post/动态爬虫-闲谈1/">
-        </link>
-        <updated>2017-11-18T06:48:03.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="开题介绍~">开题介绍~</h3>
-<p>打算开一个“闲谈”专题，定期(不定期?)收录一些自己觉得有趣的题，记录解题过程~</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="开题介绍~">开题介绍~</h3>
-<p>打算开一个“闲谈”专题，定期(不定期?)收录一些自己觉得有趣的题，记录解题过程~</p>
 ]]></content>
     </entry>
 </feed>
