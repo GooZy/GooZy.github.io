@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-05-11T01:13:52.004Z</updated>
+    <updated>2020-05-11T01:16:04.987Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -12,10 +12,10 @@
     <rights>All rights reserved 2020, 闲停</rights>
     <entry>
         <title type="html"><![CDATA[说说HTTP和RPC]]></title>
-        <id>https://goozy.github.io/post/shuo-shuo-http-he-rpc/</id>
-        <link href="https://goozy.github.io/post/shuo-shuo-http-he-rpc/">
+        <id>https://goozy.github.io/post/talk-about-http-and-rpc/</id>
+        <link href="https://goozy.github.io/post/talk-about-http-and-rpc/">
         </link>
-        <updated>2020-05-10T12:27:26.000Z</updated>
+        <updated>2020-05-10T11:27:26.000Z</updated>
         <summary type="html"><![CDATA[<p>最近被问到一个问题：“RPC和HTTP有什么区别？”<br>
 我说：“前者比后者效率高，但实现比较麻烦。总得来说后者比前者更“重”，导致效率低。”<br>
 回答的十分笼统，我觉得甚至没有解释清楚这个东西。<br>
