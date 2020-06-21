@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-05-17T15:20:29.459Z</updated>
+    <updated>2020-06-21T08:06:35.901Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[Chrome插件开发——踩坑记录]]></title>
+        <id>https://goozy.github.io/post/chrome-extension-development-problems-records/</id>
+        <link href="https://goozy.github.io/post/chrome-extension-development-problems-records/">
+        </link>
+        <updated>2020-06-21T05:36:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>记录一下最近开发中的坑点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记录一下最近开发中的坑点。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[说说HTTP和RPC]]></title>
         <id>https://goozy.github.io/post/talk-about-http-and-rpc/</id>
@@ -52,18 +63,10 @@
         <id>https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask/</id>
         <link href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask/">
         </link>
-        <updated>2020-01-17T00:58:10.000Z</updated>
+        <updated>2020-01-16T23:58:10.000Z</updated>
         <summary type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
-<h2 id="源起">源起</h2>
-<p>大概是在16年知道的这款软件，当时用着感觉也还不错，私下安利给过一个朋友。之后由于自己的惰性，加上奖励项目设计的不合理，导致收支严重不平衡，最终被我卸载。<br>
-最近我又回坑了！因为时间完全不够用！！！<br>
-想要学习，但是又忍不住看看看看看番，追追追追漫，玩玩玩游戏。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
-<h2 id="源起">源起</h2>
-<p>大概是在16年知道的这款软件，当时用着感觉也还不错，私下安利给过一个朋友。之后由于自己的惰性，加上奖励项目设计的不合理，导致收支严重不平衡，最终被我卸载。<br>
-最近我又回坑了！因为时间完全不够用！！！<br>
-想要学习，但是又忍不住看看看看看番，追追追追漫，玩玩玩游戏。</p>
 ]]></content>
     </entry>
     <entry>
@@ -135,21 +138,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
 <p>在给出的10000张图片中，有一个单词重复出现了两次，请找出这个单词~</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[无边界地图[闲谈2]]]></title>
-        <id>https://goozy.github.io/post/无边界地图-闲谈2/</id>
-        <link href="https://goozy.github.io/post/无边界地图-闲谈2/">
-        </link>
-        <updated>2017-11-25T09:49:56.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
-<p>一起来玩生命游戏~</p>
-<p>这是一款二维平面游戏，模拟生命的演化过程，规则十分简单：</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
-<p>一起来玩生命游戏~</p>
-<p>这是一款二维平面游戏，模拟生命的演化过程，规则十分简单：</p>
 ]]></content>
     </entry>
 </feed>

@@ -213,7 +213,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                如何用github和typora打造自己的云笔记
+                                Chrome插件开发——踩坑记录
                             </h1>
                             
                                 <!--en-->
@@ -223,17 +223,17 @@
                                         闲停
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2019-03-10</a>
+                                Date: <a href="#">2020-06-21</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">2.3
+                                    href="#">2.1
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">662</a></span>
+                                    <span class="post-words">words:<a href="#">488</a></span>
                                     
                                         <span class="post-category">
                                 Category:
                                 
-                                <a href="https://goozy.github.io/tag/74OGfzJjO/">总结</a>
+                                <a href="https://goozy.github.io/tag/uBvZhwqzt/">经验</a>
                                 
                             </span>
                                         
@@ -245,52 +245,79 @@
                         </header>
                         
                         <div class="post-content">
-                            <h2 id="缘起">缘起</h2>
-<p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
-<!--more-->
-<p>这几年用下来，确实也还不错。但总有一些让我不满意的地方，一是有时候卡顿严重，几乎无法书写；二是笔记的版本管理，我在mac上使用时，查看笔记的版本，虽然软件提供了比对近30天版本的功能，但是我发现各版本的区别就是0和1的区别（下图显示3-5号和3-3号两版本没任何改动，但其实我本身是有改动的）；三是我怕某天笔记倒闭了我这几年的笔记就得一个一个慢慢下载下来了，十分被动；最后一点就是有道云笔记支持不了本地图片添加到markdown里面；</p>
-<figure data-type="image" tabindex="1"><img src="https://user-images.githubusercontent.com/12698567/54083766-4631c180-4363-11e9-8a4d-955405592a4c.png" alt="版本比较" loading="lazy"></figure>
-<p>所以渐渐地，我也有了把笔记上传github的想法。可是彼时github私有仓库是收费的，而我又不想私密的笔记公开，所以就作罢。但是现在不一样了，github私有仓库免费了，所以我也开始着手自己的转移工作。</p>
-<h2 id="所需工具">所需工具</h2>
+                            <p>记录一下最近开发中的坑点。</p>
+<!-- more -->
+<h2 id="问题">问题</h2>
 <ul>
-<li>git，官网传送门：<a href="https://git-scm.com/">点我</a>
+<li>后台脚本的persistent参数用处？
 <ul>
-<li>开源的分布式版本控制系统</li>
+<li>persistent属性定义了常驻后台的方式——当其值为true时，表示扩展将一直在后台运行，无论其是否正在工作；当其值为false时，表示扩展在后台按需运行，这就是Chrome后来提出的Event Page。Event Page可以有效减小扩展对内存的消耗，如非必要，请将persistent设置为false。注意，persistent的默认值为true。</li>
+<li>https://www.cnblogs.com/giggle/p/8082672.html</li>
 </ul>
 </li>
-<li>Typora，官网传送门：<a href="https://www.typora.io/">点我</a>
+<li>js脚本互相引用，报错：cannot use import statement outside a module
 <ul>
-<li>Typora是一个本地的<a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin">markdown</a>编辑工具，支持Windows/Mac/Linux三大系统</li>
+<li>在manifest中注册所有脚本。如下，这样backgroud就可以引用utils里面的函数了</li>
+<li>
+<pre><code>&quot;background&quot;: {
+    &quot;scripts&quot;: [
+        &quot;js/common/utils.js&quot;,
+        &quot;js/common/background.js&quot;
+    ],
+    &quot;persistent&quot;: true
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>引入vue.js后，渲染文字失败
+<ul>
+<li>强制应用内容安全策略 (CSP) ，不能使用 new Function() 对表达式求值。</li>
+<li>改用兼容版本：https://github.com/vuejs/vue/tree/csp/dist，缺点是目前只支持vue的1.x版本</li>
+<li>或者使用<a href="https://github.com/superoo7/vue-cli-plugin-chrome-ext">vue-cli-plugin-chrome-ext</a>开发</li>
+</ul>
+</li>
+<li>eslint 'chrome' is not defined
+<ul>
+<li>在<code>package.json</code>里面的<code>eslintConfig</code>添加<code>&quot;webextensions&quot;: true</code></li>
+<li>https://stackoverflow.com/questions/48584556/eslint-chrome-is-not-defined-no-undef</li>
+</ul>
+</li>
+<li>使用chrome.extension.getBackgroundPage()获取后台脚本，长时间会失效，显示undefined
+<ul>
+<li>需要将<code>persistent</code>属性设置为true</li>
+<li>https://blog.csdn.net/jbk3311/article/details/103737039</li>
+</ul>
+</li>
+<li>IDEA报错，没有chrome
+<ul>
+<li>引入chrome库即可</li>
+<li>https://stackoverflow.com/questions/13997468/how-do-i-use-webstorm-for-chrome-extension-development</li>
+</ul>
+</li>
+<li>element-ui无法使用$message
+<ul>
+<li>需要注册<code>Vue.prototype.$message = Message;</code></li>
+<li>https://www.jianshu.com/p/7e3e2041be39</li>
+</ul>
+</li>
+<li>vue默认标题修改
+<ul>
+<li>修改config里的template属性就行。把模板位置改成对应模块的index文件，然后更改index.html的标题</li>
+<li>template: <code>src/${name}/index.html</code></li>
 </ul>
 </li>
 </ul>
-<h2 id="步骤">步骤</h2>
-<h4 id="1-建立自己的github私有仓库">1. 建立自己的github私有仓库</h4>
-<p>进入github官网，在个人仓库页面，新建私人仓库。</p>
-<figure data-type="image" tabindex="2"><img src="https://user-images.githubusercontent.com/12698567/54084273-b04d6500-4369-11e9-9fb3-c8ea4445ea9c.png" alt="私有仓库" loading="lazy"></figure>
-<h4 id="2-克隆到本地">2. 克隆到本地</h4>
-<p>然后进入项目页面，克隆仓库到本地。</p>
-<figure data-type="image" tabindex="3"><img src="https://user-images.githubusercontent.com/12698567/54084286-d07d2400-4369-11e9-9f58-4e2cc35d3a58.png" alt="克隆1" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://user-images.githubusercontent.com/12698567/54084287-d1ae5100-4369-11e9-894d-8ab8b90a53e9.png" alt="克隆2" loading="lazy"></figure>
-<h4 id="3-设置typora">3. 设置Typora</h4>
-<p>主要就是开启Typora的文件树视图。</p>
-<figure data-type="image" tabindex="5"><img src="https://user-images.githubusercontent.com/12698567/54084318-1639ec80-436a-11e9-8f43-8b41abe2a338.png" alt="t1" loading="lazy"></figure>
-<p>然后打开你的仓库。</p>
-<figure data-type="image" tabindex="6"><img src="https://user-images.githubusercontent.com/12698567/54084319-1639ec80-436a-11e9-816a-cbfd7c72f881.png" alt="t2" loading="lazy"></figure>
-<figure data-type="image" tabindex="7"><img src="https://user-images.githubusercontent.com/12698567/54084320-176b1980-436a-11e9-95d6-21778630c3e1.png" alt="t3" loading="lazy"></figure>
-<p>之后所有的新建文件、目录操作都可以在文件树视图里面进行，不小心关闭了软件，只需要打开最近打开的文件，目录树自动就加载出来了。</p>
-<h2 id="总结">总结</h2>
-<p><strong>优点</strong></p>
-<ol>
-<li>本地图片放到同级目录下，就可以使用相对路径引入，在本地看笔记很方便。</li>
-<li>所有笔记都在本地，同步到github，具有版本控制。</li>
-<li>本地编辑，十分流畅。</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>同步github比较麻烦，需要自己提交至github。（可以自己写个crontab命令进行定时检测仓库变动，然后上传github）</li>
-<li>笔记的分享功能没有了。（这个我个人的解决方式是发布到<a href="https://paste.ubuntu.com/">ubuntu pastebin</a>进行分享，本来是想推荐gist的，结果被墙了=。=)</li>
-</ol>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>chrome://extensions/ 可以直接加载项目文件</li>
+<li>“查看视图：背景页”，可以查看后台脚本的输出情况</li>
+<li>使用vue-cli3开发：https://www.zhangshengrong.com/p/Mr1WyQxZNG/，https://juejin.im/post/5e59f8e65188254903694647
+<ul>
+<li>使用了：https://github.com/superoo7/vue-cli-plugin-chrome-ext</li>
+</ul>
+</li>
+</ul>
 
                         </div>
                         
@@ -298,17 +325,8 @@
                                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%BC%98%E8%B5%B7">缘起</a></li>
-<li><a href="#%E6%89%80%E9%9C%80%E5%B7%A5%E5%85%B7">所需工具</a></li>
-<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a><br>
-*
-<ul>
-<li><a href="#1-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84github%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93">1. 建立自己的github私有仓库</a></li>
-<li><a href="#2-%E5%85%8B%E9%9A%86%E5%88%B0%E6%9C%AC%E5%9C%B0">2. 克隆到本地</a></li>
-<li><a href="#3-%E8%AE%BE%E7%BD%AEtypora">3. 设置Typora</a></li>
-</ul>
-</li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98">问题</a></li>
+<li><a href="#tips">Tips</a></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +344,7 @@
 
                                             <p class="copyright-item">
                                                 <span>Permalink:</span>
-                                                <span><a href="https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/">https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/</a></span>
+                                                <span><a href="https://goozy.github.io/post/chrome-extension-development-problems-records/">https://goozy.github.io/post/chrome-extension-development-problems-records/</a></span>
                                             </p>
 
                                             <p class="copyright-item">
@@ -341,12 +359,10 @@
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/&sharesource=qzone&title=如何用github和typora打造自己的云笔记&pics=https://goozy.github.io//images/avatar.png?v=1592726791090&summary=&lt;h2 id=&#34;缘起&#34;&gt;缘起&lt;/h2&gt;
-&lt;p&gt;从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。&lt;/p&gt;
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goozy.github.io/post/chrome-extension-development-problems-records/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://goozy.github.io/post/chrome-extension-development-problems-records/&sharesource=qzone&title=Chrome插件开发——踩坑记录&pics=https://goozy.github.io//images/avatar.png?v=1592726791090&summary=&lt;p&gt;记录一下最近开发中的坑点。&lt;/p&gt;
 "><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/&sharesource=weibo&title=如何用github和typora打造自己的云笔记 + " - " + &lt;h2 id=&#34;缘起&#34;&gt;缘起&lt;/h2&gt;
-&lt;p&gt;从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。&lt;/p&gt;
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://goozy.github.io/post/chrome-extension-development-problems-records/&sharesource=weibo&title=Chrome插件开发——踩坑记录 + " - " + &lt;p&gt;记录一下最近开发中的坑点。&lt;/p&gt;
 &pic="https://goozy.github.io//images/avatar.png?v=1592726791090 "><i class="fa fa-weibo "></i></a>
                                                         
                                                             <div class="reward ">
@@ -365,8 +381,8 @@
                                                                         <span class="tag ">
                         
                         
-                        <a href="https://goozy.github.io/tag/74OGfzJjO/">#
-                                                总结
+                        <a href="https://goozy.github.io/tag/uBvZhwqzt/">#
+                                                经验
                                                     </a>
                                                     
                                                         
@@ -382,13 +398,9 @@
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask/">
-                                                                                            时间管理工具——PlayTask安利
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922/">
-                                                                                                    青岛中秋三日游
+                                                                                                <a class="next" rel="next" href="https://goozy.github.io/post/talk-about-http-and-rpc/">
+                                                                                                    说说HTTP和RPC
                                                                                                 </a>
                                                                                                 
                                                                                 </section>
