@@ -213,7 +213,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                [纯前端]打造自己的ORK管理软件
+                                我开发的第一款chrome插件——“标签文件夹”介绍
                             </h1>
                             
                                 <!--en-->
@@ -223,21 +223,17 @@
                                         闲停
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2020-02-15</a>
+                                Date: <a href="#">2020-06-28</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">3.9
+                                    href="#">1.9
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">1053</a></span>
+                                    <span class="post-words">words:<a href="#">547</a></span>
                                     
                                         <span class="post-category">
                                 Category:
                                 
-                                <a href="https://goozy.github.io/tag/0_6vS5ms_/">vue</a>
-                                
-                                <a href="https://goozy.github.io/tag/gV2jFFSrm7/">element-ui</a>
-                                
-                                <a href="https://goozy.github.io/tag/1aA7OUuqJ/">教程</a>
+                                <a href="https://goozy.github.io/tag/7Nl0k-dK_/">安利</a>
                                 
                             </span>
                                         
@@ -248,111 +244,55 @@
                                 
                         </header>
                         
-                            <img class="post-feature-image" src="https://goozy.github.io//post-images/make-your-own-okr-management-software.png" alt="">
-                          
                         <div class="post-content">
-                            <p>OKR（Objectives and Key Results）即目标与关键成果法，可以理解为对目标完成情况的一种管理方法。<br>
-一般需要列出当前周期的目标，然后列举一些关键结果来衡量目标的完成情况。</p>
+                            <p>“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。</p>
 <!-- more -->
-<p>我个人的情况是，以每两个月为一个周期设定自己的目标。最初都是用markdown记录，每次列出表格，写下目标，结果，进度，最后给自己算分数。<br>
-<img src="https://goozy.github.io//post-images/1581774739203.png" alt="手工记录" loading="lazy"><br>
-然而这个算分的过程每次都得重新计算，十分麻烦，而且表格也得手工维护，总之就是麻烦。于是就有了写个软件管理的想法。<br>
-正好自己主要是做后端，所以想学习下前端知识，于是把这款软件定位在web应用上。</p>
-<h2 id="1-产品设计">1. 产品设计</h2>
-<p>先给自己写了个简单的PRD（产品需求文档），大概自己能看懂就ok，理了理思路。<a href="https://github.com/GooZy/ot/blob/master/PRD.md">传送门</a></p>
-<h2 id="2-环境配置">2. 环境配置</h2>
+<figure data-type="image" tabindex="1"><img src="https://goozy.github.io//post-images/1593354689688.png" alt="" loading="lazy"></figure>
+<h1 id="适用场景">适用场景</h1>
+<p>看到一些感兴趣的页面（视频/文章），目前没时间看，就可以用“标签文件夹”将它们收录。<br>
+<img src="https://goozy.github.io//post-images/1593354700890.png" alt="" loading="lazy"><br>
+这些项目我都感兴趣，先开个标签，慢慢一个一个看，总会看完的╮(￣▽￣)╭</p>
+<p>像上图这样，标签开多了，一时半会看不完，就容易影响到正在使用的标签页。另外观感上也让人难受。把他们放到收藏夹吧，又嫌麻烦，之后打开看还得删除收藏夹链接。</p>
+<p>用了我们“标签文件夹”后，以上都不是问题。(～￣▽￣)～</p>
+<h1 id="使用指南">使用指南</h1>
+<h2 id="初始">初始</h2>
+<p>这是初始界面，文件夹容量可以通过左上角的设置按钮，进入设置页面更改。目前设定最大可以调节到50个。应该没有人需要保存这么多标签页吧。。。<br>
+<img src="https://goozy.github.io//post-images/1593354773025.png" alt="" loading="lazy"></p>
+<h2 id="添加">添加</h2>
+<p>目前有三种方式可以添加到“标签文件夹”。</p>
 <ol>
-<li>安装npm，<a href="https://www.npmjs.com/get-npm">获取npm</a></li>
-<li>安装vue，<a href="https://cn.vuejs.org/v2/guide/installation.html#NPM">官方安装方法</a></li>
-<li>用<a href="https://www.jetbrains.com/idea/">IDEA</a>作为IDE</li>
+<li>使用 Ctrl(Win)/Command(Mac)+K</li>
+<li>使用弹出页面上的添加按钮</li>
+<li>使用鼠标右键点击页面或者链接，可以快捷选择保存</li>
 </ol>
-<h2 id="3-新建项目">3. 新建项目</h2>
-<p>使用命令<code>vue ui</code>开启图形界面，新建项目，有个默认初始化git选项，按照喜好可要可不要<br>
-<img src="https://goozy.github.io//post-images/1581773375203.png" alt="初始化" loading="lazy"></p>
-<p>“预设”选项，选择“手动”，然后勾上这些包<code>vuex</code>和<code>router</code>，不选包<code>linter</code><br>
-<img src="https://goozy.github.io//post-images/1581773664855.png" alt="选择包" loading="lazy"></p>
-<p>之后勾选使用<a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html#html5-history-%E6%A8%A1%E5%BC%8F">html5历史模式</a><br>
-<img src="https://goozy.github.io//post-images/1581774432273.png" alt="勾选历史模式" loading="lazy"></p>
-<p>进入项目web管理页面后，添加<code>element-ui</code>模块<br>
-<img src="https://goozy.github.io//post-images/1581775786777.png" alt="安装插件" loading="lazy"></p>
-<p>项目建立后导入到IDEA，就可以开始编写代码了。</p>
-<h2 id="4-难点记录">4. 难点记录</h2>
-<p>这一部分只挑一些重点来说，剩余的可以参考git仓库代码：<a href="https://github.com/GooZy/ot">ot</a></p>
-<p>主要用了两个页面，<code>App.vue</code>作为整个门面，保持不变，主要用于展示OKR的可选月份，图中红色圈出的部分即是。<code>Home.vue</code>承接OKR的展示部分，为图中的非红色部分。<br>
-<img src="https://goozy.github.io//post-images/1581775002457.png" alt="结构" loading="lazy"></p>
-<h3 id="月份展示">月份展示</h3>
-<p>提前算好月份列表，默认显示当前双月的目标。这里用v-model指定默认打开的tab。详细参考：<a href="https://element.eleme.io/#/zh-CN/component/tabs">官方文档-tabs</a><br>
-注意<code>&lt;router-view&gt;</code>别放在循环里面，这样会产生多个，实际上我们只需要一个。</p>
-<figure data-type="image" tabindex="1"><img src="https://goozy.github.io//post-images/1581781022140.png" alt="c1" loading="lazy"></figure>
-<h3 id="数据传递">数据传递</h3>
-<p>当点击月份标签的时候，使用<code>$router.push</code>把月份信息传递到<code>Home.vue</code>。这里有个点要注意，<code>push</code>方法在推送的URL和当前URL相同时，会在控制台报错。这里加了个catch忽略掉报错。</p>
-<pre><code class="language-js">this.$router.push({path: '/okr/', query: {'month': tab.label}}).catch(() =&gt; {});
-</code></pre>
-<p>由于使用的是同一个<code>Home.vue</code>，所以靠query词来区分页面。改写<code>router/index.js</code>来映射到<code>Home.vue</code></p>
-<pre><code class="language-js">const routes = [
-  {
-    path: '/okr/*',
-    name: 'home',
-    component: Home
-  }
-];
-</code></pre>
-<h3 id="homevue考虑">Home.vue考虑</h3>
-<p>本来只用了<code>&lt;el-table&gt;</code>，后来发现需要标题，所以在外面嵌套了<code>&lt;el-card&gt;</code>，最终布局是：<br>
-<img src="https://goozy.github.io//post-images/1581781050431.png" alt="c2" loading="lazy"></p>
-<h3 id="固定最后一行百分比">固定最后一行百分比</h3>
-<p>为了保证最后百分比总和为100%，就打算固定最后一行为不可更改的形式。<br>
-这里用了一个字典存是否可以修改<code>hitBox: {}</code>，key是<code>目标+结果+列名</code>，可以唯一确定一个单元格。<br>
-<img src="https://goozy.github.io//post-images/1581781061489.png" alt="c3" loading="lazy"></p>
-<p><code>v-slot</code>用于获取父组件的数据，使其可以传递下来，具体参考：<a href="https://cn.vuejs.org/v2/guide/components-slots.html#%E7%BC%96%E8%AF%91%E4%BD%9C%E7%94%A8%E5%9F%9F">编译作用域</a></p>
-<h3 id="数据刷新">数据刷新</h3>
-<p>有两种情况页面需要刷新。一个是当双击单元格时，此时要显示单元格成编辑框，所以必须刷新页面。另一个是数据变动时，此时需要刷新页面。所以要特别注意<code>hitBox</code>，在第一种情况下，不需要刷新，否则单元格又变回原样。</p>
-<pre><code class="language-js">// 同样的页面，不需要初始化的数据
-if (!isOldPage) {
-    this.hitBox = {};
-    this.editData = false;
-}
-</code></pre>
-<p>数据直接用localstorage存，使用方式就是k-v，将结构化数据序列化后使用即可。</p>
-<pre><code class="language-js">let tableData = localStorage.getItem(this.month);
-tableData = JSON.parse(tableData);
-</code></pre>
-<h2 id="5-部署到github-pages">5. 部署到github pages</h2>
-<p>官方说的很明白：<a href="https://cli.vuejs.org/zh/guide/deployment.html#github-pages">传送门</a></p>
-<p>部署完之后就可以愉快地使用啦~</p>
-<h2 id="6-效果">6. 效果</h2>
-<p>项目github地址：<a href="https://github.com/GooZy/ot">https://github.com/GooZy/ot</a></p>
-<p>部署页面：<a href="https://goozy.github.io/ot/">https://goozy.github.io/ot/</a></p>
-<h2 id="参考资料">参考资料</h2>
-<ol>
-<li><a href="https://www.bilibili.com/video/av85793766">【2020版】4小时学会Spring Boot+Vue前后端分离开发</a></li>
-<li><a href="https://www.jianshu.com/p/79f39f2c1382">VUE+Element UI实现简单的表格行内编辑效果</a></li>
-<li><a href="https://blog.csdn.net/yhflyl/article/details/88689304">Vue结合Element-UI实现单元格编辑、删除等操作</a></li>
-</ol>
+<p><img src="https://goozy.github.io//post-images/1593354799446.png" alt="" loading="lazy"><br>
+添加后效果如图<br>
+<img src="https://goozy.github.io//post-images/1593354808847.png" alt="" loading="lazy"></p>
+<p>点击链接，就会自动打开标签页到当前窗口，然后相应的链接会自动删除。</p>
+<p>图标上还有一个“当前标签页数量”的蓝色数字，时时刻刻提醒你，“你还藏着这么多私货没看呢（笑”。</p>
+<h1 id="安装">安装</h1>
+<p>由于我目前没有注册成为开发者，插件还没发布到Chrome商店，所以只能用解压包安装。</p>
+<p>首先进入页面：<a href="https://github.com/GooZy/tab-folder/releases">https://github.com/GooZy/tab-folder/releases</a>，下载最新的压缩包到本地。然后解压它。<br>
+<img src="https://goozy.github.io//post-images/1593354882902.png" alt="" loading="lazy"></p>
+<p>进入：<a href="chrome://extensions/">chrome://extensions/</a>，打开开发者模式，然后选择“加载已解压的扩展程序”，选择解压后的文件夹，即可完成安装。<br>
+<img src="https://goozy.github.io//post-images/1593354900943.png" alt="" loading="lazy"></p>
+<h1 id="最后">最后</h1>
+<p>希望这款插件能戳到大家的痛点，欢迎提出意见~<br>
+项目地址：<a href="https://github.com/GooZy/tab-folder">https://github.com/GooZy/tab-folder</a></p>
 
                         </div>
                         
                             <div class="post-toc">
                                 <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF">适用场景</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97">使用指南</a>
 <ul>
-<li><a href="#1-%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1">1. 产品设计</a></li>
-<li><a href="#2-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">2. 环境配置</a></li>
-<li><a href="#3-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE">3. 新建项目</a></li>
-<li><a href="#4-%E9%9A%BE%E7%82%B9%E8%AE%B0%E5%BD%95">4. 难点记录</a>
-<ul>
-<li><a href="#%E6%9C%88%E4%BB%BD%E5%B1%95%E7%A4%BA">月份展示</a></li>
-<li><a href="#%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92">数据传递</a></li>
-<li><a href="#homevue%E8%80%83%E8%99%91">Home.vue考虑</a></li>
-<li><a href="#%E5%9B%BA%E5%AE%9A%E6%9C%80%E5%90%8E%E4%B8%80%E8%A1%8C%E7%99%BE%E5%88%86%E6%AF%94">固定最后一行百分比</a></li>
-<li><a href="#%E6%95%B0%E6%8D%AE%E5%88%B7%E6%96%B0">数据刷新</a></li>
+<li><a href="#%E5%88%9D%E5%A7%8B">初始</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0">添加</a></li>
 </ul>
 </li>
-<li><a href="#5-%E9%83%A8%E7%BD%B2%E5%88%B0github-pages">5. 部署到github pages</a></li>
-<li><a href="#6-%E6%95%88%E6%9E%9C">6. 效果</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
-</ul>
-</li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
 </ul>
 
                             </div>
@@ -368,7 +308,7 @@ tableData = JSON.parse(tableData);
 
                                             <p class="copyright-item">
                                                 <span>Permalink:</span>
-                                                <span><a href="https://goozy.github.io/post/make-your-own-okr-management-software/">https://goozy.github.io/post/make-your-own-okr-management-software/</a></span>
+                                                <span><a href="https://goozy.github.io/post/introduce-my-first-chrome-extension/">https://goozy.github.io/post/introduce-my-first-chrome-extension/</a></span>
                                             </p>
 
                                             <p class="copyright-item">
@@ -383,12 +323,10 @@ tableData = JSON.parse(tableData);
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goozy.github.io/post/make-your-own-okr-management-software/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://goozy.github.io/post/make-your-own-okr-management-software/&sharesource=qzone&title=[纯前端]打造自己的ORK管理软件&pics=https://goozy.github.io//images/avatar.png?v=1593355117590&summary=&lt;p&gt;OKR（Objectives and Key Results）即目标与关键成果法，可以理解为对目标完成情况的一种管理方法。&lt;br&gt;
-一般需要列出当前周期的目标，然后列举一些关键结果来衡量目标的完成情况。&lt;/p&gt;
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goozy.github.io/post/introduce-my-first-chrome-extension/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://goozy.github.io/post/introduce-my-first-chrome-extension/&sharesource=qzone&title=我开发的第一款chrome插件——“标签文件夹”介绍&pics=https://goozy.github.io//images/avatar.png?v=1593355117590&summary=&lt;p&gt;“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。&lt;/p&gt;
 "><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://goozy.github.io/post/make-your-own-okr-management-software/&sharesource=weibo&title=[纯前端]打造自己的ORK管理软件 + " - " + &lt;p&gt;OKR（Objectives and Key Results）即目标与关键成果法，可以理解为对目标完成情况的一种管理方法。&lt;br&gt;
-一般需要列出当前周期的目标，然后列举一些关键结果来衡量目标的完成情况。&lt;/p&gt;
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://goozy.github.io/post/introduce-my-first-chrome-extension/&sharesource=weibo&title=我开发的第一款chrome插件——“标签文件夹”介绍 + " - " + &lt;p&gt;“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。&lt;/p&gt;
 &pic="https://goozy.github.io//images/avatar.png?v=1593355117590 "><i class="fa fa-weibo "></i></a>
                                                         
                                                             <div class="reward ">
@@ -407,16 +345,8 @@ tableData = JSON.parse(tableData);
                                                                         <span class="tag ">
                         
                         
-                        <a href="https://goozy.github.io/tag/0_6vS5ms_/">#
-                                                vue
-                                                    </a>
-                                                    
-                        <a href="https://goozy.github.io/tag/gV2jFFSrm7/">#
-                                                element-ui
-                                                    </a>
-                                                    
-                        <a href="https://goozy.github.io/tag/1aA7OUuqJ/">#
-                                                教程
+                        <a href="https://goozy.github.io/tag/7Nl0k-dK_/">#
+                                                安利
                                                     </a>
                                                     
                                                         
@@ -432,13 +362,9 @@ tableData = JSON.parse(tableData);
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://goozy.github.io/post/dream-record/">
-                                                                                            夢の記録
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://goozy.github.io/post/recommend-a-time-management-tool-PlayTask/">
-                                                                                                    时间管理工具——PlayTask安利
+                                                                                                <a class="next" rel="next" href="https://goozy.github.io/post/chrome-extension-development-problems-records/">
+                                                                                                    Chrome插件开发——踩坑记录
                                                                                                 </a>
                                                                                                 
                                                                                 </section>

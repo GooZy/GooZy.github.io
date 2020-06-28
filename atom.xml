@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-06-27T17:03:13.856Z</updated>
+    <updated>2020-06-28T14:38:43.456Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[我开发的第一款chrome插件——“标签文件夹”介绍]]></title>
+        <id>https://goozy.github.io/post/introduce-my-first-chrome-extension/</id>
+        <link href="https://goozy.github.io/post/introduce-my-first-chrome-extension/">
+        </link>
+        <updated>2020-06-28T13:23:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Chrome插件开发——踩坑记录]]></title>
         <id>https://goozy.github.io/post/chrome-extension-development-problems-records/</id>
@@ -125,19 +136,6 @@
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <p>北京室友大佬17年自己一个人去日本旅行过，今年旅行带上了我，程序宅于是有了一次出门~~（毕业旅行）~~的机会。</p>
 <h2 id="主要行程一览">主要行程一览</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[光学字符识别-闲谈3]]></title>
-        <id>https://goozy.github.io/post/光学字符识别-闲谈3/</id>
-        <link href="https://goozy.github.io/post/光学字符识别-闲谈3/">
-        </link>
-        <updated>2018-01-24T15:17:34.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
-<p>在给出的10000张图片中，有一个单词重复出现了两次，请找出这个单词~</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="本期题目">本期题目</h3>
-<p>在给出的10000张图片中，有一个单词重复出现了两次，请找出这个单词~</p>
 ]]></content>
     </entry>
 </feed>
