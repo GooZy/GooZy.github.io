@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2020-10-16T10:20:53.072Z</updated>
+    <updated>2021-01-17T15:09:13.069Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
     <subtitle>闲下来休憩，停下来思考</subtitle>
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 闲停</rights>
+    <rights>All rights reserved 2021, 闲停</rights>
     <entry>
         <title type="html"><![CDATA[我开发的第一款chrome插件——“标签文件夹”介绍]]></title>
         <id>https://goozy.github.io/post/introduce-my-first-chrome-extension/</id>
@@ -57,7 +57,7 @@
         <updated>2020-03-28T22:01:17.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[纯前端]打造自己的ORK管理软件]]></title>
+        <title type="html"><![CDATA[[纯前端]打造自己的OKR管理软件]]></title>
         <id>https://goozy.github.io/post/make-your-own-okr-management-software/</id>
         <link href="https://goozy.github.io/post/make-your-own-okr-management-software/">
         </link>
