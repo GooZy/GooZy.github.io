@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-03-13T01:46:32.472Z</updated>
+    <updated>2021-04-05T13:43:24.702Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[0]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-0/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-0/">
+        </link>
+        <updated>2021-04-05T12:41:29.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[我开发的第一款chrome插件——“标签文件夹”介绍]]></title>
         <id>https://goozy.github.io/post/introduce-my-first-chrome-extension/</id>
@@ -121,21 +128,6 @@
         <content type="html"><![CDATA[<h3 id="介绍">介绍</h3>
 <p>首先是一个概念：置乱。意即将图像的信息次序打乱，使其变换成杂乱无章难以辨认的图像。</p>
 <p>用处大概就是：对图像加个密，除非你暴力破解，否则你不知道这是个啥。<s>所以就能安心地在百度云上存些蜜汁图片<sub>(≧▽≦)/</sub>啦</s></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[日本之旅(4.4~4.14)]]></title>
-        <id>https://goozy.github.io/post/日本之旅-4-4-4-14/</id>
-        <link href="https://goozy.github.io/post/日本之旅-4-4-4-14/">
-        </link>
-        <updated>2018-04-05T14:09:23.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>北京室友大佬17年自己一个人去日本旅行过，今年旅行带上了我，程序宅于是有了一次出门~~（毕业旅行）~~的机会。</p>
-<h2 id="主要行程一览">主要行程一览</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>北京室友大佬17年自己一个人去日本旅行过，今年旅行带上了我，程序宅于是有了一次出门~~（毕业旅行）~~的机会。</p>
-<h2 id="主要行程一览">主要行程一览</h2>
 ]]></content>
     </entry>
 </feed>
