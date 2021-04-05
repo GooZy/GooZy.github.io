@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-05T13:43:24.702Z</updated>
+    <updated>2021-04-05T13:46:35.856Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -16,6 +16,12 @@
         <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-0/">
         </link>
         <updated>2021-04-05T12:41:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<p>本文档介绍了如何在PDF文档中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<p>本文档介绍了如何在PDF文档中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[我开发的第一款chrome插件——“标签文件夹”介绍]]></title>
