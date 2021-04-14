@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-14T15:41:59.149Z</updated>
+    <updated>2021-04-14T15:58:31.953Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -18,11 +18,11 @@
         <updated>2021-04-14T14:27:51.000Z</updated>
         <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
 <h1 id="一-在pdf文件中表示签名">一、在PDF文件中表示签名</h1>
-<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计于签名数据处理的PDF阅读器使用。</p>
+<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计用于签名数据处理的PDF阅读器使用。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
 <h1 id="一-在pdf文件中表示签名">一、在PDF文件中表示签名</h1>
-<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计于签名数据处理的PDF阅读器使用。</p>
+<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计用于签名数据处理的PDF阅读器使用。</p>
 ]]></content>
     </entry>
     <entry>
