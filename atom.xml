@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-05T14:31:42.770Z</updated>
+    <updated>2021-04-14T15:34:45.296Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[1]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-1/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-1/">
+        </link>
+        <updated>2021-04-14T14:27:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="一-在pdf文件中表示签名">一、在PDF文件中表示签名</h1>
+<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计于签名数据处理的PDF阅读器使用。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="一-在pdf文件中表示签名">一、在PDF文件中表示签名</h1>
+<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计于签名数据处理的PDF阅读器使用。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【翻译】PDF中的数字签名[0]]]></title>
         <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-0/</id>
@@ -119,21 +134,6 @@
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
 <p>本来是想着中秋来一场说走就走的旅行，结果在询问秦皇岛和青岛哪一个比较好玩的时候，恰巧他们也打算去，此行就此成立~</p>
 <h2 id="主要行程">主要行程</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Arnold变换(附Python实现)]]></title>
-        <id>https://goozy.github.io/post/Arnold变换-附Python实现/</id>
-        <link href="https://goozy.github.io/post/Arnold变换-附Python实现/">
-        </link>
-        <updated>2018-04-29T11:34:06.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="介绍">介绍</h3>
-<p>首先是一个概念：置乱。意即将图像的信息次序打乱，使其变换成杂乱无章难以辨认的图像。</p>
-<p>用处大概就是：对图像加个密，除非你暴力破解，否则你不知道这是个啥。<s>所以就能安心地在百度云上存些蜜汁图片<sub>(≧▽≦)/</sub>啦</s></p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="介绍">介绍</h3>
-<p>首先是一个概念：置乱。意即将图像的信息次序打乱，使其变换成杂乱无章难以辨认的图像。</p>
-<p>用处大概就是：对图像加个密，除非你暴力破解，否则你不知道这是个啥。<s>所以就能安心地在百度云上存些蜜汁图片<sub>(≧▽≦)/</sub>啦</s></p>
 ]]></content>
     </entry>
 </feed>
