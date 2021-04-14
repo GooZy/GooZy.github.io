@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-14T15:34:45.296Z</updated>
+    <updated>2021-04-14T15:40:19.157Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -32,10 +32,10 @@
         </link>
         <updated>2021-04-05T12:41:29.000Z</updated>
         <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
-<p>本文档介绍了如何在PDF文档中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
+<p>本文档介绍了如何在PDF文件中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
-<p>本文档介绍了如何在PDF文档中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
+<p>本文档介绍了如何在PDF文件中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
 ]]></content>
     </entry>
     <entry>
