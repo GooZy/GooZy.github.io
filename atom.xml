@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-14T15:58:31.953Z</updated>
+    <updated>2021-04-17T09:17:47.350Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[2]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/">
+        </link>
+        <updated>2021-04-17T03:23:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="二-公钥基础设施pki">二、公钥基础设施（PKI）</h1>
+<p>PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="二-公钥基础设施pki">二、公钥基础设施（PKI）</h1>
+<p>PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【翻译】PDF中的数字签名[1]]]></title>
         <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-1/</id>
@@ -119,21 +134,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<h2 id="缘起">缘起</h2>
 <p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[青岛中秋三日游]]></title>
-        <id>https://goozy.github.io/post/Travel-Around-Qingdao-20180922/</id>
-        <link href="https://goozy.github.io/post/Travel-Around-Qingdao-20180922/">
-        </link>
-        <updated>2018-09-26T06:04:54.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>本来是想着中秋来一场说走就走的旅行，结果在询问秦皇岛和青岛哪一个比较好玩的时候，恰巧他们也打算去，此行就此成立~</p>
-<h2 id="主要行程">主要行程</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<p>本来是想着中秋来一场说走就走的旅行，结果在询问秦皇岛和青岛哪一个比较好玩的时候，恰巧他们也打算去，此行就此成立~</p>
-<h2 id="主要行程">主要行程</h2>
 ]]></content>
     </entry>
 </feed>

@@ -213,7 +213,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                Codeforces 706E Working routine (模拟链表)
+                                【翻译】PDF中的数字签名[2]
                             </h1>
                             
                                 <!--en-->
@@ -223,21 +223,19 @@
                                         闲停
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2016-08-12</a>
+                                Date: <a href="#">2021-04-17</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">0.8
+                                    href="#">6.8
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">237</a></span>
+                                    <span class="post-words">words:<a href="#">1968</a></span>
                                     
                                         <span class="post-category">
                                 Category:
                                 
-                                <a href="https://goozy.github.io/tag/uAfeciE2vm/">链表</a>
+                                <a href="https://goozy.github.io/tag/7ApGo1wx3/">PDF</a>
                                 
-                                <a href="https://goozy.github.io/tag/IuY569NX66/">实现</a>
-                                
-                                <a href="https://goozy.github.io/tag/LIg4ghwOnb/">数据结构</a>
+                                <a href="https://goozy.github.io/tag/Ms-TtVKdN/">翻译</a>
                                 
                             </span>
                                         
@@ -249,43 +247,65 @@
                         </header>
                         
                         <div class="post-content">
-                            <h3 id="题目链接">题目链接：</h3>
-<p><a href="http://codeforces.com/problemset/problem/706/E">Codeforces 706E Working routine (模拟链表)</a></p>
-<h3 id="题意分析">题意分析：</h3>
-<p>给出一个矩阵和q个操作，每次操作需要交换矩阵的两个子矩形，问：经过q次操作后，最终矩阵长什么样子。</p>
-<!--more-->
-<h3 id="解题思路">解题思路：</h3>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1000</mn><mo>×</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">1000 \times 1000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 的矩阵啊，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> 操作肯定是要T的。考虑链表将整个矩阵串在一起，如下图：</p>
-<figure data-type="image" tabindex="1"><img src="http://7xsy54.com1.z0.glb.clouddn.com/Codeforces%20706E%20Working%20routine.png" alt="" loading="lazy"></figure>
-<p>发现对于任意需要我们交换的矩阵，其实我们只需要改变这两个矩阵的周围一圈元素的指针指向即可完成两个矩阵的交换。单次操作复杂度就降到了O(n + m)了。另外我们只需要知道元素的右边下边是什么，并不用关心上方，左方是什么，所以只用存储两个方向即可。</p>
-<h3 id="个人感受">个人感受：</h3>
-<p>链表赛高！</p>
-<h3 id="具体代码链接">具体代码链接：</h3>
-<p><a href="https://github.com/GooZy/Codes/blob/master/OJ-Codeforces/%23367%20div2/Working%20routine.cpp">传送门</a></p>
-<hr>
-<p><strong>广告时间</strong></p>
-<blockquote>
-<p><em>Java学习网站</em>: <a href="http://how2j.cn?p=23251" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/how2j.png?raw=true" alt="how2j" loading="lazy"></a></p>
-</blockquote>
-<blockquote>
-<p><em>VPS</em>: <a href="https://www.vultr.com/?ref=7255071" target="_blank"><img src="https://github.com/GooZy/GooZy.github.io/blob/hexo/source/images/banner_2.png?raw=true" alt="VPS" loading="lazy"></a></p>
-</blockquote>
+                            <p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="二-公钥基础设施pki">二、公钥基础设施（PKI）</h1>
+<p>PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。</p>
+<!-- more -->
+<p>在PDF签名工作流的上下文中，“PKI”通常指数字ID的颁发者、用户、管理员以及任何在这些工作流中使用的软硬件。实现并符合PDF语言标准的PDF阅读器能够以无缝且健壮的方式与这些组件交互。</p>
+<figure data-type="image" tabindex="1"><img src="https://goozy.github.io//post-images/1618638421098.png" alt="common-pki-elements.png" loading="lazy"></figure>
+<p>在签署重要的纸质文件时，人们通常需要向公证人或其他受信任的机构提供令人满意的身份证明，之后在他们面前对文件进行签署。 因为公证人被认为是值得信赖的，所以你可以信任公证人见证的签名。 使用PKI是一种提供类似信任的方法。</p>
+<p>与提供信任直接相关的一些常见PKI组件包括：</p>
+<ul>
+<li>证书颁发机构（CA）：最终的信任机构，可以出售或发行数字ID（例如Verisign或Geotrust）。 CA会签署自己的证书（自我签名），并且其证书通常是证书链顶部的“根”证书。</li>
+<li>中间证书（ICAs）：一种CA，在证书链中其位于终端用户和根证书之间。 该证书不是自签名的，并且ICA通常提供诸如策略，时间戳，吊销列表等服务。</li>
+<li>终端用户证书（EE）：签署者的证书，也是签署链上最后的元素。根据定义，终端用户证书不包含<a href="https://sites.google.com/site/cse825maninthemiddle/odds-and-ends/certificate-basic-constraints">CA基本约束值</a>。</li>
+<li>数字ID：与个人或实体相关联的基于ITU-T X.509 v3标准的数据电子表示形式。 它存储在计算机或网络上受密码保护的文件，USB令牌，智能卡等中。数字ID包含公钥证书，私钥和其他数据</li>
+<li>公钥证书：一个包含公钥/私钥对的数字公钥部分以及用于定义证书所有者，有效期和用法的关联扩展和属性的文件。</li>
+<li>私钥：PKI系统中的密钥，用于验证传入消息和对传出消息进行签名。在密钥生成期间，私钥始终与其公钥配对。</li>
+</ul>
+<p>尽管数字ID及其发行实体是任何PKI的核心，但PKI还包括许多其他企业所有和第三方项目。 PKI管理员通常管理着数字ID的创建与分发，LDAP（Light Directory Access Portocol）服务器，时间戳服务器，吊销列表和其他项目。PDF语言支持所有与这些组件交互所需的数据。</p>
+<h2 id="1-pkipdf和签署">1. PKI，PDF和签署</h2>
+<p>PDF支持将签名嵌入文件自身，而不是作为单独的数据管理或者添加到现有文件格式中。这意味着查看应用程序可以不破坏签名而进行特定类型的修改。对于其它数字签名格式，用户可能需要使用两个应用来处理文件和签名，或者需要为每个签名文件管理两份单独的文件。</p>
+<p>PDF中的每个签名都与签名处理程序关联。签名被放置在PDF签名字典中，里面包含用于处理签名的签名处理器名字（如图3）。Adobe Acrobat leverages Public/Private Key（PPK）加密技术内置了签名处理程序。PPK基于这样一种思想，即用私钥加密的值只能使用公钥解密（反之，在为特定收件人加密文件时也是同样的，但这不在本文档的范围之内）。</p>
+<p>对PDF进行签名后，签名者的证书将嵌入在PDF文件中。图3展示了存储在用户硬件设备上的数字ID与嵌入PDF文件中签名值的关系。签名值可能还包含额外的信息，例如签名图片，时间戳和可能特定于用户，系统或应用程序的其他数据。</p>
+<figure data-type="image" tabindex="2"><img src="https://goozy.github.io//post-images/1618646849908.png" alt="relation-between-id-pdf" loading="lazy"></figure>
+<p>签署过程如下：</p>
+<ol>
+<li>待签名文件被处理成字节流。</li>
+<li>将整个PDF文件写入磁盘，并留出适当大小的空间用于签名值以及<code>ByteRange</code>数组中的最坏情况值。
+<ul>
+<li><code>ByteRange</code>数组由四个数字组成。每对中的第一个数字是对于文件的偏移量（从头开始，起始是0），表示需要被包含在哈希计算中的字节流的起始。第二个数字是该流的长度。这两对定义了两个字节序列，这些字节序列定义了要哈希的内容。实际签名值存储在第一个序列的末尾与第二个序列的开头之间的<code>/Contents</code>键中。图4中，哈希是针对字节0到839和960到1200计算的。</li>
+</ul>
+</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://goozy.github.io//post-images/1618648017487.png" alt="" loading="lazy"></figure>
+<ol start="3">
+<li>一旦根据文件中的偏移量知道了签名值的位置，就可以使用正确的值填充<code>ByteRange</code>数组。因为字节偏移禁止修改，所以新数组语句之后的多余字节将被零覆盖。</li>
+<li>使用诸如SHA-256之类的哈希算法，由实际<code>ByteRange</code>值指定的字节来计算整个文件的哈希。Acrobat始终在整个PDF文件中计算文件签名的哈希值，该哈希值从字节0开始到物理文件的最后一个字节结束，但不包括签名值字节。</li>
+<li>哈希值由签署者的私钥加密，并生成一个十六进制编码的<code>PKCS#7</code>对象签名对象。</li>
+<li>签名对象放置在磁盘上的文件中，覆盖占位符<code>/Contents</code>值。 未用于签名对象的任何空间都将被零覆盖。</li>
+<li>将PDF文件重新加载到Acrobat中，以确保内存和磁盘上的版本相同。</li>
+</ol>
+<p><strong>提示：</strong> 这是一个高层级展示。对于更详细的一些应用程序级配置选项的快速键，请参阅“签名创建工作流”。</p>
+<h2 id="2-pkipdf和签名校验">2. PKI，PDF和签名校验</h2>
+<p>由于私钥和公钥仅仅是数字，因此任何人都可以使用任意数量的工具生成公钥和私钥对。 诸如Acrobat之类的应用程序提供了一种生成自签名证书的机制，该证书将简单的用户提供的身份绑定到由应用程序生成的公钥。 然后使用相应的私钥对其进行签名。 显然，没有什么可以阻止某人生成使用他人名字的自签名证书的。 因此，未知的自签名证书没有很高的保证水平。</p>
+<p>为了解决这种类型的信任问题，组织者使用一种PKI，该PKI包括发布，记录和跟踪数字ID的独立权限。 由于PDF支持将签名者的公共密钥作为签名的一部分进行嵌入，因此文件接收者始终可以使用它来进行签名验证。要验证签名，验证者只需检索签名者的证书，并将其与自己的受信任证书列表进行比较：</p>
+<ol>
+<li>收件人的应用程序使用签名者使用的相同算法（不包括签名值）来生成文件的单向哈希。</li>
+<li>使用签名者的公钥对文件中加密的哈希值进行解密</li>
+<li>将解密的哈希值与本地生成的哈希值进行比较。</li>
+<li>如果它们相同，则将签名报告为已知。</li>
+</ol>
+<p><strong>提示：</strong> 签名是否受信任或有效是单独的问题。 签名信任取决于收件人的应用程序配置。 签名状态还取决于文件完整性检查。</p>
 
                         </div>
                         
                             <div class="post-toc">
                                 <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E4%BA%8C-%E5%85%AC%E9%92%A5%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BDpki">二、公钥基础设施（PKI）</a>
 <ul>
-<li>
-<ul>
-<li><a href="#%E9%A2%98%E7%9B%AE%E9%93%BE%E6%8E%A5">题目链接：</a></li>
-<li><a href="#%E9%A2%98%E6%84%8F%E5%88%86%E6%9E%90">题意分析：</a></li>
-<li><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">解题思路：</a></li>
-<li><a href="#%E4%B8%AA%E4%BA%BA%E6%84%9F%E5%8F%97">个人感受：</a></li>
-<li><a href="#%E5%85%B7%E4%BD%93%E4%BB%A3%E7%A0%81%E9%93%BE%E6%8E%A5">具体代码链接：</a></li>
-</ul>
-</li>
+<li><a href="#1-pkipdf%E5%92%8C%E7%AD%BE%E7%BD%B2">1. PKI，PDF和签署</a></li>
+<li><a href="#2-pkipdf%E5%92%8C%E7%AD%BE%E5%90%8D%E6%A0%A1%E9%AA%8C">2. PKI，PDF和签名校验</a></li>
 </ul>
 </li>
 </ul>
@@ -303,7 +323,7 @@
 
                                             <p class="copyright-item">
                                                 <span>Permalink:</span>
-                                                <span><a href="https://goozy.github.io/post/Codeforces-706E-Working-routine-模拟链表/">https://goozy.github.io/post/Codeforces-706E-Working-routine-模拟链表/</a></span>
+                                                <span><a href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/">https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/</a></span>
                                             </p>
 
                                             <p class="copyright-item">
@@ -318,16 +338,14 @@
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goozy.github.io/post/Codeforces-706E-Working-routine-模拟链表/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://goozy.github.io/post/Codeforces-706E-Working-routine-模拟链表/&sharesource=qzone&title=Codeforces 706E Working routine (模拟链表)&pics=https://goozy.github.io//images/avatar.png?v=1618651061565&summary=&lt;h3 id=&#34;题目链接&#34;&gt;题目链接：&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://codeforces.com/problemset/problem/706/E&#34;&gt;Codeforces 706E Working routine (模拟链表)&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;题意分析&#34;&gt;题意分析：&lt;/h3&gt;
-&lt;p&gt;给出一个矩阵和q个操作，每次操作需要交换矩阵的两个子矩形，问：经过q次操作后，最终矩阵长什么样子。&lt;/p&gt;
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/&sharesource=qzone&title=【翻译】PDF中的数字签名[2]&pics=https://goozy.github.io//images/avatar.png?v=1618651061565&summary=&lt;p&gt;原文：&lt;a href=&#34;https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf&#34;&gt;Digital Signatures in a PDF&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-公钥基础设施pki&#34;&gt;二、公钥基础设施（PKI）&lt;/h1&gt;
+&lt;p&gt;PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。&lt;/p&gt;
 "><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://goozy.github.io/post/Codeforces-706E-Working-routine-模拟链表/&sharesource=weibo&title=Codeforces 706E Working routine (模拟链表) + " - " + &lt;h3 id=&#34;题目链接&#34;&gt;题目链接：&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://codeforces.com/problemset/problem/706/E&#34;&gt;Codeforces 706E Working routine (模拟链表)&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;题意分析&#34;&gt;题意分析：&lt;/h3&gt;
-&lt;p&gt;给出一个矩阵和q个操作，每次操作需要交换矩阵的两个子矩形，问：经过q次操作后，最终矩阵长什么样子。&lt;/p&gt;
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/&sharesource=weibo&title=【翻译】PDF中的数字签名[2] + " - " + &lt;p&gt;原文：&lt;a href=&#34;https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf&#34;&gt;Digital Signatures in a PDF&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-公钥基础设施pki&#34;&gt;二、公钥基础设施（PKI）&lt;/h1&gt;
+&lt;p&gt;PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。&lt;/p&gt;
 &pic="https://goozy.github.io//images/avatar.png?v=1618651061565 "><i class="fa fa-weibo "></i></a>
                                                         
                                                             <div class="reward ">
@@ -346,16 +364,12 @@
                                                                         <span class="tag ">
                         
                         
-                        <a href="https://goozy.github.io/tag/uAfeciE2vm/">#
-                                                链表
+                        <a href="https://goozy.github.io/tag/7ApGo1wx3/">#
+                                                PDF
                                                     </a>
                                                     
-                        <a href="https://goozy.github.io/tag/IuY569NX66/">#
-                                                实现
-                                                    </a>
-                                                    
-                        <a href="https://goozy.github.io/tag/LIg4ghwOnb/">#
-                                                数据结构
+                        <a href="https://goozy.github.io/tag/Ms-TtVKdN/">#
+                                                翻译
                                                     </a>
                                                     
                                                         
@@ -371,13 +385,9 @@
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://goozy.github.io/post/GitHub入门与实践-笔记-书评/">
-                                                                                            GitHub入门与实践 笔记+书评
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://goozy.github.io/post/HDU-5812-Distance/">
-                                                                                                    HDU 5812 Distance
+                                                                                                <a class="next" rel="next" href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-1/">
+                                                                                                    【翻译】PDF中的数字签名[1]
                                                                                                 </a>
                                                                                                 
                                                                                 </section>
