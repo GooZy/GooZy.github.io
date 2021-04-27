@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-17T09:17:47.350Z</updated>
+    <updated>2021-04-27T15:18:48.316Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://goozy.github.io/images/avatar.png</logo>
     <icon>https://goozy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[3]]]></title>
+        <id>https://goozy.github.io/post/fan-yi-pdf-zhong-de-shu-zi-qian-ming-3/</id>
+        <link href="https://goozy.github.io/post/fan-yi-pdf-zhong-de-shu-zi-qian-ming-3/">
+        </link>
+        <updated>2021-04-24T14:36:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="三-pdf语言签名功能">三、PDF语言签名功能</h1>
+<h2 id="1-标准支持">1. 标准支持</h2>
+<p>PDF本身是一个开放的ISO标准。ISO 32000对PDF中的数字签名支持进行了全面描述，Adobe在其开放SDK中提供了与PDF和Acrobat系列产品api交互的工具。但是，PDF中也内置了对其他标准的支持，像Acrobat和Adobe Reader这样的PDF阅读器应该遵守表2（注：见原文第五部分）中列出的标准。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="三-pdf语言签名功能">三、PDF语言签名功能</h1>
+<h2 id="1-标准支持">1. 标准支持</h2>
+<p>PDF本身是一个开放的ISO标准。ISO 32000对PDF中的数字签名支持进行了全面描述，Adobe在其开放SDK中提供了与PDF和Acrobat系列产品api交互的工具。但是，PDF中也内置了对其他标准的支持，像Acrobat和Adobe Reader这样的PDF阅读器应该遵守表2（注：见原文第五部分）中列出的标准。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【翻译】PDF中的数字签名[2]]]></title>
         <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/</id>
@@ -121,19 +138,6 @@
         <summary type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何用github和typora打造自己的云笔记]]></title>
-        <id>https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/</id>
-        <link href="https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/">
-        </link>
-        <updated>2019-03-10T10:21:55.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="缘起">缘起</h2>
-<p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="缘起">缘起</h2>
-<p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
 ]]></content>
     </entry>
 </feed>
