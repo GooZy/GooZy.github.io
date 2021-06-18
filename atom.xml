@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://goozy.github.io/</id>
     <title>闲停</title>
-    <updated>2021-04-27T15:22:03.991Z</updated>
+    <updated>2021-06-18T01:43:16.926Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://goozy.github.io/"/>
     <link rel="self" href="https://goozy.github.io/atom.xml"/>
@@ -110,13 +110,6 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[夢の記録]]></title>
-        <id>https://goozy.github.io/post/dream-record/</id>
-        <link href="https://goozy.github.io/post/dream-record/">
-        </link>
-        <updated>2020-03-28T22:01:17.000Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[[纯前端]打造自己的OKR管理软件]]></title>
         <id>https://goozy.github.io/post/make-your-own-okr-management-software/</id>
         <link href="https://goozy.github.io/post/make-your-own-okr-management-software/">
@@ -138,6 +131,19 @@
         <summary type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>今天给大家安利一款时间管理工具——PlayTask。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何用github和typora打造自己的云笔记]]></title>
+        <id>https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/</id>
+        <link href="https://goozy.github.io/post/how-to-use-github-and-typora-to-build-your-own-cloud-note/">
+        </link>
+        <updated>2019-03-10T10:21:55.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="缘起">缘起</h2>
+<p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="缘起">缘起</h2>
+<p>从2016年冬季开始，我就有了看书会记些笔记的习惯，在比对了各个软件之后，选定了有道云笔记。主要看中了：1.免费；2.跨多个平台（手机、mac、windows）；3.可以用markdown写。</p>
 ]]></content>
     </entry>
 </feed>
