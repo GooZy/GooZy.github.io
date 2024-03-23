@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://goozy.github.io/</id>
+    <title>闲停</title>
+    <updated>2024-03-23T07:26:53.575Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://goozy.github.io/"/>
+    <link rel="self" href="https://goozy.github.io/atom.xml"/>
+    <subtitle>闲下来休憩，停下来思考</subtitle>
+    <logo>https://goozy.github.io/images/avatar.png</logo>
+    <icon>https://goozy.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 闲停</rights>
+    <entry>
+        <title type="html"><![CDATA[SLF4J源码分析（二）——SLF4J 绑定实现原理]]></title>
+        <id>https://goozy.github.io/post/slf4j-source-code-analyze-2-binding-imp/</id>
+        <link href="https://goozy.github.io/post/slf4j-source-code-analyze-2-binding-imp/">
+        </link>
+        <updated>2024-03-23T06:11:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>总的入口就是这句 <code>LoggerFactory.getLogger(Main.class)</code>，我们从这里入手。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>总的入口就是这句 <code>LoggerFactory.getLogger(Main.class)</code>，我们从这里入手。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SLF4J源码分析（一）]]></title>
+        <id>https://goozy.github.io/post/slf4j-source-code-analyze-1/</id>
+        <link href="https://goozy.github.io/post/slf4j-source-code-analyze-1/">
+        </link>
+        <updated>2024-03-18T15:57:58.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="介绍">介绍</h1>
+<p>SLF4J（Simple Logging Facade for Java）是一个简单的日志门面框架，它允许应用程序使用单一的 API 进行日志记录，而不用关心具体的日志实现。SLF4J 提供了一个简单的抽象层，可以在运行时绑定到不同的日志框架，比如 logback、log4j 等。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="介绍">介绍</h1>
+<p>SLF4J（Simple Logging Facade for Java）是一个简单的日志门面框架，它允许应用程序使用单一的 API 进行日志记录，而不用关心具体的日志实现。SLF4J 提供了一个简单的抽象层，可以在运行时绑定到不同的日志框架，比如 logback、log4j 等。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[3]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-3/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-3/">
+        </link>
+        <updated>2021-04-24T14:36:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="三-pdf语言签名功能">三、PDF语言签名功能</h1>
+<h2 id="1-标准支持">1. 标准支持</h2>
+<p>PDF本身是一个开放的ISO标准。ISO 32000对PDF中的数字签名支持进行了全面描述，Adobe在其开放SDK中提供了与PDF和Acrobat系列产品api交互的工具。但是，PDF中也内置了对其他标准的支持，像Acrobat和Adobe Reader这样的PDF阅读器应该遵守表2（注：见原文第五部分）中列出的标准。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="三-pdf语言签名功能">三、PDF语言签名功能</h1>
+<h2 id="1-标准支持">1. 标准支持</h2>
+<p>PDF本身是一个开放的ISO标准。ISO 32000对PDF中的数字签名支持进行了全面描述，Adobe在其开放SDK中提供了与PDF和Acrobat系列产品api交互的工具。但是，PDF中也内置了对其他标准的支持，像Acrobat和Adobe Reader这样的PDF阅读器应该遵守表2（注：见原文第五部分）中列出的标准。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[2]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-2/">
+        </link>
+        <updated>2021-04-17T03:23:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="二-公钥基础设施pki">二、公钥基础设施（PKI）</h1>
+<p>PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="二-公钥基础设施pki">二、公钥基础设施（PKI）</h1>
+<p>PDF的数字签名功能旨在与企业和政府环境中部署的与主流公钥基础设施（PKI）相关的所有标准兼容。PKI是在创建，分发，管理，吊销以及使用数字ID时使用的人员，策略，过程，硬件和软件的集合，这些数字ID中包含签署PDF时使用的公钥/私钥对。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[1]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-1/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-1/">
+        </link>
+        <updated>2021-04-14T14:27:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="一-在pdf文件中表示签名">一、在PDF文件中表示签名</h1>
+<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计用于签名数据处理的PDF阅读器使用。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<h1 id="一-在pdf文件中表示签名">一、在PDF文件中表示签名</h1>
+<p>在PDF中，签名信息包含在一个签名字典中。字典中的对象由PDF Reference定义。签名字典可以引用或者被其它字典引用，通常是下图这样。这些字典中的条目决定了签名的性质和特征，并通过扩展确定了哪些数据可被任何设计用于签名数据处理的PDF阅读器使用。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【翻译】PDF中的数字签名[0]]]></title>
+        <id>https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-0/</id>
+        <link href="https://goozy.github.io/post/digital-signatures-in-a-pdf-chinese-version-0/">
+        </link>
+        <updated>2021-04-05T12:41:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<p>本文档介绍了如何在PDF文件中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原文：<a href="https://www.adobe.com/devnet-docs/etk_deprecated/tools/DigSig/Acrobat_DigitalSignatures_in_PDF.pdf">Digital Signatures in a PDF</a></p>
+<p>本文档介绍了如何在PDF文件中表示数字签名，以及PDF语言支持哪些与签名相关的功能。Adobe® Reader®与Acrobat®实现了PDF的所有功能，因此为基于公钥基础设施（PKI）技术的数字数据认证提供了全面的支持。第三方开发人员可以以Acrobat插件签名处理程序的形式定义自己的处理方式。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我开发的第一款chrome插件——“标签文件夹”介绍]]></title>
+        <id>https://goozy.github.io/post/introduce-my-first-chrome-extension/</id>
+        <link href="https://goozy.github.io/post/introduce-my-first-chrome-extension/">
+        </link>
+        <updated>2020-06-28T13:23:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>“标签文件夹”是一款用来临时保存浏览器标签页的插件。是我个人开发的第一款Chrome插件，希望能够帮到和我一样，标签页偶尔会塞满浏览器的人。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chrome插件开发——踩坑记录]]></title>
+        <id>https://goozy.github.io/post/chrome-extension-development-problems-records/</id>
+        <link href="https://goozy.github.io/post/chrome-extension-development-problems-records/">
+        </link>
+        <updated>2020-06-21T05:36:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>记录一下最近开发中的坑点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记录一下最近开发中的坑点。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[说说HTTP和RPC]]></title>
+        <id>https://goozy.github.io/post/talk-about-http-and-rpc/</id>
+        <link href="https://goozy.github.io/post/talk-about-http-and-rpc/">
+        </link>
+        <updated>2020-05-10T08:27:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近被问到一个问题：“RPC和HTTP有什么区别？”<br>
+我说：“前者比后者效率高，但实现比较麻烦。总得来说后者比前者更“重”，导致效率低。”<br>
+回答的十分笼统，我觉得甚至没有解释清楚这个东西。<br>
+所以决定认真的再看看这两位“熟悉的朋友”。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近被问到一个问题：“RPC和HTTP有什么区别？”<br>
+我说：“前者比后者效率高，但实现比较麻烦。总得来说后者比前者更“重”，导致效率低。”<br>
+回答的十分笼统，我觉得甚至没有解释清楚这个东西。<br>
+所以决定认真的再看看这两位“熟悉的朋友”。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[纯前端]打造自己的OKR管理软件]]></title>
+        <id>https://goozy.github.io/post/make-your-own-okr-management-software/</id>
+        <link href="https://goozy.github.io/post/make-your-own-okr-management-software/">
+        </link>
+        <updated>2020-02-15T09:40:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>OKR（Objectives and Key Results）即目标与关键成果法，可以理解为对目标完成情况的一种管理方法。<br>
+一般需要列出当前周期的目标，然后列举一些关键结果来衡量目标的完成情况。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>OKR（Objectives and Key Results）即目标与关键成果法，可以理解为对目标完成情况的一种管理方法。<br>
+一般需要列出当前周期的目标，然后列举一些关键结果来衡量目标的完成情况。</p>
+]]></content>
+    </entry>
+</feed>
